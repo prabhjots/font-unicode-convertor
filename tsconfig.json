@@ -2,7 +2,8 @@
     "compilerOptions": {
         "target": "es3",
         "noImplicitAny": false,
-        "sourceMap": false
+        "sourceMap": false,
+        "outFile": "dist/convertor.js"
     },
     "exclude": [       
     ]
