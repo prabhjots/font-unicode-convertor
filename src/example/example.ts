@@ -6,7 +6,6 @@ function changeMapperConverText(){
     convertText();
 }
 
-
 function convertText() {  
    fromText.style.fontFamily = fromFont.value
     toText.style.fontFamily = toFont.value    
@@ -17,7 +16,6 @@ function convertText() {
     fromUnicodeText.value = getUnicodes(fromText.value);
     toUnicodeText.value = getUnicodes(toText.value);
 }
-
 
 function convertUnicodesToChar() {
     fromText.value = getChars(fromUnicodeText.value);
@@ -34,8 +32,6 @@ function getChars(unicodesString) {
 
     return chars.join("");
 }
-
-
 
 function getUnicodes(stringToConvert) {
     stringToConvert = stringToConvert || ""

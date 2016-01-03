@@ -1,12 +1,4 @@
-///<reference path="./punjabiMappings.ts"/>
 namespace Convertor {
-    export interface IMapperConfig {
-        mapper;
-        maxWidth: number
-        moveLeftChars: string[];
-        moveRightChars: string[];
-    }
-
     export function convertString(mapperConfig: IMapperConfig, stringToConvert: string): string {
         let {mapper, maxWidth, moveRightChars, moveLeftChars } = mapperConfig;
 
@@ -55,14 +47,7 @@ namespace Convertor {
         return output.join("");
 
     }
-
-    export interface IMapping {
-        characterCodes: number[];
-        moveRightCharacters: number[];
-    }
-
-
-
+    
     export function getMapper(to: IMapping, from: IMapping, compositions: { [key: number]: number[] }): IMapperConfig {
         let mappingLength = Math.max(to.characterCodes.length, from.characterCodes.length);
 
@@ -78,15 +63,15 @@ namespace Convertor {
         }
         let maxWidth = 0;
 
-         for (let c in compositions) {
+        for (let c in compositions) {
             if (compositions.hasOwnProperty(c)) {
                 let compositionChar = compositions[c];
                 maxWidth = Math.max(maxWidth, compositionChar.length);
-                let toCharCodes =[];
-                
-                if(to.characterCodes[c]){
+                let toCharCodes = [];
+
+                if (to.characterCodes[c]) {
                     toCharCodes = [to.characterCodes[c]]
-                } else {                    
+                } else {
                     for (let code of compositionChar) {
                         let toCode = to.characterCodes[code];
 
@@ -97,17 +82,17 @@ namespace Convertor {
                         }
                     }
                 }
-                
+
                 let toMulipleChar = getCharFromUnicode(...toCharCodes);
-                
+
                 let fromCompositeCharCode = from.characterCodes[c];
-                
-                if(fromCompositeCharCode){
-                     mapper[getCharFromUnicode(fromCompositeCharCode)] = toMulipleChar;
+
+                if (fromCompositeCharCode && !(fromCompositeCharCode in mapper)) {
+                    mapper[getCharFromUnicode(fromCompositeCharCode)] = toMulipleChar;
                 }
-                
+
                 let fromCharCodes: number[] = [];
-                
+
                 let invalid = false;
                 for (let code of compositionChar) {
                     let fromCode = from.characterCodes[code];
@@ -118,22 +103,20 @@ namespace Convertor {
                         invalid = true;
                         //console.error(`No code in from for ${code}`);
                     }
-                }   
-                
-                if(!invalid){
-                    mapper[getCharFromUnicode(...fromCharCodes)] = toMulipleChar; 
-                }  
+                }
+
+                if (!invalid) {
+                    let fromSingleChars = getCharFromUnicode(...fromCharCodes)
+                    
+                    if(!(fromSingleChars in mapper)){
+                        mapper[fromSingleChars] = toMulipleChar;
+                    }                    
+                }
             }
         }
 
-        let commonChar = getCommonCodes(to.moveRightCharacters, from.moveRightCharacters);
-
-        let moveLeftCharIndexes = from.moveRightCharacters
-            .filter((a) => commonChar.indexOf(a) === -1);
-
-
-        let moveRightCharIndexes = to.moveRightCharacters
-            .filter((a) => commonChar.indexOf(a) === -1);
+        let moveLeftCharIndexes = from.moveRightCharacters.filter(a => to.moveRightCharacters.indexOf(a) === -1);
+        let moveRightCharIndexes = to.moveRightCharacters.filter(a => from.moveRightCharacters.indexOf(a) === -1);
 
         return {
             mapper,
@@ -142,48 +125,20 @@ namespace Convertor {
             moveRightChars: moveRightCharIndexes.map(c => getCharFromUnicode(to.characterCodes[c]))
         };
     }
-    
-    
-    
-    function getMapperUsingCompositions(allToCharCodes:number[], allFromCharCodes:number[] , compositions: { [key: number]: number[] }) {
-        let maxWidth = 0;
-        let mapper = {};
-        
-       
-        
-    }
 
     function getCharFromUnicode(...unicodes: number[]): string {
         return unicodes.map(c => String.fromCharCode(c)).join("");
     }
 
-    function getCommonCodes(a: number[], b: number[]) {
-        a = a.sort();
-        b = b.sort();
-
-        let ai = 0, bi = 0;
-        let result = new Array();
-
-        while (ai < a.length && bi < b.length) {
-            if (a[ai] < b[bi]) {
-                ai++;
-            }
-            else if (a[ai] > b[bi]) {
-                bi++;
-            }
-            else /* they're equal */ {
-                result.push(a[ai]);
-                ai++;
-                bi++;
-            }
-        }
-
-        return result;
+    export interface IMapping {
+        characterCodes: number[];
+        moveRightCharacters: number[];
     }
-} 
 
-
-
-
-
-
+    export interface IMapperConfig {
+        mapper;
+        maxWidth: number
+        moveLeftChars: string[];
+        moveRightChars: string[];
+    }
+}
