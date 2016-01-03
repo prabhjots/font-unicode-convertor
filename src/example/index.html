@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Font Convertor Example</title>
+
+</head>
+
+<body>
+    <!-- include source files here... -->
+    <script src="../convertor/punjabiMappings.js"></script>
+    <script src="../convertor/convertor.js"></script>
+    <script src="./example.js"></script>
+
+    <select id="fromFont" onchange="changeMapperConverText()">
+        <option value="AnmolLipi">Anmol Lipi</option>
+          <option value="Unicode">Unicode</option>
+        <!--<option value="DrChatrikWeb">Dr Chatrik</option>
+        <option value="Satluj">Satluj</option>
+        <option value="Asees">Asees</option>
+        <option value="PunjabiFont">Punjabi Font</option>
+        <option value="Joy">Joy</option>
+        <option value="SGPHar">SGPHar</option>
+      
+        <option value="SriAngad">SriAngad</option>
+        <option value="GurLipi">GurLipi</option> -->
+    </select>
+    <label>to</label>
+    <select id="toFont" onchange="changeMapperConverText()">
+        <option value="AnmolLipi">Anmol Lipi</option>
+               <option value="Unicode">Unicode</option>
+        <!--<option value="DrChatrikWeb">Dr Chatrik</option>
+        <option value="Satluj">Satluj</option>
+        <option value="Asees">Asees</option>
+        <option value="Punjabi Font">Punjabi Font</option>
+        <option value="Joy">Joy</option>
+        <option value="SGPHar">SGPHar</option>
+ 
+        <option value="SriAngad">SriAngad</option>
+        <option value="GurLipi">GurLipi</option>-->
+    </select>
+    <button onclick="convertText()">Convert</button>
+    <textarea style="font-family: 'AnmolLipi'; width: 100%;" id="fromText" rows="7" cols="100" onkeyup="convertText()"></textarea>
+
+    <br/>
+    <textarea style="font-family: 'AnmolLipi'; width: 100%;" id="toText" rows="7" cols="100"></textarea>
+    <br/> From Unicodes
+    <br/>
+    <textarea id="fromUnicodeText" rows="3" cols="70" style="width: 100%;" onkeyup="convertUnicodesToChar()"></textarea>
+
+    To Unicodes
+    <textarea id="toUnicodeText" rows="3" cols="70" style="width: 100%;" onkeyup="convertUnicodesToChar()"></textarea>
+</body>
+
+</html>
