@@ -14,8 +14,8 @@
     <select id="fromFont" onchange="changeMapperConverText()">
         <option value="AnmolLipi">Anmol Lipi</option>
           <option value="Unicode">Unicode</option>
-        <!--<option value="DrChatrikWeb">Dr Chatrik</option>
-        <option value="Satluj">Satluj</option>
+        <option value="DrChatrikWeb">Dr Chatrik</option>
+        <!--<option value="Satluj">Satluj</option>
         <option value="Asees">Asees</option>
         <option value="PunjabiFont">Punjabi Font</option>
         <option value="Joy">Joy</option>
@@ -28,8 +28,8 @@
     <select id="toFont" onchange="changeMapperConverText()">
         <option value="AnmolLipi">Anmol Lipi</option>
                <option value="Unicode">Unicode</option>
-        <!--<option value="DrChatrikWeb">Dr Chatrik</option>
-        <option value="Satluj">Satluj</option>
+       <option value="DrChatrikWeb">Dr Chatrik</option>
+        <!-- <option value="Satluj">Satluj</option>
         <option value="Asees">Asees</option>
         <option value="Punjabi Font">Punjabi Font</option>
         <option value="Joy">Joy</option>
@@ -39,10 +39,12 @@
         <option value="GurLipi">GurLipi</option>-->
     </select>
     <button onclick="convertText()">Convert</button>
-    <textarea style="font-family: 'AnmolLipi'; width: 100%; font-size:16px;" id="fromText" rows="7" cols="100" onkeyup="convertText()"></textarea>
+    <textarea style="font-family: 'AnmolLipi'; width: 100%; font-size:16px;" id="fromText" rows="7" cols="200" onkeyup="convertText()" 
+                autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ></textarea>
 
     <br/>
-    <textarea style="font-family: 'AnmolLipi'; width: 100%; font-size:16px;" id="toText" rows="7" cols="100"></textarea>
+    <textarea style="font-family: 'AnmolLipi'; width: 100%; font-size:16px;" id="toText" rows="7" cols="200"  
+            autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
     <br/> From Unicodes
     <br/>
     <textarea id="fromUnicodeText" rows="3" cols="70" style="width: 100%;" onkeyup="convertUnicodesToChar()"></textarea>

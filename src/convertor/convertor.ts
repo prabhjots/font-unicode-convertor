@@ -48,7 +48,7 @@ namespace Convertor {
 
     }
 
-    export function getMapper(to: IMapping, from: IMapping, compositions: { [key: number]: number[][] }): IMapperConfig {
+    export function getMapper(to: IMapping, from: IMapping, compositions: number[][][]): IMapperConfig {
         let mappingLength = Math.max(to.characterCodes.length, from.characterCodes.length);
 
         let mapper: any = {};
@@ -63,68 +63,18 @@ namespace Convertor {
         }
         let maxWidth = 0;
 
-        for (let c in compositions) {
-            if (compositions.hasOwnProperty(c)) {
-                let compositionCharArrays = compositions[c];
+        for (let compositionCharArrays of compositions) {
 
-                let toCharCodes = null;
+            let toCharacter = getCompositionCharacters(compositionCharArrays, to.characterCodes)[0];
 
-                if (to.characterCodes[c]) {
-                    toCharCodes = [to.characterCodes[c]]
-                } else {
-                    for (let compositionChar of compositionCharArrays) {
-                        if (!toCharCodes) {
-                            let isValid = true;
-                            let mayBeToChars = [];
-                            for (let code of compositionChar) {
-                                let toCode = to.characterCodes[code];
+            if (toCharacter) {
+                let fromCharacters = getCompositionCharacters(compositionCharArrays, from.characterCodes);
 
-                                if (toCode) {
-                                    mayBeToChars.push(toCode);
-                                } else {
-                                    isValid = false;
-                                    //onsole.error(`No code in to for ${code}`);
-                                }
-                            }
-                            
-                            if(isValid){
-                                toCharCodes = mayBeToChars;
-                            }
-                        }
+                for (let fromChar of fromCharacters) {
+                    maxWidth = Math.max(maxWidth, fromChar.length);                   
 
-                    }
-                }
-
-                let toMulipleChar = getCharFromUnicode(...toCharCodes);
-
-                let fromCompositeCharCode = from.characterCodes[c];
-
-                if (fromCompositeCharCode && !(fromCompositeCharCode in mapper)) {
-                    mapper[getCharFromUnicode(fromCompositeCharCode)] = toMulipleChar;
-                }
-                for (let compositionChar of compositionCharArrays) {
-
-                    let fromCharCodes: number[] = [];
-
-                    let isValid = true;
-                    for (let code of compositionChar) {
-                        let fromCode = from.characterCodes[code];
-
-                        if (fromCode) {
-                            fromCharCodes.push(fromCode);
-                        } else {
-                            isValid = false;
-                            //console.error(`No code in from for ${code}`);
-                        }
-                    }
-
-                    if (isValid) {
-                        maxWidth = Math.max(maxWidth, compositionChar.length);
-                        let fromSingleChars = getCharFromUnicode(...fromCharCodes)
-
-                        if (!(fromSingleChars in mapper)) {
-                            mapper[fromSingleChars] = toMulipleChar;
-                        }
+                    if (!(fromChar in mapper)) {                        
+                        mapper[fromChar] = toCharacter;
                     }
                 }
             }
@@ -141,6 +91,32 @@ namespace Convertor {
         };
     }
 
+    function getCompositionCharacters(compositionCharArrays: number[][], codes: number[]) {
+        let characters = [];
+
+        let toCharCodes = null;
+
+        for (let compositionChar of compositionCharArrays) {
+            let isValid = true;
+            let charCodes = [];
+            for (let code of compositionChar) {
+                let toCode = codes[code];
+
+                if (toCode) {
+                    charCodes.push(toCode);
+                } else {
+                    isValid = false;
+                    //onsole.error(`No code in to for ${code}`);
+                }
+            }
+
+            if (isValid) {
+                characters.push(getCharFromUnicode(...charCodes));
+            }
+        }
+        return characters;
+    }
+    
     function getCharFromUnicode(...unicodes: number[]): string {
         return unicodes.map(c => String.fromCharCode(c)).join("");
     }
