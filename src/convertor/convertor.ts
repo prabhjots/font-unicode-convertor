@@ -47,8 +47,8 @@ namespace Convertor {
         return output.join("");
 
     }
-    
-    export function getMapper(to: IMapping, from: IMapping, compositions: { [key: number]: number[] }): IMapperConfig {
+
+    export function getMapper(to: IMapping, from: IMapping, compositions: { [key: number]: number[][] }): IMapperConfig {
         let mappingLength = Math.max(to.characterCodes.length, from.characterCodes.length);
 
         let mapper: any = {};
@@ -65,21 +65,33 @@ namespace Convertor {
 
         for (let c in compositions) {
             if (compositions.hasOwnProperty(c)) {
-                let compositionChar = compositions[c];
-                maxWidth = Math.max(maxWidth, compositionChar.length);
-                let toCharCodes = [];
+                let compositionCharArrays = compositions[c];
+
+                let toCharCodes = null;
 
                 if (to.characterCodes[c]) {
                     toCharCodes = [to.characterCodes[c]]
                 } else {
-                    for (let code of compositionChar) {
-                        let toCode = to.characterCodes[code];
+                    for (let compositionChar of compositionCharArrays) {
+                        if (!toCharCodes) {
+                            let isValid = true;
+                            let mayBeToChars = [];
+                            for (let code of compositionChar) {
+                                let toCode = to.characterCodes[code];
 
-                        if (toCode) {
-                            toCharCodes.push(toCode);
-                        } else {
-                            //onsole.error(`No code in to for ${code}`);
+                                if (toCode) {
+                                    mayBeToChars.push(toCode);
+                                } else {
+                                    isValid = false;
+                                    //onsole.error(`No code in to for ${code}`);
+                                }
+                            }
+                            
+                            if(isValid){
+                                toCharCodes = mayBeToChars;
+                            }
                         }
+
                     }
                 }
 
@@ -90,27 +102,30 @@ namespace Convertor {
                 if (fromCompositeCharCode && !(fromCompositeCharCode in mapper)) {
                     mapper[getCharFromUnicode(fromCompositeCharCode)] = toMulipleChar;
                 }
+                for (let compositionChar of compositionCharArrays) {
 
-                let fromCharCodes: number[] = [];
+                    let fromCharCodes: number[] = [];
 
-                let invalid = false;
-                for (let code of compositionChar) {
-                    let fromCode = from.characterCodes[code];
+                    let isValid = true;
+                    for (let code of compositionChar) {
+                        let fromCode = from.characterCodes[code];
 
-                    if (fromCode) {
-                        fromCharCodes.push(fromCode);
-                    } else {
-                        invalid = true;
-                        //console.error(`No code in from for ${code}`);
+                        if (fromCode) {
+                            fromCharCodes.push(fromCode);
+                        } else {
+                            isValid = false;
+                            //console.error(`No code in from for ${code}`);
+                        }
                     }
-                }
 
-                if (!invalid) {
-                    let fromSingleChars = getCharFromUnicode(...fromCharCodes)
-                    
-                    if(!(fromSingleChars in mapper)){
-                        mapper[fromSingleChars] = toMulipleChar;
-                    }                    
+                    if (isValid) {
+                        maxWidth = Math.max(maxWidth, compositionChar.length);
+                        let fromSingleChars = getCharFromUnicode(...fromCharCodes)
+
+                        if (!(fromSingleChars in mapper)) {
+                            mapper[fromSingleChars] = toMulipleChar;
+                        }
+                    }
                 }
             }
         }

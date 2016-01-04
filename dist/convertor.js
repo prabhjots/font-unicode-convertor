@@ -56,20 +56,30 @@ var Convertor;
         var maxWidth = 0;
         for (var c in compositions) {
             if (compositions.hasOwnProperty(c)) {
-                var compositionChar = compositions[c];
-                maxWidth = Math.max(maxWidth, compositionChar.length);
-                var toCharCodes = [];
+                var compositionCharArrays = compositions[c];
+                var toCharCodes = null;
                 if (to.characterCodes[c]) {
                     toCharCodes = [to.characterCodes[c]];
                 }
                 else {
-                    for (var _i = 0; _i < compositionChar.length; _i++) {
-                        var code = compositionChar[_i];
-                        var toCode = to.characterCodes[code];
-                        if (toCode) {
-                            toCharCodes.push(toCode);
-                        }
-                        else {
+                    for (var _i = 0; _i < compositionCharArrays.length; _i++) {
+                        var compositionChar = compositionCharArrays[_i];
+                        if (!toCharCodes) {
+                            var isValid = true;
+                            var mayBeToChars = [];
+                            for (var _a = 0; _a < compositionChar.length; _a++) {
+                                var code = compositionChar[_a];
+                                var toCode = to.characterCodes[code];
+                                if (toCode) {
+                                    mayBeToChars.push(toCode);
+                                }
+                                else {
+                                    isValid = false;
+                                }
+                            }
+                            if (isValid) {
+                                toCharCodes = mayBeToChars;
+                            }
                         }
                     }
                 }
@@ -78,22 +88,26 @@ var Convertor;
                 if (fromCompositeCharCode && !(fromCompositeCharCode in mapper)) {
                     mapper[getCharFromUnicode(fromCompositeCharCode)] = toMulipleChar;
                 }
-                var fromCharCodes = [];
-                var invalid = false;
-                for (var _a = 0; _a < compositionChar.length; _a++) {
-                    var code = compositionChar[_a];
-                    var fromCode = from.characterCodes[code];
-                    if (fromCode) {
-                        fromCharCodes.push(fromCode);
+                for (var _b = 0; _b < compositionCharArrays.length; _b++) {
+                    var compositionChar = compositionCharArrays[_b];
+                    var fromCharCodes = [];
+                    var isValid = true;
+                    for (var _c = 0; _c < compositionChar.length; _c++) {
+                        var code = compositionChar[_c];
+                        var fromCode = from.characterCodes[code];
+                        if (fromCode) {
+                            fromCharCodes.push(fromCode);
+                        }
+                        else {
+                            isValid = false;
+                        }
                     }
-                    else {
-                        invalid = true;
-                    }
-                }
-                if (!invalid) {
-                    var fromSingleChars = getCharFromUnicode.apply(void 0, fromCharCodes);
-                    if (!(fromSingleChars in mapper)) {
-                        mapper[fromSingleChars] = toMulipleChar;
+                    if (isValid) {
+                        maxWidth = Math.max(maxWidth, compositionChar.length);
+                        var fromSingleChars = getCharFromUnicode.apply(void 0, fromCharCodes);
+                        if (!(fromSingleChars in mapper)) {
+                            mapper[fromSingleChars] = toMulipleChar;
+                        }
                     }
                 }
             }
@@ -119,28 +133,29 @@ var Convertor;
 var PunjabiMappings;
 (function (PunjabiMappings) {
     PunjabiMappings.compositions = (_a = {},
-        _a[0 /* AdakBindi */] = [77 /* Addak */, 1 /* Bindi */],
-        _a[4 /* Aਆ */] = [3 /* Aਅ */, 47 /* Kana */],
-        _a[5 /* Eਇ */] = [48 /* Sihari */, 79 /* Eੲ */],
-        _a[6 /* Eਈ */] = [79 /* Eੲ */, 49 /* Bihari */],
-        _a[7 /* Uਉ */] = [80 /* Uੳ */, 50 /* Aunkar */],
-        _a[8 /* Uਊ */] = [80 /* Uੳ */, 51 /* Dulainkar */],
-        _a[9 /* Eਏ */] = [79 /* Eੲ */, 52 /* Lavan */],
-        _a[10 /* Aਐ */] = [3 /* Aਅ */, 53 /* Dulavan */],
-        _a[12 /* Oਔ */] = [3 /* Aਅ */, 50 /* Aunkar */],
-        _a[41 /* LPairiBindiਲ਼ */] = [40 /* Lਲ */, 46 /* PairiBindi */],
-        _a[43 /* SPairiBindiਸ਼ */] = [44 /* Sਸ */, 46 /* PairiBindi */],
-        _a[59 /* KPairiBindiਖ਼ */] = [14 /* Kਖ */, 46 /* PairiBindi */],
-        _a[60 /* GPairiBindiਗ਼ */] = [15 /* Gਗ */, 46 /* PairiBindi */],
-        _a[61 /* JPairiBindiਜ਼ */] = [20 /* Jਜ */, 46 /* PairiBindi */],
-        _a[63 /* FPairiBindiਫ਼ */] = [34 /* Fਫ */, 46 /* PairiBindi */],
-        _a[65 /* DoubleDanda */] = [64 /* Danda */, 64 /* Danda */],
-        _a[85 /* KanaBindi */] = [47 /* Kana */, 1 /* Bindi */],
-        _a[86 /* PairiHaha */] = [56 /* Virama */, 45 /* Hਹ */],
-        _a[57 /* PairiRara */] = [56 /* Virama */, 39 /* Rਰ */],
-        _a[78 /* Addak2 */] = [77 /* Addak */],
-        _a[82 /* AੴPart1 */] = [81 /* Aੴ */],
-        _a[81 /* Aੴ */] = [82 /* AੴPart1 */, 83 /* AੴPart2 */],
+        _a[0 /* AdakBindi */] = [[77 /* Addak */, 1 /* Bindi */]],
+        _a[4 /* Aਆ */] = [[3 /* Aਅ */, 47 /* Kana */]],
+        _a[87 /* AਆBindi */] = [[4 /* Aਆ */, 1 /* Bindi */], [3 /* Aਅ */, 85 /* KanaBindi */]],
+        _a[5 /* Eਇ */] = [[48 /* Sihari */, 79 /* Eੲ */]],
+        _a[6 /* Eਈ */] = [[79 /* Eੲ */, 49 /* Bihari */]],
+        _a[7 /* Uਉ */] = [[80 /* Uੳ */, 50 /* Aunkar */]],
+        _a[8 /* Uਊ */] = [[80 /* Uੳ */, 51 /* Dulainkar */]],
+        _a[9 /* Eਏ */] = [[79 /* Eੲ */, 52 /* Lavan */]],
+        _a[10 /* Aਐ */] = [[3 /* Aਅ */, 53 /* Dulavan */]],
+        _a[12 /* Oਔ */] = [[3 /* Aਅ */, 50 /* Aunkar */]],
+        _a[41 /* LPairiBindiਲ਼ */] = [[40 /* Lਲ */, 46 /* PairiBindi */]],
+        _a[43 /* SPairiBindiਸ਼ */] = [[44 /* Sਸ */, 46 /* PairiBindi */]],
+        _a[59 /* KPairiBindiਖ਼ */] = [[14 /* Kਖ */, 46 /* PairiBindi */]],
+        _a[60 /* GPairiBindiਗ਼ */] = [[15 /* Gਗ */, 46 /* PairiBindi */]],
+        _a[61 /* JPairiBindiਜ਼ */] = [[20 /* Jਜ */, 46 /* PairiBindi */]],
+        _a[63 /* FPairiBindiਫ਼ */] = [[34 /* Fਫ */, 46 /* PairiBindi */]],
+        _a[65 /* DoubleDanda */] = [[64 /* Danda */, 64 /* Danda */]],
+        _a[85 /* KanaBindi */] = [[47 /* Kana */, 1 /* Bindi */]],
+        _a[86 /* PairiHaha */] = [[56 /* Virama */, 45 /* Hਹ */]],
+        _a[57 /* PairiRara */] = [[56 /* Virama */, 39 /* Rਰ */]],
+        _a[78 /* Addak2 */] = [[77 /* Addak */]],
+        _a[82 /* AੴPart1 */] = [[81 /* Aੴ */]],
+        _a[81 /* Aੴ */] = [[82 /* AੴPart1 */, 83 /* AੴPart2 */]],
         _a
     );
     var unicodeMapping = (_b = {},

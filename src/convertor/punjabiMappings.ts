@@ -87,31 +87,33 @@ namespace PunjabiMappings {
         Yakash,         // $ੵ GURMUKHI SIGN YAKASH  
         KanaBindi,      // kana ate bindi
         PairiHaha,      // pair wich haha' }   
+        AਆBindi
     }
 
-    export let compositions: { [key: number]: number[] } = {
-        [Char.AdakBindi]: [Char.Addak, Char.Bindi],
-        [Char.Aਆ]: [Char.Aਅ, Char.Kana],
-        [Char.Eਇ]: [Char.Sihari, Char.Eੲ],
-        [Char.Eਈ]: [Char.Eੲ, Char.Bihari],
-        [Char.Uਉ]: [Char.Uੳ, Char.Aunkar],
-        [Char.Uਊ]: [Char.Uੳ, Char.Dulainkar],
-        [Char.Eਏ]: [Char.Eੲ, Char.Lavan],
-        [Char.Aਐ]: [Char.Aਅ, Char.Dulavan],
-        [Char.Oਔ]: [Char.Aਅ, Char.Aunkar],
-        [Char.LPairiBindiਲ਼]: [Char.Lਲ, Char.PairiBindi],
-        [Char.SPairiBindiਸ਼]: [Char.Sਸ, Char.PairiBindi],
-        [Char.KPairiBindiਖ਼]: [Char.Kਖ, Char.PairiBindi],
-        [Char.GPairiBindiਗ਼]: [Char.Gਗ, Char.PairiBindi],
-        [Char.JPairiBindiਜ਼]: [Char.Jਜ, Char.PairiBindi],
-        [Char.FPairiBindiਫ਼]: [Char.Fਫ, Char.PairiBindi],
-        [Char.DoubleDanda]: [Char.Danda, Char.Danda],
-        [Char.KanaBindi]: [Char.Kana, Char.Bindi],
-        [Char.PairiHaha]: [Char.Virama, Char.Hਹ],
-        [Char.PairiRara]: [Char.Virama, Char.Rਰ],
-        [Char.Addak2]: [Char.Addak],
-        [Char.AੴPart1]:[Char.Aੴ],
-        [Char.Aੴ]: [Char.AੴPart1, Char.AੴPart2],
+    export let compositions = {
+        [Char.AdakBindi]: [[Char.Addak, Char.Bindi]],
+        [Char.Aਆ]: [[Char.Aਅ, Char.Kana]],
+        [Char.AਆBindi]: [[Char.Aਆ, Char.Bindi], [Char.Aਅ, Char.KanaBindi]],
+        [Char.Eਇ]: [[Char.Sihari, Char.Eੲ]],
+        [Char.Eਈ]: [[Char.Eੲ, Char.Bihari]],
+        [Char.Uਉ]: [[Char.Uੳ, Char.Aunkar]],
+        [Char.Uਊ]: [[Char.Uੳ, Char.Dulainkar]],
+        [Char.Eਏ]: [[Char.Eੲ, Char.Lavan]],
+        [Char.Aਐ]: [[Char.Aਅ, Char.Dulavan]],
+        [Char.Oਔ]: [[Char.Aਅ, Char.Aunkar]],
+        [Char.LPairiBindiਲ਼]: [[Char.Lਲ, Char.PairiBindi]],
+        [Char.SPairiBindiਸ਼]: [[Char.Sਸ, Char.PairiBindi]],
+        [Char.KPairiBindiਖ਼]: [[Char.Kਖ, Char.PairiBindi]],
+        [Char.GPairiBindiਗ਼]: [[Char.Gਗ, Char.PairiBindi]],
+        [Char.JPairiBindiਜ਼]: [[Char.Jਜ, Char.PairiBindi]],
+        [Char.FPairiBindiਫ਼]: [[Char.Fਫ, Char.PairiBindi]],
+        [Char.DoubleDanda]: [[Char.Danda, Char.Danda]],
+        [Char.KanaBindi]: [[Char.Kana, Char.Bindi]],
+        [Char.PairiHaha]: [[Char.Virama, Char.Hਹ]],
+        [Char.PairiRara]: [[Char.Virama, Char.Rਰ]],
+        [Char.Addak2]: [[Char.Addak]],
+        [Char.AੴPart1]: [[Char.Aੴ]],
+        [Char.Aੴ]: [[Char.AੴPart1, Char.AੴPart2]],
     };
 
     let unicodeMapping = {
@@ -268,8 +270,8 @@ namespace PunjabiMappings {
         [Char.KanaBindi]: 0x57,
         [Char.PairiHaha]: 0x48,
         [Char.Addak2]: 0x7e,
-        [Char.AੴPart1]:  0x3c ,
-        [Char.AੴPart2]:0x3e,
+        [Char.AੴPart1]: 0x3c,
+        [Char.AੴPart2]: 0x3e,
     }
 
 
