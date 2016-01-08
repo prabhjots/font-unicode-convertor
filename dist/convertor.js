@@ -1,6 +1,6 @@
 var Convertor;
 (function (Convertor) {
-    function convertString(mapperConfig, stringToConvert) {
+    function convertStringUsingMapper(mapperConfig, stringToConvert) {
         var mapper = mapperConfig.mapper, maxWidth = mapperConfig.maxWidth, moveRightChars = mapperConfig.moveRightChars, moveLeftChars = mapperConfig.moveLeftChars;
         var output = [];
         var charToAddOnRight = "";
@@ -42,7 +42,7 @@ var Convertor;
         }
         return output.join("");
     }
-    Convertor.convertString = convertString;
+    Convertor.convertStringUsingMapper = convertStringUsingMapper;
     function getMapper(to, from, compositions) {
         var mappingLength = Math.max(to.characterCodes.length, from.characterCodes.length);
         var mapper = {};
@@ -177,16 +177,16 @@ var PunjabiMappings;
         _a[76 /* Virama */] = 0x40,
         _a[78 /* Danda */] = 0x5b,
         _a[81 /* DoubleDanda */] = 0x5d,
-        _a[83 /* Zero */] = 0x30,
-        _a[84 /* One */] = 0x31,
-        _a[85 /* Two */] = 0x32,
-        _a[86 /* Three */] = 0x33,
-        _a[87 /* Four */] = 0x34,
-        _a[88 /* Five */] = 0x35,
-        _a[89 /* Six */] = 0x36,
-        _a[90 /* Seven */] = 0x37,
-        _a[91 /* Eight */] = 0x38,
-        _a[92 /* Nine */] = 0x39,
+        _a[83 /* GZero */] = 0xfa,
+        _a[84 /* GOne */] = 0xf1,
+        _a[85 /* GTwo */] = 0xf2,
+        _a[86 /* GThree */] = 0xf3,
+        _a[87 /* GFour */] = 0xf4,
+        _a[88 /* GFive */] = 0xf5,
+        _a[89 /* GSix */] = 0xf6,
+        _a[90 /* GSeven */] = 0xf7,
+        _a[91 /* GEight */] = 0xf8,
+        _a[92 /* GNine */] = 0xf9,
         _a
     );
     var _a;
@@ -265,16 +265,16 @@ var PunjabiMappings;
         _a[80 /* Danda3 */] = 0xbb,
         _a[81 /* DoubleDanda */] = 0x5d,
         _a[82 /* DoubleDanda2 */] = 0xab,
-        _a[83 /* Zero */] = 0x30,
-        _a[84 /* One */] = 0x31,
-        _a[85 /* Two */] = 0x32,
-        _a[86 /* Three */] = 0x33,
-        _a[87 /* Four */] = 0x34,
-        _a[88 /* Five */] = 0x35,
-        _a[89 /* Six */] = 0x36,
-        _a[90 /* Seven */] = 0x37,
-        _a[91 /* Eight */] = 0x38,
-        _a[92 /* Nine */] = 0x39,
+        _a[83 /* GZero */] = 0xfa,
+        _a[84 /* GOne */] = 0xf1,
+        _a[85 /* GTwo */] = 0xf2,
+        _a[86 /* GThree */] = 0xf3,
+        _a[87 /* GFour */] = 0xf4,
+        _a[88 /* GFive */] = 0xf5,
+        _a[89 /* GSix */] = 0xf6,
+        _a[90 /* GSeven */] = 0xf7,
+        _a[91 /* GEight */] = 0xf8,
+        _a[92 /* GNine */] = 0xf9,
         _a
     );
     var _a;
@@ -353,16 +353,16 @@ var PunjabiMappings;
         _a[77 /* Udaat */] = 0x0A51,
         _a[78 /* Danda */] = 0x0964,
         _a[81 /* DoubleDanda */] = 0x0965,
-        _a[83 /* Zero */] = 0x0A66,
-        _a[84 /* One */] = 0x0A67,
-        _a[85 /* Two */] = 0x0A68,
-        _a[86 /* Three */] = 0x0A69,
-        _a[87 /* Four */] = 0x0A6A,
-        _a[88 /* Five */] = 0x0A6B,
-        _a[89 /* Six */] = 0x0A6C,
-        _a[90 /* Seven */] = 0x0A6D,
-        _a[91 /* Eight */] = 0x0A6E,
-        _a[92 /* Nine */] = 0x0A6F,
+        _a[83 /* GZero */] = 0x0A66,
+        _a[84 /* GOne */] = 0x0A67,
+        _a[85 /* GTwo */] = 0x0A68,
+        _a[86 /* GThree */] = 0x0A69,
+        _a[87 /* GFour */] = 0x0A6A,
+        _a[88 /* GFive */] = 0x0A6B,
+        _a[89 /* GSix */] = 0x0A6C,
+        _a[90 /* GSeven */] = 0x0A6D,
+        _a[91 /* GEight */] = 0x0A6E,
+        _a[92 /* GNine */] = 0x0A6F,
         _a
     );
     var _a;
@@ -396,7 +396,7 @@ var PunjabiMappings;
         [[5 /* Uਊ */], [3 /* Uੳ */, 71 /* Dulainkar */]],
         [[14 /* Eਏ */], [11 /* Eੲ */, 72 /* Lavan */]],
         [[9 /* Aਐ */], [7 /* Aਅ */, 73 /* Dulavan */]],
-        [[10 /* Oਔ */], [7 /* Aਅ */, 70 /* Aunkar */]],
+        [[10 /* Oਔ */], [7 /* Aਅ */, 75 /* Kanaura */]],
         [[52 /* LPairiBindiਲ਼ */], [44 /* Lਲ */, 53 /* PairiBindi */]],
         [[47 /* SPairiBindiਸ਼ */], [15 /* Sਸ */, 53 /* PairiBindi */]],
         [[48 /* KPairiBindiਖ਼ */], [18 /* Kਖ */, 53 /* PairiBindi */]],
@@ -412,6 +412,7 @@ var PunjabiMappings;
         [[0 /* ੴ */], [1 /* AO1 */, 2 /* AO2 */], [1 /* AO1 */]],
         [[53 /* PairiBindi */], [54 /* PairiBindi2 */]],
         [[58 /* Tippi */], [59 /* Tippi2 */]],
+        [[93 /* Nu */], [36 /* Nਨ */, 58 /* Tippi */, 71 /* Dulainkar */], [36 /* Nਨ */, 71 /* Dulainkar */, 58 /* Tippi */]]
     ];
     function makeArray() {
         var configs = [];

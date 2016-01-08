@@ -6,7 +6,7 @@ function convertText() {
     fromText.style.fontFamily = fromFont.value;
     toText.style.fontFamily = toFont.value;
     var mapperConfig = Convertor.getMapper(punjabiMappingConfig[toFont.value], punjabiMappingConfig[fromFont.value], PunjabiMappings.compositions);
-    toText.value = Convertor.convertString(mapperConfig, fromText.value);
+    toText.value = Convertor.convertStringUsingMapper(mapperConfig, fromText.value);
     fromUnicodeText.value = getUnicodes(fromText.value);
     toUnicodeText.value = getUnicodes(toText.value);
 }

@@ -27,7 +27,7 @@ namespace PunjabiMappings {
         [[Char.Uਊ], [Char.Uੳ, Char.Dulainkar]],
         [[Char.Eਏ], [Char.Eੲ, Char.Lavan]],
         [[Char.Aਐ], [Char.Aਅ, Char.Dulavan]],
-        [[Char.Oਔ], [Char.Aਅ, Char.Aunkar]],
+        [[Char.Oਔ], [Char.Aਅ, Char.Kanaura]],
         [[Char.LPairiBindiਲ਼], [Char.Lਲ, Char.PairiBindi]],
         [[Char.SPairiBindiਸ਼], [Char.Sਸ, Char.PairiBindi]],
         [[Char.KPairiBindiਖ਼], [Char.Kਖ, Char.PairiBindi]],
@@ -43,6 +43,7 @@ namespace PunjabiMappings {
         [[Char.ੴ], [Char.AO1, Char.AO2], [Char.AO1]],
         [[Char.PairiBindi], [Char.PairiBindi2]],
         [[Char.Tippi], [Char.Tippi2]],
+        [[Char.Nu], [Char.Nਨ, Char.Tippi, Char.Dulainkar],[Char.Nਨ, Char.Dulainkar, Char.Tippi] ]
     ];
 
    

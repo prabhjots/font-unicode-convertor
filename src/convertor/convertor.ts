@@ -1,5 +1,5 @@
 namespace Convertor {
-    export function convertString(mapperConfig: IMapperConfig, stringToConvert: string): string {
+    export function convertStringUsingMapper(mapperConfig: IMapperConfig, stringToConvert: string): string {
         let {mapper, maxWidth, moveRightChars, moveLeftChars } = mapperConfig;
 
         let output: string[] = [];

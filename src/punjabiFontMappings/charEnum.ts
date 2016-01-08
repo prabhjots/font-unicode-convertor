@@ -82,16 +82,18 @@ namespace PunjabiMappings {
         Danda2,
         Danda3,
         DoubleDanda,    // ॥ double danda    
-        DoubleDanda2,
-        Zero,           // ੦ GURMUKHI DIGIT ZERO
-        One,            // ੧ GURMUKHI DIGIT ONE
-        Two,            // ੨ GURMUKHI DIGIT TWO
-        Three,          // ੩ GURMUKHI DIGIT THREE
-        Four,           // ੪ GURMUKHI DIGIT FOUR
-        Five,           // ੫ GURMUKHI DIGIT FIVE
-        Six,            // ੬ GURMUKHI DIGIT SIX
-        Seven,          // ੭ GURMUKHI DIGIT SEVEN
-        Eight,          // ੮ GURMUKHI DIGIT EIGHT
-        Nine,           // ੯ GURMUKHI DIGIT NINE        
+        DoubleDanda2,       
+        GZero,           // ੦ GURMUKHI DIGIT ZERO
+        GOne,            // ੧ GURMUKHI DIGIT ONE
+        GTwo,            // ੨ GURMUKHI DIGIT TWO
+        GThree,          // ੩ GURMUKHI DIGIT THREE
+        GFour,           // ੪ GURMUKHI DIGIT FOUR
+        GFive,           // ੫ GURMUKHI DIGIT FIVE
+        GSix,            // ੬ GURMUKHI DIGIT SIX
+        GSeven,          // ੭ GURMUKHI DIGIT SEVEN
+        GEight,          // ੮ GURMUKHI DIGIT EIGHT
+        GNine,           // ੯ GURMUKHI DIGIT NINE   
+        Nu
+             
     }
 }
