@@ -1,4 +1,4 @@
-namespace PunjabiMappings {    
+namespace PunjabiFontConvertor {    
     export let drChatrikMappings = {
         [Char.AO1]: 0xc3,
         [Char.AO2]: 0xc4,

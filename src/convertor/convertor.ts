@@ -1,10 +1,11 @@
 namespace Convertor {
     export function convertStringUsingMapper(mapperConfig: IMapperConfig, stringToConvert: string): string {
-        let {mapper, maxWidth, moveRightChars, moveLeftChars } = mapperConfig;
+        let {mapper, maxWidth, moveRightChars, moveLeftChars, moveAcrossCharacters } = mapperConfig;
 
         let output: string[] = [];
 
         let charToAddOnRight = "";
+        let charToMoveRightIndex = 0;
 
         for (let i = 0; i < stringToConvert.length; i++) {
             let j = maxWidth + 1;
@@ -29,13 +30,20 @@ namespace Convertor {
             }
 
             if (charToAddOnRight) {
-                output.push(charToAdd, charToAddOnRight);
-                charToAddOnRight = null;
+                if(charToMoveRightIndex < 1){
+                    charToMoveRightIndex = 1;
+                    output.push(charToAdd); 
+                } else if(moveAcrossCharacters.indexOf(charToAdd) > -1){
+                    output.push(charToAdd); 
+                } else {
+                    output.push(charToAddOnRight, charToAdd); 
+                    charToAddOnRight = null;
+                    charToMoveRightIndex = 0;
+                }
             } else if (moveRightChars.indexOf(charToAdd) > -1) {
                 charToAddOnRight = charToAdd;
             } else if (moveLeftChars.indexOf(charToAdd) > -1 && output.length) {
-                let lastChar = output.pop();
-                output.push(charToAdd, lastChar);
+                insertCharOnLeft(output, moveAcrossCharacters, charToAdd, []);
             } else {
                 output.push(charToAdd);
             }
@@ -47,8 +55,23 @@ namespace Convertor {
         return output.join("");
 
     }
+    
+    function insertCharOnLeft(chars : string[], moveLeftAcrossChars: string[], characterToAdd:string, onRightChars: string[]){
+        let lastChar = chars.pop();
+        
+        if(lastChar) {            
+            if(moveLeftAcrossChars.indexOf(lastChar) > -1){
+                onRightChars.unshift(lastChar);
+                insertCharOnLeft(chars, moveLeftAcrossChars, characterToAdd, onRightChars);
+            } else {
+                chars.push(characterToAdd, lastChar, ...onRightChars);                
+            }
+        } else {
+          chars.push(characterToAdd, ...onRightChars);            
+        }
+    }
 
-    export function getMapper(to: IMapping, from: IMapping, compositions: number[][][]): IMapperConfig {
+    export function getMapper(to: IMapping, from: IMapping, compositions: number[][][], moveAcrossCharSet : number[][][]): IMapperConfig {
         let mappingLength = Math.max(to.characterCodes.length, from.characterCodes.length);
 
         let mapper: any = {};
@@ -82,12 +105,16 @@ namespace Convertor {
 
         let moveLeftCharIndexes = from.moveRightCharacters.filter(a => to.moveRightCharacters.indexOf(a) === -1);
         let moveRightCharIndexes = to.moveRightCharacters.filter(a => from.moveRightCharacters.indexOf(a) === -1);
-
+        
+        let moveAcrossCharacters =  moveAcrossCharSet
+                                        .map(a =>  getCompositionCharacters(a, to.characterCodes ))
+                                        .reduce((a, b)=> a.concat(b), []);
         return {
             mapper,
             maxWidth,
             moveLeftChars: moveLeftCharIndexes.map(c => getCharFromUnicode(to.characterCodes[c])),
-            moveRightChars: moveRightCharIndexes.map(c => getCharFromUnicode(to.characterCodes[c]))
+           moveAcrossCharacters,
+            moveRightChars: moveRightCharIndexes.map(c => getCharFromUnicode(to.characterCodes[c])),
         };
     }
 
@@ -124,6 +151,7 @@ namespace Convertor {
     export interface IMapping {
         characterCodes: number[];
         moveRightCharacters: number[];
+        moveRightAcrossCharacterSet:number[][];
     }
 
     export interface IMapperConfig {
@@ -131,5 +159,6 @@ namespace Convertor {
         maxWidth: number
         moveLeftChars: string[];
         moveRightChars: string[];
+        moveAcrossCharacters: string[];
     }
 }

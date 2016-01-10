@@ -1,14 +1,13 @@
-var punjabiMappingConfig = PunjabiMappings.fontConvertorConfigs;
 function changeMapperConverText() {
     convertText();
 }
 function convertText() {
     fromText.style.fontFamily = fromFont.value;
     toText.style.fontFamily = toFont.value;
-    var mapperConfig = Convertor.getMapper(punjabiMappingConfig[toFont.value], punjabiMappingConfig[fromFont.value], PunjabiMappings.compositions);
-    toText.value = Convertor.convertStringUsingMapper(mapperConfig, fromText.value);
+    toText.value = PunjabiFontConvertor.convert(fromText.value, toFont.value, fromFont.value);
     fromUnicodeText.value = getUnicodes(fromText.value);
     toUnicodeText.value = getUnicodes(toText.value);
+    onScroll();
 }
 function convertUnicodesToChar() {
     fromText.value = getChars(fromUnicodeText.value);
@@ -18,9 +17,14 @@ function getChars(unicodesString) {
     var unicodes = (unicodesString || "").split(" ");
     var chars = [];
     for (var i = 0; i < unicodes.length; i++) {
-        chars.push(String.fromCharCode(parseInt(unicodes[i], 16)));
+        var charCode = parseInt(unicodes[i], 16);
+        
+        if(charCode != 0x20 && charCode != 0xfffd){
+          chars.push(String.fromCharCode(charCode));
+        }
+        
     }
-    return chars.join("");
+    return chars.join(" ");
 }
 function getUnicodes(stringToConvert) {
     stringToConvert = stringToConvert || "";
@@ -29,4 +33,9 @@ function getUnicodes(stringToConvert) {
         unicodes.push(stringToConvert.charCodeAt(x).toString(16));
     }
     return unicodes.join(" ");
+}
+
+
+function onScroll(){
+    toText.scrollTop =  ( fromText.scrollTop *  toText.scrollHeight)/ fromText.scrollHeight;
 }

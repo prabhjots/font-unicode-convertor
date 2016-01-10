@@ -1,4 +1,4 @@
-namespace PunjabiMappings {
+namespace PunjabiFontConvertor {
     export const enum Char {
         ੴ,            // ੴ GURMUKHI EK ONKAR • God is One
         AO1,

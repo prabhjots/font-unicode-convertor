@@ -1,23 +1,16 @@
-///<reference path="./anmolFontMappings" />
-///<reference path="./unicodeFontMappings" />
-///<reference path="./drChatrikFontMappings" />
-namespace PunjabiMappings {
-   export let fontConvertorConfigs = {
-        "Unicode": {
-            moveRightCharacters: [Char.Sihari],
-            characterCodes: makeArray(PunjabiMappings.unicodeMapping)
-        },
-        "AnmolLipi": {
-            moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiMappings.anmolMapping)
-        },
-        "DrChatrikWeb": {
-            moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiMappings.drChatrikMappings)
-        }
-    };
+///<reference path="./charEnum" />
+///<reference path="./mappings/anmolFontMappings" />
+///<reference path="./mappings/unicodeFontMappings" />
+///<reference path="./mappings/drChatrikFontMappings" />
+namespace PunjabiFontConvertor {
+        
+    let moveAcrossChaSet = [
+        [[Char.PairiHaha], [Char.Virama, Char.Hਹ]],
+        [[Char.PairiRara], [Char.Virama, Char.Rਰ]],
+    ];
 
-    export let compositions = [
+    let compositions = [
+        ...moveAcrossChaSet,
         [[Char.AdakBindi], [Char.Addak, Char.Bindi]],
         [[Char.Aਆ], [Char.Aਅ, Char.Kana]],
         [[Char.Aਆ, Char.Bindi], [Char.Aਅ, Char.KanaBindi]],
@@ -37,16 +30,35 @@ namespace PunjabiMappings {
         [[Char.DoubleDanda], [Char.Danda, Char.Danda], [Char.DoubleDanda2]],
         [[Char.Danda], [Char.Danda2], [Char.Danda3]],
         [[Char.KanaBindi], [Char.Kana, Char.Bindi]],
-        [[Char.PairiHaha], [Char.Virama, Char.Hਹ]],
-        [[Char.PairiRara], [Char.Virama, Char.Rਰ]],
         [[Char.Addak2], [Char.Addak]],
         [[Char.ੴ], [Char.AO1, Char.AO2], [Char.AO1]],
         [[Char.PairiBindi], [Char.PairiBindi2]],
         [[Char.Tippi], [Char.Tippi2]],
-        [[Char.Nu], [Char.Nਨ, Char.Tippi, Char.Dulainkar],[Char.Nਨ, Char.Dulainkar, Char.Tippi] ]
+        [[Char.Nu], [Char.Nਨ, Char.Tippi, Char.Dulainkar], [Char.Nਨ, Char.Dulainkar, Char.Tippi]]
     ];
 
-   
+    let fontConvertorConfigs = {
+        "Unicode": {
+            moveRightCharacters: [Char.Sihari],
+            characterCodes: makeArray(PunjabiFontConvertor.unicodeMapping)
+        },
+        "AnmolLipi": {
+            moveRightCharacters: [],
+            characterCodes: makeArray(PunjabiFontConvertor.anmolMapping)
+        },
+        "DrChatrikWeb": {
+            moveRightCharacters: [],
+            characterCodes: makeArray(PunjabiFontConvertor.drChatrikMappings)
+        }
+    };
+
+    export function convert(str: string, toFontName: string, fromFontName: string) {
+        let to = fontConvertorConfigs[toFontName];
+        let from = fontConvertorConfigs[fromFontName];
+        var mapperConfig = Convertor.getMapper(to, from, compositions, moveAcrossChaSet);
+
+        return Convertor.convertStringUsingMapper(mapperConfig, str);
+    }
     
     function makeArray(...configs: any[]) {
         var c: number[] = [];
@@ -59,5 +71,5 @@ namespace PunjabiMappings {
             }
         }
         return c;
-    }    
+    }
 }

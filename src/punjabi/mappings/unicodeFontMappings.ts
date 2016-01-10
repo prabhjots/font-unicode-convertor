@@ -1,4 +1,4 @@
-namespace PunjabiMappings {
+namespace PunjabiFontConvertor {
     export let unicodeMapping = {
         [Char.ੴ]: 0x0A74,
         [Char.Uੳ]: 0x0A73,

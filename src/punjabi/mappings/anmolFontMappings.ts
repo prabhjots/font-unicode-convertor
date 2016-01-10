@@ -1,4 +1,4 @@
-namespace PunjabiMappings {
+namespace PunjabiFontConvertor {
     export let anmolMapping = {
         [Char.AO1]: 0x3c,
         [Char.AO2]: 0x3e,
