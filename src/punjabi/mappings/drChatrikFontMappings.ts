@@ -1,7 +1,7 @@
 namespace PunjabiFontConvertor {    
     export let drChatrikMappings = {
-        [Char.AO1]: 0xc3,
-        [Char.AO2]: 0xc4,
+        [Char.IkOnkarVersion1a]: 0xc3,
+        [Char.IkOnkarVersion1b]: 0xc4,
         [Char.Uੳ]: 0x41,
         [Char.Aਅ]: 0x61,
         [Char.Eੲ]: 0x65,
@@ -52,8 +52,8 @@ namespace PunjabiFontConvertor {
         [Char.Tippi]: 0x4d,
         [Char.Tippi2]: 0x53,
         [Char.Bindi]: 0x4e,
-        [Char.Addak]: 0x57,
-        [Char.Addak2]: 0x77,
+        [Char.AddakRight]: 0x57,
+        [Char.AddakRight2]: 0x77,
         [Char.AdakBindi]: 0x0A01,
         [Char.Kana]: 0x66,
         [Char.KanaBindi]: 0x46,

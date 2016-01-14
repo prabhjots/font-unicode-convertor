@@ -1,8 +1,12 @@
 namespace PunjabiFontConvertor {
     export const enum Char {
-        ੴ,            // ੴ GURMUKHI EK ONKAR • God is One
-        AO1,
-        AO2,
+        IkOnkarVersion1,   // ੴ GURMUKHI EK ONKAR • God is One                
+        IkOnkarVersion1a,
+        IkOnkarVersion1b,
+        IkOnkarVersion2,
+        IkOnkarVersion2a,
+        IkOnkarVersion2b,
+        IkOnkarVersion3,
         Uੳ,             // ੳ GURMUKHI URA • base for vowels
         Uਉ,             // ਉ GURMUKHI LETTER U
         Uਊ,             // ਊ GURMUKHI LETTER UU	
@@ -56,14 +60,25 @@ namespace PunjabiFontConvertor {
         PairiBindi,     // $਼ GURMUKHI SIGN NUKTA = pairin bindi 
         PairiBindi2,
         Dot,
-        PairiHaha,      // pair wich haha'   
+        PairiHaha,      // pair wich haha'
+        PairiHahaDulainkar,   
         PairiRara,      // pair wich rara
+        PairiRaraPairiBindi,
+        PairiChacha,
+        PairiTenka,
+        PairiVava,
+        PairiYaiya,
+        PairiTata,
+        PairiNana,
+        HalfYaiya,
         Tippi,          // $ੰ GURMUKHI TIPPI • nasalization
         Tippi2,
         Bindi,          // $ਂ GURMUKHI SIGN BINDI
+        Bindi2,
         Visagra,        // $ਃ GURMUKHI SIGN VISARGA
-        Addak,          // $ੱ GURMUKHI ADDAK • doubles following consonant
-        Addak2,
+        AddakAbove,
+        AddakRight,          // $ੱ GURMUKHI ADDAK • doubles following consonant
+        AddakRight2,
         AdakBindi,      //$ਁ GURMUKHI SIGN ADAK BINDI
         Yakash,         // $ੵ GURMUKHI SIGN YAKASH  
         Kana,           // $ਾ GURMUKHI VOWEL SIGN AA = kanna
@@ -71,7 +86,9 @@ namespace PunjabiFontConvertor {
         Sihari,         // $ਿ GURMUKHI VOWEL SIGN I= sihari
         Bihari,         // $ੀ GURMUKHI VOWEL SIGN II= bihari
         Aunkar,         // $ੁ GURMUKHI VOWEL SIGN U = aunkar
+        Aunkar2,
         Dulainkar,      // $ੂ GURMUKHI VOWEL SIGN UU= dulainkar
+        Dulainkar2,
         Lavan,          // $ੇ GURMUKHI VOWEL SIGN EE= lanvan
         Dulavan,        // $ੈ GURMUKHI VOWEL SIGN AI= dulanvan
         Hora,           // $ੋ GURMUKHI VOWEL SIGN OO= hora
@@ -93,7 +110,20 @@ namespace PunjabiFontConvertor {
         GSeven,          // ੭ GURMUKHI DIGIT SEVEN
         GEight,          // ੮ GURMUKHI DIGIT EIGHT
         GNine,           // ੯ GURMUKHI DIGIT NINE   
-        Nu
+        Nu,
+        Divide,
+        Multiply,
+        Khanda,   
+        FlowerDesign1,
+        FlowerDesign2,
+        FlowerDesign3,
+        FlowerDesign4,
+        FlowerDesign5,
+        Diamond,
+        KThind,
+        Colon,
+        Unknown1,
+        TopRightExtention,
              
     }
 }

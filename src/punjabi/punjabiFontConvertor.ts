@@ -2,16 +2,32 @@
 ///<reference path="./mappings/anmolFontMappings" />
 ///<reference path="./mappings/unicodeFontMappings" />
 ///<reference path="./mappings/drChatrikFontMappings" />
-namespace PunjabiFontConvertor {
-        
+namespace PunjabiFontConvertor {        
     let moveAcrossChaSet = [
-        [[Char.PairiHaha], [Char.Virama, Char.Hਹ]],
+        [[Char.PairiHaha], [Char.Virama, Char.Hਹ]],         
         [[Char.PairiRara], [Char.Virama, Char.Rਰ]],
+        [[Char.PairiChacha], [Char.Virama, Char.Cਚ]],
+        [[Char.PairiTenka], [Char.Virama, Char.Tਟ]],
+        [[Char.PairiVava], [Char.Virama, Char.Vਵ]],
+        [[Char.PairiYaiya],[Char.Virama, Char.Yਯ,Char.Virama, Char.Yਯ]], // not sure about this.
+        [[Char.PairiTata], [Char.Virama, Char.Tਤ]],
+        [[Char.PairiNana], [Char.Virama, Char.Nਨ]],
+        [[Char.PairiRaraPairiBindi],[Char.PairiRara, Char.PairiBindi], 
+                [Char.PairiRara, Char.PairiBindi2], [Char.PairiBindi, Char.Virama, Char.Rਰ] , [Char.PairiBindi2, Char.Virama, Char.Rਰ]],
     ];
+    
+    let ikOnkarVersion1 = [[Char.IkOnkarVersion1], [Char.IkOnkarVersion1a, Char.IkOnkarVersion1b], [Char.IkOnkarVersion1a]];
+    let ikOnkarVersion2 = [[Char.IkOnkarVersion2], [Char.IkOnkarVersion2a, Char.IkOnkarVersion2b], [Char.IkOnkarVersion2a]];
+    let ikOnkarVersion3 = [[Char.IkOnkarVersion3]];    
 
-    let compositions = [
+    let compositions: number[][][] = [
         ...moveAcrossChaSet,
-        [[Char.AdakBindi], [Char.Addak, Char.Bindi]],
+        ikOnkarVersion1,
+        ikOnkarVersion2,
+        ikOnkarVersion3,
+        [...ikOnkarVersion1, ...ikOnkarVersion2, ...ikOnkarVersion3],
+        [[Char.HalfYaiya],[Char.Virama, Char.Yਯ]],
+        [[Char.AdakBindi], [Char.AddakRight, Char.Bindi]],
         [[Char.Aਆ], [Char.Aਅ, Char.Kana]],
         [[Char.Aਆ, Char.Bindi], [Char.Aਅ, Char.KanaBindi]],
         [[Char.Eਇ], [Char.Sihari, Char.Eੲ]],
@@ -28,17 +44,26 @@ namespace PunjabiFontConvertor {
         [[Char.JPairiBindiਜ਼], [Char.Jਜ, Char.PairiBindi]],
         [[Char.FPairiBindiਫ਼], [Char.Fਫ, Char.PairiBindi]],
         [[Char.DoubleDanda], [Char.Danda, Char.Danda], [Char.DoubleDanda2]],
+        [[Char.Dulainkar], [Char.Dulainkar2]],
+        [[Char.Aunkar], [Char.Aunkar2]],
         [[Char.Danda], [Char.Danda2], [Char.Danda3]],
         [[Char.KanaBindi], [Char.Kana, Char.Bindi]],
-        [[Char.Addak2], [Char.Addak]],
-        [[Char.ੴ], [Char.AO1, Char.AO2], [Char.AO1]],
+        [[Char.AddakRight], [Char.AddakRight2]],
+        [[Char.AddakAbove], [Char.AddakRight], [Char.AddakRight2]],
+        [[Char.IkOnkarVersion1], [Char.IkOnkarVersion1a, Char.IkOnkarVersion1b], [Char.IkOnkarVersion1a]],
         [[Char.PairiBindi], [Char.PairiBindi2]],
         [[Char.Tippi], [Char.Tippi2]],
-        [[Char.Nu], [Char.Nਨ, Char.Tippi, Char.Dulainkar], [Char.Nਨ, Char.Dulainkar, Char.Tippi]]
+        [[Char.Nu], [Char.Nਨ, Char.Dulainkar, Char.Tippi], [Char.Nਨ, Char.Tippi, Char.Dulainkar]],
+        [[Char.FlowerDesign1],[Char.FlowerDesign2],[Char.FlowerDesign3],[Char.FlowerDesign4],[Char.FlowerDesign5]],
+        [[Char.PairiHahaDulainkar], [ Char.Virama, Char.Hਹ,Char.Dulainkar]],
     ];
 
     let fontConvertorConfigs = {
         "Unicode": {
+            moveRightCharacters: [Char.Sihari],
+            characterCodes: makeArray(PunjabiFontConvertor.unicodeMapping)
+        },
+        "AnmolUni": {
             moveRightCharacters: [Char.Sihari],
             characterCodes: makeArray(PunjabiFontConvertor.unicodeMapping)
         },

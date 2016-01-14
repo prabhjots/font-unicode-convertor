@@ -13,6 +13,7 @@
 
     <select id="fromFont" onchange="changeMapperConverText()">
         <option value="AnmolLipi">Anmol Lipi</option>
+        <option value="AnmolUni">Anmol Uni</option>
         <option value="Unicode">Unicode</option>
         <option value="DrChatrikWeb">Dr Chatrik</option>
         <!--<option value="Satluj">Satluj</option>
@@ -27,6 +28,7 @@
     <label>to</label>
     <select id="toFont" onchange="changeMapperConverText()">
        <option value="AnmolLipi">Anmol Lipi</option>
+       <option value="AnmolUni">Anmol Uni</option>
        <option value="Unicode" selected="selected">Unicode</option>
        <option value="DrChatrikWeb">Dr Chatrik</option>
         <!-- <option value="Satluj">Satluj</option>
@@ -42,9 +44,10 @@
     
     <div style="margin-top:10px;">
         <div style="width:48%; float:left;" >
-            <textarea style="font-family: 'AnmolLipi'; width: 100%; font-size:16px; height: 450px;" id="fromText" rows="7" cols="200" 
+            <textarea style="font-family: 'AnmolLipi'; width: 100%; font-size:24px; height: 450px;" id="fromText" rows="7" cols="200" 
                       onkeyup="convertText()" onscroll="onScroll(event)" 
-                      autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ></textarea>
+                      autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" >! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; 
+                      </textarea>
             <textarea id="fromUnicodeText" rows="3" cols="70" style="width: 100%;" onkeyup="convertUnicodesToChar()"></textarea>
         </div>
         <div style="width:48%; float:left; margin-left:10px" >
