@@ -111,5 +111,7 @@ namespace PunjabiFontConvertor {
         [Char.Colon]: 0xda,                 
         [Char.SingleQuoteCurlyLeft]: 0x2018,
         [Char.SingleQuoteCurlyRight]: 0x2019, 
+        [Char.DoubleQuoteCurlyLeft]: 0x201c,
+        [Char.DoubleQuoteCurlyRight]: 0x201d, 
     }; 
 }

@@ -7,6 +7,8 @@ namespace PunjabiFontConvertor {
         IkOnkarVersion2a,
         IkOnkarVersion2b,
         IkOnkarVersion3,
+        Onkar1,
+        Onkar2,
         Uੳ,             // ੳ GURMUKHI URA • base for vowels
         Uਉ,             // ਉ GURMUKHI LETTER U
         Uਊ,             // ਊ GURMUKHI LETTER UU	
@@ -87,6 +89,7 @@ namespace PunjabiFontConvertor {
         KanaBindi,      // kana ate bindi
         Sihari,         // $ਿ GURMUKHI VOWEL SIGN I= sihari
         Bihari,         // $ੀ GURMUKHI VOWEL SIGN II= bihari
+        BihariBindi,
         Aunkar,         // $ੁ GURMUKHI VOWEL SIGN U = aunkar
         Aunkar2,
         Dulainkar,      // $ੂ GURMUKHI VOWEL SIGN UU= dulainkar
@@ -95,6 +98,7 @@ namespace PunjabiFontConvertor {
         Dulavan,        // $ੈ GURMUKHI VOWEL SIGN AI= dulanvan
         Hora,           // $ੋ GURMUKHI VOWEL SIGN OO= hora
         Kanaura,        // $ੌ GURMUKHI VOWEL SIGN AU= kanaura
+        Kanaura2,
         Virama,         // $੍ GURMUKHI SIGN VIRAMA
         Udaat,          // $ੑ GURMUKHI SIGN UDAAT // todo: confirm
         Danda,          // । danda
@@ -118,6 +122,7 @@ namespace PunjabiFontConvertor {
         Divide,
         Multiply,
         Khanda,   
+        Khanda2,  
         FlowerDesign1,
         FlowerDesign2,
         FlowerDesign3,
@@ -129,7 +134,9 @@ namespace PunjabiFontConvertor {
         Unknown1,
         TopRightExtention,
         SingleQuoteCurlyLeft,
+        SingleQuoteCurlyLeft2,
         SingleQuoteCurlyRight,
+        SingleQuoteCurlyRight2,
         DoubleQuoteCurlyLeft,
         DoubleQuoteCurlyRight,
         SquareBracketLeft,
