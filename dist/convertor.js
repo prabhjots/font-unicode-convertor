@@ -109,7 +109,6 @@ var Convertor;
     Convertor.getMapper = getMapper;
     function getCompositionCharacters(compositionCharArrays, codes) {
         var characters = [];
-        var toCharCodes = null;
         for (var _i = 0; _i < compositionCharArrays.length; _i++) {
             var compositionChar = compositionCharArrays[_i];
             var isValid = true;
@@ -536,8 +535,8 @@ var PunjabiFontConvertor;
         _a[59 /* Dot */] = 0x50,
         _a[60 /* PairiHaha */] = 0x48,
         _a[61 /* PairiHahaDulainkar */] = 0xa7,
-        //[Char.PairiRara]: 0x52,
-        _a[63 /* PairiRaraPairiBindi */] = 0x71,
+        _a[62 /* PairiRara */] = 0x71,
+        //[Char.PairiRaraPairiBindi]: 0x71,
         _a[64 /* PairiChacha */] = 0xe7,
         _a[65 /* PairiTenka */] = 0x2020,
         _a[66 /* PairiVava */] = 0x58,

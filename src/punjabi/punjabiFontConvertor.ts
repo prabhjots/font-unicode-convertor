@@ -61,7 +61,7 @@ namespace PunjabiFontConvertor {
         
     ];
 
-    let fontConvertorConfigs = {
+    let fontConvertorConfigs : { [key: string]: Convertor.IMapping  }= {
         "Unicode": {
             moveRightCharacters: [Char.Sihari],
             characterCodes: makeArray(PunjabiFontConvertor.unicodeMapping)
