@@ -108,6 +108,8 @@ namespace PunjabiFontConvertor {
         //[Char.FlowerDesign4]: ,
         //[Char.FlowerDesign5]: ,
         [Char.KThind] : 0xff,
-        [Char.Colon]: 0xda,
+        [Char.Colon]: 0xda,                 
+        [Char.SingleQuoteCurlyLeft]: 0x2018,
+        [Char.SingleQuoteCurlyRight]: 0x2019, 
     }; 
 }

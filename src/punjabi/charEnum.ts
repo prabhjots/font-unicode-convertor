@@ -70,9 +70,11 @@ namespace PunjabiFontConvertor {
         PairiYaiya,
         PairiTata,
         PairiNana,
-        HalfYaiya,
+        HalfYaiyaRight,
+        HalfYaiyaLeft,
         Tippi,          // $ੰ GURMUKHI TIPPI • nasalization
         Tippi2,
+        TippiRight,
         Bindi,          // $ਂ GURMUKHI SIGN BINDI
         Bindi2,
         Visagra,        // $ਃ GURMUKHI SIGN VISARGA
@@ -96,6 +98,7 @@ namespace PunjabiFontConvertor {
         Virama,         // $੍ GURMUKHI SIGN VIRAMA
         Udaat,          // $ੑ GURMUKHI SIGN UDAAT // todo: confirm
         Danda,          // । danda
+        DandaLong, 
         Danda2,
         Danda3,
         DoubleDanda,    // ॥ double danda    
@@ -111,6 +114,7 @@ namespace PunjabiFontConvertor {
         GEight,          // ੮ GURMUKHI DIGIT EIGHT
         GNine,           // ੯ GURMUKHI DIGIT NINE   
         Nu,
+        NanaDulainkar,
         Divide,
         Multiply,
         Khanda,   
@@ -124,6 +128,14 @@ namespace PunjabiFontConvertor {
         Colon,
         Unknown1,
         TopRightExtention,
+        SingleQuoteCurlyLeft,
+        SingleQuoteCurlyRight,
+        DoubleQuoteCurlyLeft,
+        DoubleQuoteCurlyRight,
+        SquareBracketLeft,
+        SquareBracketLeft2,
+        SquareBracketRight,
+        SquareBracketRight2,
              
     }
 }

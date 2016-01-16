@@ -67,7 +67,7 @@ namespace PunjabiFontConvertor {
         [Char.PairiYaiya]: 0xcf,
         [Char.PairiTata]: 0x153,
         [Char.PairiNana]: 0x2dc,
-        [Char.HalfYaiya]: 0xce,
+        [Char.HalfYaiyaRight]: 0xce,
         [Char.Tippi]: 0x4d,
         //[Char.Bindi]: 0x00,
         //[Char.Visagra]: 0x00,
@@ -118,7 +118,9 @@ namespace PunjabiFontConvertor {
         [Char.KThind] : 0xff,
         [Char.Colon]: 0xda,
         [Char.Unknown1]: 0xb4,
-        [Char.TopRightExtention]: 0xd8,
+        [Char.TopRightExtention]: 0xd8,          
+        [Char.SingleQuoteCurlyLeft]: 0x2018,
+        [Char.SingleQuoteCurlyRight]: 0x2019, 
         
         
     }

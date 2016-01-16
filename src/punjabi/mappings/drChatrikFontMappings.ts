@@ -80,6 +80,8 @@ namespace PunjabiFontConvertor {
         [Char.GSix]: 0xf6,
         [Char.GSeven]: 0xf7,
         [Char.GEight]: 0xf8,
-        [Char.GNine]: 0xf9,
+        [Char.GNine]: 0xf9,                 
+        [Char.SingleQuoteCurlyLeft]: 0x2018,
+        [Char.SingleQuoteCurlyRight]: 0x2019, 
     }
 }

@@ -2,6 +2,7 @@
 ///<reference path="./mappings/anmolFontMappings" />
 ///<reference path="./mappings/unicodeFontMappings" />
 ///<reference path="./mappings/drChatrikFontMappings" />
+///<reference path="./mappings/awazeFont" />
 namespace PunjabiFontConvertor {        
     let moveAcrossChaSet = [
         [[Char.PairiHaha], [Char.Virama, Char.Hਹ]],         
@@ -26,7 +27,7 @@ namespace PunjabiFontConvertor {
         ikOnkarVersion2,
         ikOnkarVersion3,
         [...ikOnkarVersion1, ...ikOnkarVersion2, ...ikOnkarVersion3],
-        [[Char.HalfYaiya],[Char.Virama, Char.Yਯ]],
+        [[Char.HalfYaiyaRight],[Char.Virama, Char.Yਯ]],
         [[Char.AdakBindi], [Char.AddakRight, Char.Bindi]],
         [[Char.Aਆ], [Char.Aਅ, Char.Kana]],
         [[Char.Aਆ, Char.Bindi], [Char.Aਅ, Char.KanaBindi]],
@@ -46,16 +47,18 @@ namespace PunjabiFontConvertor {
         [[Char.DoubleDanda], [Char.Danda, Char.Danda], [Char.DoubleDanda2]],
         [[Char.Dulainkar], [Char.Dulainkar2]],
         [[Char.Aunkar], [Char.Aunkar2]],
-        [[Char.Danda], [Char.Danda2], [Char.Danda3]],
+        [[Char.Danda], [Char.Danda2], [Char.Danda3] , [Char.DandaLong]],
         [[Char.KanaBindi], [Char.Kana, Char.Bindi]],
         [[Char.AddakRight], [Char.AddakRight2]],
         [[Char.AddakAbove], [Char.AddakRight], [Char.AddakRight2]],
         [[Char.IkOnkarVersion1], [Char.IkOnkarVersion1a, Char.IkOnkarVersion1b], [Char.IkOnkarVersion1a]],
         [[Char.PairiBindi], [Char.PairiBindi2]],
-        [[Char.Tippi], [Char.Tippi2]],
-        [[Char.Nu], [Char.Nਨ, Char.Dulainkar, Char.Tippi], [Char.Nਨ, Char.Tippi, Char.Dulainkar]],
+        [[Char.Tippi], [Char.Tippi2] ,[Char.TippiRight]],
+        [[Char.Nu], [Char.Nਨ, Char.Dulainkar, Char.Tippi], [Char.Nਨ, Char.Tippi, Char.Dulainkar], [Char.NanaDulainkar, Char.Tippi]],
+        [[Char.NanaDulainkar], [Char.Nਨ, Char.Dulainkar]],
         [[Char.FlowerDesign1],[Char.FlowerDesign2],[Char.FlowerDesign3],[Char.FlowerDesign4],[Char.FlowerDesign5]],
         [[Char.PairiHahaDulainkar], [ Char.Virama, Char.Hਹ,Char.Dulainkar]],
+        
     ];
 
     let fontConvertorConfigs = {
@@ -74,6 +77,10 @@ namespace PunjabiFontConvertor {
         "DrChatrikWeb": {
             moveRightCharacters: [],
             characterCodes: makeArray(PunjabiFontConvertor.drChatrikMappings)
+        },
+        "Awaze":{
+            moveRightCharacters: [],
+            characterCodes: makeArray(PunjabiFontConvertor.awazeMappings)
         }
     };
 
