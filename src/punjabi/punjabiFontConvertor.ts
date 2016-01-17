@@ -22,7 +22,7 @@ namespace PunjabiFontConvertor {
     let ikOnkarVersion1 = [[Char.IkOnkarVersion1], [Char.IkOnkarVersion1a, Char.IkOnkarVersion1b], [Char.IkOnkarVersion1a], [Char.GOne, Char.Onkar1]];
     let ikOnkarVersion2 = [[Char.IkOnkarVersion2], [Char.IkOnkarVersion2a, Char.IkOnkarVersion2b], [Char.IkOnkarVersion2a], [Char.GOne, Char.Onkar2]];
     let ikOnkarVersion3 = [[Char.IkOnkarVersion3]];
-    
+
     let compositions: number[][][] = [
         ...moveAcrossChaSet,
         ikOnkarVersion1,
@@ -68,6 +68,7 @@ namespace PunjabiFontConvertor {
         [[Char.DoubleQuoteCurlyRight], [Char.DoubleQuoteCurlyRight2]],
         [[Char.Khanda], [Char.Khanda2]],
         [[Char.Colon], [Char.ColonFancy]],
+        [[Char.SemiColon], [Char.SemiColon2], [Char.SemiColon3]],
         [[Char.RaraAunkar], [Char.Rਰ, Char.Aunkar], [Char.Rਰ, Char.Aunkar2]]
 
     ];

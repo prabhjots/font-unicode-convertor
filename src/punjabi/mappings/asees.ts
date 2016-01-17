@@ -132,6 +132,7 @@ namespace PunjabiFontConvertor {
         [Char.KThind] : 0xff,
         [Char.Colon]: 0x4c,
         [Char.ColonFancy]: 0xda,
+        [Char.SemiColon]: 0x6c,
         //[Char.Unknown1]: 0xb4,
         [Char.TopRightExtention]: 0x46,  
         [Char.SingleQuoteCurlyLeft]: 0x2018,
