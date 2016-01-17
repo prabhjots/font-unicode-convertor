@@ -120,6 +120,16 @@ namespace PunjabiFontConvertor {
         GSeven,          // ੭ GURMUKHI DIGIT SEVEN
         GEight,          // ੮ GURMUKHI DIGIT EIGHT
         GNine,           // ੯ GURMUKHI DIGIT NINE   
+        EnglishZero,           // ੦ GURMUKHI DIGIT ZERO
+        EnglishOne,            // ੧ GURMUKHI DIGIT ONE
+        EnglishTwo,            // ੨ GURMUKHI DIGIT TWO
+        EnglishThree,          // ੩ GURMUKHI DIGIT THREE
+        EnglishFour,           // ੪ GURMUKHI DIGIT FOUR
+        EnglishFive,           // ੫ GURMUKHI DIGIT FIVE
+        EnglishSix,            // ੬ GURMUKHI DIGIT SIX
+        EnglishSeven,          // ੭ GURMUKHI DIGIT SEVEN
+        EnglishEight,          // ੮ GURMUKHI DIGIT EIGHT
+        EnglishNine, 
         Nu,
         NanaDulainkar,
         RaraAunkar,
