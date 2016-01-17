@@ -3,10 +3,12 @@
 ///<reference path="./mappings/unicodeFontMappings" />
 ///<reference path="./mappings/drChatrikFontMappings" />
 ///<reference path="./mappings/awazeFont" />
+///<reference path="./mappings/satluj" />
+///<reference path="./mappings/asees" />
 namespace PunjabiFontConvertor {
     let moveAcrossChaSet = [
         [[Char.PairiHaha], [Char.Virama, Char.Hਹ]],
-        [[Char.PairiRara], [Char.Virama, Char.Rਰ]],
+        [[Char.PairiRara], [Char.PairiRaraLeft], [Char.Virama, Char.Rਰ]],
         [[Char.PairiChacha], [Char.Virama, Char.Cਚ]],
         [[Char.PairiTenka], [Char.Virama, Char.Tਟ]],
         [[Char.PairiVava], [Char.Virama, Char.Vਵ]],
@@ -20,13 +22,13 @@ namespace PunjabiFontConvertor {
     let ikOnkarVersion1 = [[Char.IkOnkarVersion1], [Char.IkOnkarVersion1a, Char.IkOnkarVersion1b], [Char.IkOnkarVersion1a], [Char.GOne, Char.Onkar1]];
     let ikOnkarVersion2 = [[Char.IkOnkarVersion2], [Char.IkOnkarVersion2a, Char.IkOnkarVersion2b], [Char.IkOnkarVersion2a], [Char.GOne, Char.Onkar2]];
     let ikOnkarVersion3 = [[Char.IkOnkarVersion3]];
-
+    
     let compositions: number[][][] = [
         ...moveAcrossChaSet,
         ikOnkarVersion1,
         ikOnkarVersion2,
         ikOnkarVersion3,
-        [...ikOnkarVersion1, ...ikOnkarVersion2, ...ikOnkarVersion3],
+        [...ikOnkarVersion1, ...ikOnkarVersion2, ...ikOnkarVersion3, [Char.IkOnkarVersion4], [Char.IkOnkarVersion5]],
         [[Char.HalfYaiyaRight], [Char.Virama, Char.Yਯ]],
         [[Char.AdakBindi], [Char.AddakRight, Char.Bindi]],
         [[Char.Aਆ], [Char.Aਅ, Char.Kana]],
@@ -63,7 +65,10 @@ namespace PunjabiFontConvertor {
         [[Char.Kanaura], [Char.Kanaura2]],
         [[Char.SingleQuoteCurlyLeft], [Char.SingleQuoteCurlyLeft2]],
         [[Char.SingleQuoteCurlyRight], [Char.SingleQuoteCurlyRight2]],
+        [[Char.DoubleQuoteCurlyRight], [Char.DoubleQuoteCurlyRight2]],
         [[Char.Khanda], [Char.Khanda2]],
+        [[Char.Colon], [Char.ColonFancy]],
+        [[Char.RaraAunkar], [Char.Rਰ, Char.Aunkar], [Char.Rਰ, Char.Aunkar2]]
 
     ];
 
@@ -87,7 +92,15 @@ namespace PunjabiFontConvertor {
         "Awaze": {
             moveRightCharacters: [],
             characterCodes: makeArray(PunjabiFontConvertor.awazeMappings)
-        }
+        },
+        "Satluj": {
+            moveRightCharacters: [],
+            characterCodes: makeArray(PunjabiFontConvertor.satluj)
+        },
+        "Asees": {
+            moveRightCharacters: [],
+            characterCodes: makeArray(PunjabiFontConvertor.asees)
+        },
     };
 
     export function convert(str: string, toFontName: string, fromFontName: string) {

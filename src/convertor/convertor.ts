@@ -84,7 +84,7 @@ namespace Convertor {
                 mapper[getCharFromUnicode(fromChar)] = getCharFromUnicode(toChar);
             }
         }
-        let maxWidth = 0;
+        let maxWidth = 1;
 
         for (let compositionCharArrays of compositions) {
 

@@ -7,6 +7,8 @@ namespace PunjabiFontConvertor {
         IkOnkarVersion2a,
         IkOnkarVersion2b,
         IkOnkarVersion3,
+        IkOnkarVersion4,
+        IkOnkarVersion5,
         Onkar1,
         Onkar2,
         Uੳ,             // ੳ GURMUKHI URA • base for vowels
@@ -65,6 +67,7 @@ namespace PunjabiFontConvertor {
         PairiHaha,      // pair wich haha'
         PairiHahaDulainkar,   
         PairiRara,      // pair wich rara
+        PairiRaraLeft, 
         PairiRaraPairiBindi,
         PairiChacha,
         PairiTenka,
@@ -119,6 +122,7 @@ namespace PunjabiFontConvertor {
         GNine,           // ੯ GURMUKHI DIGIT NINE   
         Nu,
         NanaDulainkar,
+        RaraAunkar,
         Divide,
         Multiply,
         Khanda,   
@@ -131,6 +135,7 @@ namespace PunjabiFontConvertor {
         Diamond,
         KThind,
         Colon,
+        ColonFancy,
         Unknown1,
         TopRightExtention,
         SingleQuoteCurlyLeft,
@@ -139,6 +144,7 @@ namespace PunjabiFontConvertor {
         SingleQuoteCurlyRight2,
         DoubleQuoteCurlyLeft,
         DoubleQuoteCurlyRight,
+        DoubleQuoteCurlyRight2,
         SquareBracketLeft,
         SquareBracketLeft2,
         SquareBracketRight,
