@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Font Convertor Trial</title>
+    <style>
+        textarea {
+            padding-left: 2px;
+        }
+    </style>    
+</head>
+<body>
+    <h1>Punjabi Font Convertor</h1>
+    <select id="fromFont" onchange="convertText()">
+        <option value="AnmolLipi" selected="selected">Anmol Lipi</option>
+        <option value="AnmolUni">Anmol Uni</option>
+        <option value="Unicode">Unicode</option>
+        <option value="DrChatrikWeb">Dr Chatrik</option>
+         <option value="Awaze">Awaze</option>
+        <option value="Satluj">Satluj</option>
+        <option value="Asees">Asees</option>
+        <!--<option value="PunjabiFont">Punjabi Font</option>
+        <option value="Joy">Joy</option>
+        <option value="SGPHar">SGPHar</option>
+      
+        <option value="SriAngad">SriAngad</option>
+        <option value="GurLipi">GurLipi</option> -->
+    </select>
+    <label>to</label>
+    <select id="toFont" onchange="convertText()">
+       <option value="AnmolLipi" >Anmol Lipi</option>
+       <option value="AnmolUni">Anmol Uni</option>
+       <option value="Unicode" selected="selected">Unicode</option>
+       <option value="DrChatrikWeb">Dr Chatrik</option>
+       <option value="Awaze">Awaze</option>
+       <option value="Satluj">Satluj</option>
+       <option value="Asees">Asees</option>
+           <!-- <option value="Punjabi Font">Punjabi Font</option>
+        <option value="Joy">Joy</option>
+        <option value="SGPHar">SGPHar</option>
+ 
+        <option value="SriAngad">SriAngad</option>
+        <option value="GurLipi">GurLipi</option>-->
+    </select>
+    <button onclick="convertText()">Convert</button>
+    
+    <div style="margin-top:10px;">
+        <div style="width:48%; float:left;" >
+            <textarea style="font-family: 'AnmolLipi'; width: 100%; font-size:16px; height: 450px;" id="fromText" rows="7" cols="200" 
+                      onkeyup="convertText()" onscroll="onScroll(event)" 
+                      autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ></textarea>
+        </div>
+        <div style="width:48%; float:left; margin-left:10px" >
+            <textarea style="font-family: 'Unicode'; width: 100%; font-size:16px; height: 450px;" id="toText" rows="7" cols="200" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+        </div>   
+    </div>
+<script src="./dist/convertor.js"></script> 
+<script>
+function convertText() {
+    fromText.style.fontFamily = fromFont.value;
+    toText.style.fontFamily = toFont.value;
+    
+    toText.value = PunjabiFontConvertor.convert(fromText.value, toFont.value, fromFont.value);
+    onScroll();
+}
+function onScroll(){
+    toText.scrollTop =  ( fromText.scrollTop *  toText.scrollHeight)/ fromText.scrollHeight;
+}
+</script>
+</body>
+</html>
