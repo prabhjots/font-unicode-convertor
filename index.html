@@ -4,9 +4,20 @@
 <head>
     <title>Font Convertor Trial</title>
     <style>
-        textarea {
-            padding-left: 2px;
-        }
+textarea {
+    padding-left: 2px;
+    width: 100%; 
+    font-size:16px; 
+    height: 700px;
+}
+.row {
+  display: flex; /* equal height of the children */
+}
+
+.col {
+  flex: 1; /* additionally, equal width */
+  padding: 0.5em;  
+}
     </style>    
 </head>
 <body>
@@ -41,17 +52,15 @@
  
         <option value="SriAngad">SriAngad</option>
         <option value="GurLipi">GurLipi</option>-->
-    </select>
-    <button onclick="convertText()">Convert</button>
-    
-    <div style="margin-top:10px;">
-        <div style="width:48%; float:left;" >
-            <textarea style="font-family: 'AnmolLipi'; width: 100%; font-size:16px; height: 450px;" id="fromText" rows="7" cols="200" 
+    </select>    
+    <div class="row">
+        <div class="col">
+            <textarea style="font-family: 'AnmolLipi';" id="fromText" rows="7" cols="200" 
                       onkeyup="convertText()" onscroll="onScroll(event)" 
                       autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ></textarea>
         </div>
-        <div style="width:48%; float:left; margin-left:10px" >
-            <textarea style="font-family: 'Unicode'; width: 100%; font-size:16px; height: 450px;" id="toText" rows="7" cols="200" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+        <div class="col">
+            <textarea style="font-family: 'Unicode';" id="toText" rows="7" cols="200" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
         </div>   
     </div>
 <script src="./dist/convertor.js"></script> 
