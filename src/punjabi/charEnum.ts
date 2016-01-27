@@ -13,6 +13,7 @@ namespace PunjabiFontConvertor {
         Onkar2,
         Uੳ,             // ੳ GURMUKHI URA • base for vowels
         Uਉ,             // ਉ GURMUKHI LETTER U
+        UਉBindi, 
         Uਊ,             // ਊ GURMUKHI LETTER UU	
         Oਓ,             // ਓ GURMUKHI LETTER OO
         Aਅ,             // ਅ GURMUKHI LETTER A = aira
@@ -77,6 +78,7 @@ namespace PunjabiFontConvertor {
         PairiNana,
         HalfYaiyaRight,
         HalfYaiyaLeft,
+        TippiLeft,
         Tippi,          // $ੰ GURMUKHI TIPPI • nasalization
         Tippi2,
         TippiRight,
@@ -162,6 +164,14 @@ namespace PunjabiFontConvertor {
         SquareBracketLeft2,
         SquareBracketRight,
         SquareBracketRight2,
+        KakaPairiRara,
+        LalaDulainkar,
+        LalaAunkar,
+        LalaTippi,
+        TਥAunkar,
+        CਚAunkar, 
+        
+        
              
     }
 }

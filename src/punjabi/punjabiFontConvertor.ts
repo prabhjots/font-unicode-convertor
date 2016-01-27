@@ -56,7 +56,7 @@ namespace PunjabiFontConvertor {
         [[Char.AddakAbove], [Char.AddakRight], [Char.AddakRight2]],
         [[Char.IkOnkarVersion1], [Char.IkOnkarVersion1a, Char.IkOnkarVersion1b], [Char.IkOnkarVersion1a]],
         [[Char.PairiBindi], [Char.PairiBindi2]],
-        [[Char.Tippi], [Char.Tippi2], [Char.TippiRight]],
+        [[Char.Tippi], [Char.Tippi2], [Char.TippiRight], [Char.TippiLeft]],
         [[Char.Nu], [Char.Nਨ, Char.Dulainkar, Char.Tippi], [Char.Nਨ, Char.Tippi, Char.Dulainkar], [Char.NanaDulainkar, Char.Tippi]],
         [[Char.NanaDulainkar], [Char.Nਨ, Char.Dulainkar]],
         [[Char.FlowerDesign1], [Char.FlowerDesign2], [Char.FlowerDesign3], [Char.FlowerDesign4], [Char.FlowerDesign5]],
@@ -69,7 +69,14 @@ namespace PunjabiFontConvertor {
         [[Char.Khanda], [Char.Khanda2]],
         [[Char.Colon], [Char.ColonFancy]],
         [[Char.SemiColon], [Char.SemiColon2], [Char.SemiColon3]],
-        [[Char.RaraAunkar], [Char.Rਰ, Char.Aunkar], [Char.Rਰ, Char.Aunkar2]]
+        [[Char.RaraAunkar], [Char.Rਰ, Char.Aunkar], [Char.Rਰ, Char.Aunkar2]],
+        [[Char.KakaPairiRara],[Char.Kਕ, Char.PairiRara],[Char.Kਕ, Char.Virama, Char.Rਰ]],
+        [[Char.Uਉ],[Char.Uੳ, Char.Aunkar]],
+        [[Char.LalaDulainkar], [Char.Lਲ, Char.Dulainkar], [Char.Lਲ, Char.Dulainkar2]],
+        [[Char.LalaAunkar] , [Char.Lਲ, Char.Aunkar], [Char.Lਲ, Char.Aunkar2]], 
+        [[Char.LalaTippi], [Char.Lਲ, Char.Tippi], [Char.Tippi2]],
+        [[Char.TਥAunkar], [Char.Tਥ, Char.Aunkar], [Char.Tਥ, Char.Aunkar2]],
+        [[Char.CਚAunkar], [Char.Cਚ, Char.Aunkar], [Char.Cਚ, Char.Aunkar2]], 
 
     ];
 
