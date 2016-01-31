@@ -992,6 +992,10 @@ var PunjabiFontConvertor;
     );
     var _a;
 })(PunjabiFontConvertor || (PunjabiFontConvertor = {}));
+var PunjabiFontConvertor;
+(function (PunjabiFontConvertor) {
+    PunjabiFontConvertor.joy = {};
+})(PunjabiFontConvertor || (PunjabiFontConvertor = {}));
 ///<reference path="./charEnum" />
 ///<reference path="./mappings/anmolFontMappings" />
 ///<reference path="./mappings/unicodeFontMappings" />
@@ -999,6 +1003,7 @@ var PunjabiFontConvertor;
 ///<reference path="./mappings/awazeFont" />
 ///<reference path="./mappings/satluj" />
 ///<reference path="./mappings/asees" />
+///<reference path="./mappings/joy" />
 var PunjabiFontConvertor;
 (function (PunjabiFontConvertor) {
     var moveAcrossChaSet = [

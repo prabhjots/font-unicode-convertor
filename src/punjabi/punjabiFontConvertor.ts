@@ -5,6 +5,7 @@
 ///<reference path="./mappings/awazeFont" />
 ///<reference path="./mappings/satluj" />
 ///<reference path="./mappings/asees" />
+///<reference path="./mappings/joy" />
 namespace PunjabiFontConvertor {
     let moveAcrossChaSet = [
         [[Char.PairiHaha], [Char.Virama, Char.Hਹ]],

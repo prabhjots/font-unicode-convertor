@@ -4,21 +4,20 @@
 <head>
     <title>Font Convertor Trial</title>
     <style>
-textarea {
-    padding-left: 2px;
-    width: 100%; 
-    font-size:16px; 
-    height: 700px;
-}
-.row {
-  display: flex; /* equal height of the children */
-}
-
-.col {
-  flex: 1; /* additionally, equal width */
-  padding: 0.5em;  
-}
-    </style>    
+        textarea {
+            padding-left: 2px;
+            width: 100%;
+            font-size: 16px;
+            height: 700px;
+        }        
+        .row {
+            display: flex;
+        }        
+        .col {
+            flex: 1;
+            padding: 0.5em;
+        }
+    </style>
 </head>
 <body>
     <h1>Punjabi Font Convertor</h1>
@@ -27,7 +26,7 @@ textarea {
         <option value="AnmolUni">Anmol Uni</option>
         <option value="Unicode">Unicode</option>
         <option value="DrChatrikWeb">Dr Chatrik</option>
-         <option value="Awaze">Awaze</option>
+        <option value="Awaze">Awaze</option>
         <option value="Satluj">Satluj</option>
         <option value="Asees">Asees</option>
         <!--<option value="PunjabiFont">Punjabi Font</option>
@@ -39,42 +38,45 @@ textarea {
     </select>
     <label>to</label>
     <select id="toFont" onchange="convertText()">
-       <option value="AnmolLipi" >Anmol Lipi</option>
-       <option value="AnmolUni">Anmol Uni</option>
-       <option value="Unicode" selected="selected">Unicode</option>
-       <option value="DrChatrikWeb">Dr Chatrik</option>
-       <option value="Awaze">Awaze</option>
-       <option value="Satluj">Satluj</option>
-       <option value="Asees">Asees</option>
-           <!-- <option value="Punjabi Font">Punjabi Font</option>
+        <option value="AnmolLipi">Anmol Lipi</option>
+        <option value="AnmolUni">Anmol Uni</option>
+        <option value="Unicode" selected="selected">Unicode</option>
+        <option value="DrChatrikWeb">Dr Chatrik</option>
+        <option value="Awaze">Awaze</option>
+        <option value="Satluj">Satluj</option>
+        <option value="Asees">Asees</option>
+        <!-- <option value="Punjabi Font">Punjabi Font</option>
         <option value="Joy">Joy</option>
         <option value="SGPHar">SGPHar</option>
  
         <option value="SriAngad">SriAngad</option>
         <option value="GurLipi">GurLipi</option>-->
-    </select>    
+    </select>
     <div class="row">
         <div class="col">
-            <textarea style="font-family: 'AnmolLipi';" id="fromText" rows="7" cols="200" 
-                      onkeyup="convertText()" onscroll="onScroll(event)" 
-                      autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ></textarea>
+            <textarea style="font-family: 'AnmolLipi';" id="fromText" rows="7" cols="200" oninput="convertText()" onscroll="onScroll(event)"
+            autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
         </div>
         <div class="col">
-            <textarea style="font-family: 'Unicode';" id="toText" rows="7" cols="200" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
-        </div>   
+            <textarea style="font-family: 'Unicode';" id="toText" rows="7" cols="200" autocomplete="off" autocorrect="off" autocapitalize="off"
+            spellcheck="false"></textarea>
+        </div>
     </div>
-<script src="./dist/convertor.js"></script> 
-<script>
-function convertText() {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.1.0/lodash.min.js"></script>
+    <script src="./dist/convertor.js"></script>
+    <script>
+var milliSecondsToWait = 300;
+
+var convertText = _.debounce(function () {
     fromText.style.fontFamily = fromFont.value;
     toText.style.fontFamily = toFont.value;
-    
     toText.value = PunjabiFontConvertor.convert(fromText.value, toFont.value, fromFont.value);
-    onScroll();
-}
+    onScroll();    
+}, milliSecondsToWait);
+
 function onScroll(){
     toText.scrollTop =  ( fromText.scrollTop *  toText.scrollHeight)/ fromText.scrollHeight;
 }
-</script>
+    </script>
 </body>
 </html>
