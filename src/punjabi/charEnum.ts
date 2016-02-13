@@ -95,6 +95,7 @@ namespace PunjabiFontConvertor {
         Sihari,         // $ਿ GURMUKHI VOWEL SIGN I= sihari
         Bihari,         // $ੀ GURMUKHI VOWEL SIGN II= bihari
         BihariBindi,
+         BihariBindi2,
         Aunkar,         // $ੁ GURMUKHI VOWEL SIGN U = aunkar
         Aunkar2,
         Dulainkar,      // $ੂ GURMUKHI VOWEL SIGN UU= dulainkar
@@ -170,7 +171,7 @@ namespace PunjabiFontConvertor {
         LalaTippi,
         TਥAunkar,
         CਚAunkar, 
-        
+        Hai
         
              
     }

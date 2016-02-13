@@ -79,7 +79,7 @@ namespace PunjabiFontConvertor {
         [[Char.LalaTippi], [Char.Lਲ, Char.Tippi], [Char.Tippi2]],
         [[Char.TਥAunkar], [Char.Tਥ, Char.Aunkar], [Char.Tਥ, Char.Aunkar2]],
         [[Char.CਚAunkar], [Char.Cਚ, Char.Aunkar], [Char.Cਚ, Char.Aunkar2]], 
-
+        [[Char.Hai], [Char.Hਹ, Char.Dulavan]],
     ];
 
     let fontConvertorConfigs: { [key: string]: Convertor.IMapping } = {
@@ -111,6 +111,10 @@ namespace PunjabiFontConvertor {
             moveRightCharacters: [],
             characterCodes: makeArray(PunjabiFontConvertor.asees)
         },
+        "Joy": {
+            moveRightCharacters: [],
+            characterCodes : makeArray(PunjabiFontConvertor.joy)
+        }
     };
 
     export function convert(str: string, toFontName: string, fromFontName: string) {
