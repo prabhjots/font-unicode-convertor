@@ -30,6 +30,7 @@ namespace PunjabiFontConvertor {
         ikOnkarVersion2,
         ikOnkarVersion3,
         [...ikOnkarVersion1, ...ikOnkarVersion2, ...ikOnkarVersion3, [Char.IkOnkarVersion4], [Char.IkOnkarVersion5]],
+        [[Char.Bindi], [Char.Bindi2]],
         [[Char.HalfYaiyaRight], [Char.Virama, Char.Yਯ]],
         [[Char.AdakBindi], [Char.AddakRight, Char.Bindi]],
         [[Char.Aਆ], [Char.Aਅ, Char.Kana]],

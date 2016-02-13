@@ -79,13 +79,13 @@ var Convertor;
             }
         }
         var maxWidth = 1;
-        for (var _i = 0; _i < compositions.length; _i++) {
-            var compositionCharArrays = compositions[_i];
+        for (var _i = 0, compositions_1 = compositions; _i < compositions_1.length; _i++) {
+            var compositionCharArrays = compositions_1[_i];
             var toCharacter = getCompositionCharacters(compositionCharArrays, to.characterCodes)[0];
             if (toCharacter) {
                 var fromCharacters = getCompositionCharacters(compositionCharArrays, from.characterCodes);
-                for (var _a = 0; _a < fromCharacters.length; _a++) {
-                    var fromChar = fromCharacters[_a];
+                for (var _a = 0, fromCharacters_1 = fromCharacters; _a < fromCharacters_1.length; _a++) {
+                    var fromChar = fromCharacters_1[_a];
                     maxWidth = Math.max(maxWidth, fromChar.length);
                     if (!(fromChar in mapper)) {
                         mapper[fromChar] = toCharacter;
@@ -109,12 +109,12 @@ var Convertor;
     Convertor.getMapper = getMapper;
     function getCompositionCharacters(compositionCharArrays, codes) {
         var characters = [];
-        for (var _i = 0; _i < compositionCharArrays.length; _i++) {
-            var compositionChar = compositionCharArrays[_i];
+        for (var _i = 0, compositionCharArrays_1 = compositionCharArrays; _i < compositionCharArrays_1.length; _i++) {
+            var compositionChar = compositionCharArrays_1[_i];
             var isValid = true;
             var charCodes = [];
-            for (var _a = 0; _a < compositionChar.length; _a++) {
-                var code = compositionChar[_a];
+            for (var _a = 0, compositionChar_1 = compositionChar; _a < compositionChar_1.length; _a++) {
+                var code = compositionChar_1[_a];
                 var toCode = codes[code];
                 if (toCode) {
                     charCodes.push(toCode);
@@ -1026,6 +1026,7 @@ var PunjabiFontConvertor;
         ikOnkarVersion2,
         ikOnkarVersion3,
         ikOnkarVersion1.concat(ikOnkarVersion2, ikOnkarVersion3, [[7 /* IkOnkarVersion4 */], [8 /* IkOnkarVersion5 */]]),
+        [[82 /* Bindi */], [83 /* Bindi2 */]],
         [[76 /* HalfYaiyaRight */], [104 /* Virama */, 51 /* Yਯ */]],
         [[88 /* AdakBindi */], [86 /* AddakRight */, 82 /* Bindi */]],
         [[17 /* Aਆ */], [16 /* Aਅ */, 90 /* Kana */]],
@@ -1118,8 +1119,8 @@ var PunjabiFontConvertor;
             configs[_i - 0] = arguments[_i];
         }
         var c = [];
-        for (var _a = 0; _a < configs.length; _a++) {
-            var a = configs[_a];
+        for (var _a = 0, configs_1 = configs; _a < configs_1.length; _a++) {
+            var a = configs_1[_a];
             for (var x in a) {
                 if (a.hasOwnProperty(x)) {
                     c[x] = a[x];
