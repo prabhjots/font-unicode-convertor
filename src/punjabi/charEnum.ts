@@ -15,7 +15,7 @@ namespace PunjabiFontConvertor {
         Uਉ,             // ਉ GURMUKHI LETTER U
         UਉBindi, 
         Uਊ,             // ਊ GURMUKHI LETTER UU	
-        Oਓ,             // ਓ GURMUKHI LETTER OO
+        Oਓ,Oਓ2,             // ਓ GURMUKHI LETTER OO
         Aਅ,             // ਅ GURMUKHI LETTER A = aira
         Aਆ,             // ਆ GURMUKHI LETTER AA
         Aਐ,
@@ -65,14 +65,14 @@ namespace PunjabiFontConvertor {
         PairiBindi,     // $਼ GURMUKHI SIGN NUKTA = pairin bindi 
         PairiBindi2,
         Dot,
-        PairiHaha,      // pair wich haha'
+        PairiHaha, PairiHaha2,      // pair wich haha'
         PairiHahaDulainkar,   
         PairiRara,      // pair wich rara
         PairiRaraLeft, 
         PairiRaraPairiBindi,
         PairiChacha,
         PairiTenka,
-        PairiVava,
+        PairiVava,PairiVava2,
         PairiYaiya,
         PairiTata,
         PairiNana,
@@ -85,26 +85,26 @@ namespace PunjabiFontConvertor {
         Bindi,          // $ਂ GURMUKHI SIGN BINDI
         Bindi2,
         Visagra,        // $ਃ GURMUKHI SIGN VISARGA
+        AddakLeft,
         AddakAbove,
-        AddakRight,          // $ੱ GURMUKHI ADDAK • doubles following consonant
-        AddakRight2,
+        AddakRight,  AddakRight2,          // $ੱ GURMUKHI ADDAK • doubles following consonant
         AdakBindi,      //$ਁ GURMUKHI SIGN ADAK BINDI
         Yakash,         // $ੵ GURMUKHI SIGN YAKASH  
-        Kana,           // $ਾ GURMUKHI VOWEL SIGN AA = kanna
+        Kana, Kana2,          // $ਾ GURMUKHI VOWEL SIGN AA = kanna
         KanaBindi,      // kana ate bindi
-        Sihari,         // $ਿ GURMUKHI VOWEL SIGN I= sihari
-        Bihari,         // $ੀ GURMUKHI VOWEL SIGN II= bihari
+        Sihari,  
+        Sihari2,       // $ਿ GURMUKHI VOWEL SIGN I= sihari
+        Bihari,      
+        Bihari2,   // $ੀ GURMUKHI VOWEL SIGN II= bihari
         BihariBindi,
-         BihariBindi2,
-        Aunkar,         // $ੁ GURMUKHI VOWEL SIGN U = aunkar
-        Aunkar2,
-        Dulainkar,      // $ੂ GURMUKHI VOWEL SIGN UU= dulainkar
-        Dulainkar2,
-        Lavan,          // $ੇ GURMUKHI VOWEL SIGN EE= lanvan
-        Dulavan,        // $ੈ GURMUKHI VOWEL SIGN AI= dulanvan
-        Hora,           // $ੋ GURMUKHI VOWEL SIGN OO= hora
-        Kanaura,        // $ੌ GURMUKHI VOWEL SIGN AU= kanaura
-        Kanaura2,
+        BihariBindi2,
+        Aunkar, Aunkar2, Aunkar3,     // $ੁ GURMUKHI VOWEL SIGN U = aunkar
+        Dulainkar,  Dulainkar2, Dulainkar3,     // $ੂ GURMUKHI VOWEL SIGN UU= dulainkar
+        Lavan,  Lavan2,       // $ੇ GURMUKHI VOWEL SIGN EE= lanvan
+        Dulavan, Dulavan2,       // $ੈ GURMUKHI VOWEL SIGN AI= dulanvan
+        Hora, Hora2,        // $ੋ GURMUKHI VOWEL SIGN OO= hora
+        Kanaura, Kanaura2,        // $ੌ GURMUKHI VOWEL SIGN AU= kanaura
+        KanauraRight,
         Virama,         // $੍ GURMUKHI SIGN VIRAMA
         Udaat,          // $ੑ GURMUKHI SIGN UDAAT // todo: confirm
         Danda,          // । danda
@@ -114,7 +114,7 @@ namespace PunjabiFontConvertor {
         DoubleDanda,    // ॥ double danda    
         DoubleDanda2,       
         GZero,           // ੦ GURMUKHI DIGIT ZERO
-        GOne,            // ੧ GURMUKHI DIGIT ONE
+        GOne, GOne1,         // ੧ GURMUKHI DIGIT ONE
         GTwo,            // ੨ GURMUKHI DIGIT TWO
         GThree,          // ੩ GURMUKHI DIGIT THREE
         GFour,           // ੪ GURMUKHI DIGIT FOUR
@@ -171,7 +171,7 @@ namespace PunjabiFontConvertor {
         LalaTippi,
         TਥAunkar,
         CਚAunkar, 
-        Hai
+        Hai, Hai2,
         
              
     }
