@@ -1177,6 +1177,33 @@ var PunjabiFontConvertor;
     );
     var _a;
 })(PunjabiFontConvertor || (PunjabiFontConvertor = {}));
+var PunjabiFontConvertor;
+(function (PunjabiFontConvertor) {
+    PunjabiFontConvertor.gurbaniLipi = (_a = {},
+        _a[126 /* GZero */] = 0x30,
+        _a[127 /* GOne */] = 0x31,
+        _a[129 /* GTwo */] = 0x32,
+        _a[130 /* GThree */] = 0x33,
+        _a[131 /* GFour */] = 0x34,
+        _a[132 /* GFive */] = 0x35,
+        _a[133 /* GSix */] = 0x36,
+        _a[134 /* GSeven */] = 0x37,
+        _a[135 /* GEight */] = 0x38,
+        _a[136 /* GNine */] = 0x39,
+        _a[137 /* EnglishZero */] = 0x30,
+        _a[138 /* EnglishOne */] = 0x31,
+        _a[139 /* EnglishTwo */] = 0x32,
+        _a[140 /* EnglishThree */] = 0x33,
+        _a[141 /* EnglishFour */] = 0x34,
+        _a[142 /* EnglishFive */] = 0x35,
+        _a[143 /* EnglishSix */] = 0x36,
+        _a[144 /* EnglishSeven */] = 0x37,
+        _a[145 /* EnglishEight */] = 0x38,
+        _a[146 /* EnglishNine */] = 0x39,
+        _a
+    );
+    var _a;
+})(PunjabiFontConvertor || (PunjabiFontConvertor = {}));
 ///<reference path="../convertor/convertor" />
 ///<reference path="./charEnum" />
 ///<reference path="./mappings/anmolFontMappings" />
@@ -1186,6 +1213,7 @@ var PunjabiFontConvertor;
 ///<reference path="./mappings/satluj" />
 ///<reference path="./mappings/asees" />
 ///<reference path="./mappings/joy" />
+///<reference path="./mappings/gurbaniLipi" />
 var PunjabiFontConvertor;
 (function (PunjabiFontConvertor) {
     var moveAcrossChaSet = [
@@ -1300,6 +1328,14 @@ var PunjabiFontConvertor;
         "Joy": {
             moveRightCharacters: [],
             characterCodes: makeArray(PunjabiFontConvertor.joy)
+        },
+        "GurbaniLipi": {
+            moveRightCharacters: [],
+            characterCodes: makeArray(PunjabiFontConvertor.anmolMapping, PunjabiFontConvertor.gurbaniLipi)
+        },
+        "GurmukhiLys020": {
+            moveRightCharacters: [],
+            characterCodes: makeArray(PunjabiFontConvertor.anmolMapping)
         }
     };
     function convert(str, toFontName, fromFontName) {

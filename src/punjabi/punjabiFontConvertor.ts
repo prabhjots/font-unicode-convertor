@@ -7,6 +7,7 @@
 ///<reference path="./mappings/satluj" />
 ///<reference path="./mappings/asees" />
 ///<reference path="./mappings/joy" />
+///<reference path="./mappings/gurbaniLipi" />
 namespace PunjabiFontConvertor {
     let moveAcrossChaSet = [
         [[Char.PairiHaha],[Char.PairiHaha2], [Char.Virama, Char.Hਹ]],
@@ -124,7 +125,15 @@ namespace PunjabiFontConvertor {
         "Joy": {
             moveRightCharacters: [],
             characterCodes : makeArray(PunjabiFontConvertor.joy)
-        }
+        },
+        "GurbaniLipi": {
+            moveRightCharacters: [],
+            characterCodes: makeArray(PunjabiFontConvertor.anmolMapping, PunjabiFontConvertor.gurbaniLipi)
+        },
+        "GurmukhiLys020": {
+            moveRightCharacters: [],
+            characterCodes: makeArray(PunjabiFontConvertor.anmolMapping)
+        },
     };
 
     export function convert(str: string, toFontName: string, fromFontName: string) {
