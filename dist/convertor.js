@@ -1269,7 +1269,7 @@ var PunjabiFontConvertor;
         [[13 /* UਉBindi */], [12 /* Uਉ */, 85 /* Bindi */], [11 /* Uੳ */, 103 /* Aunkar */, 85 /* Bindi */]],
     ]);
     var fontConvertorConfigs = {
-        "Unicode": {
+        "Arial Unicode MS": {
             moveRightCharacters: [97 /* Sihari */],
             characterCodes: makeArray(PunjabiFontConvertor.unicodeMapping)
         },

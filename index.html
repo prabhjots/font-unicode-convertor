@@ -22,35 +22,29 @@
 <body>
     <h1>Punjabi Font Convertor</h1>
     <select id="fromFont" onchange="convertText()">
-        <option value="AnmolLipi" selected="selected">Anmol Lipi</option>
+        <option value="AnmolLipi">Anmol Lipi</option>
         <option value="AnmolUni">Anmol Uni</option>
-        <option value="Unicode">Unicode</option>
+        <option value="Arial Unicode MS">Unicode</option>
         <option value="DrChatrikWeb">Dr Chatrik</option>
         <option value="Awaze">Awaze</option>
         <option value="Satluj">Satluj</option>
         <option value="Asees">Asees</option>
-        <!--<option value="PunjabiFont">Punjabi Font</option>
         <option value="Joy">Joy</option>
-        <option value="SGPHar">SGPHar</option>
-      
-        <option value="SriAngad">SriAngad</option>
-        <option value="GurLipi">GurLipi</option> -->
+        <option value="GurbaniLipi">Gurbany Lipi</option>
+        <option value="GurmukhiLys020">Gurmukhi Lys 020</option>
     </select>
     <label>to</label>
     <select id="toFont" onchange="convertText()">
         <option value="AnmolLipi">Anmol Lipi</option>
         <option value="AnmolUni">Anmol Uni</option>
-        <option value="Unicode" selected="selected">Unicode</option>
+        <option value="Arial Unicode MS" selected="selected">Unicode</option>
         <option value="DrChatrikWeb">Dr Chatrik</option>
         <option value="Awaze">Awaze</option>
         <option value="Satluj">Satluj</option>
         <option value="Asees">Asees</option>
-        <!-- <option value="Punjabi Font">Punjabi Font</option>
         <option value="Joy">Joy</option>
-        <option value="SGPHar">SGPHar</option>
- 
-        <option value="SriAngad">SriAngad</option>
-        <option value="GurLipi">GurLipi</option>-->
+        <option value="GurbaniLipi">Gurbany Lipi</option>
+        <option value="GurmukhiLys020">Gurmukhi Lys 020</option>
     </select>
     <div class="row">
         <div class="col">
@@ -58,7 +52,7 @@
             autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
         </div>
         <div class="col">
-            <textarea style="font-family: 'Unicode';" id="toText" rows="7" cols="200" autocomplete="off" autocorrect="off" autocapitalize="off"
+            <textarea style="font-family: 'Arial Unicode MS';" id="toText" rows="7" cols="200" autocomplete="off" autocorrect="off" autocapitalize="off"
             spellcheck="false"></textarea>
         </div>
     </div>
