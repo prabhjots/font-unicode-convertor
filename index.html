@@ -9,16 +9,19 @@
             width: 100%;
             font-size: 16px;
             height: 700px;
-        }        
+        }
+
         .row {
             display: flex;
-        }        
+        }
+
         .col {
             flex: 1;
             padding: 0.5em;
         }
     </style>
 </head>
+
 <body>
     <h1>Punjabi Font Convertor</h1>
     <select id="fromFont" onchange="convertText()">
@@ -48,29 +51,30 @@
     </select>
     <div class="row">
         <div class="col">
-            <textarea style="font-family: 'AnmolLipi';" id="fromText" rows="7" cols="200" oninput="convertText()" onscroll="onScroll(event)"
-            autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+            <textarea style="font-family: 'AnmolLipi';" id="fromText" rows="7" cols="200" oninput="convertText()"
+                onscroll="onScroll(event)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
         </div>
         <div class="col">
-            <textarea style="font-family: 'Arial Unicode MS';" id="toText" rows="7" cols="200" autocomplete="off" autocorrect="off" autocapitalize="off"
-            spellcheck="false"></textarea>
+            <textarea style="font-family: 'Arial Unicode MS';" id="toText" rows="7" cols="200" autocomplete="off"
+                autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.1.0/lodash.min.js"></script>
     <script src="./dist/convertor.js"></script>
     <script>
-var milliSecondsToWait = 300;
+        var milliSecondsToWait = 300;
 
-var convertText = _.debounce(function () {
-    fromText.style.fontFamily = fromFont.value;
-    toText.style.fontFamily = toFont.value;
-    toText.value = PunjabiFontConvertor.convert(fromText.value, toFont.value, fromFont.value);
-    onScroll();    
-}, milliSecondsToWait);
+        var convertText = _.debounce(function () {
+            fromText.style.fontFamily = fromFont.value;
+            toText.style.fontFamily = toFont.value;
+            toText.value = PunjabiFontConvertor.convert(fromText.value, toFont.value, fromFont.value);
+            onScroll();
+        }, milliSecondsToWait);
 
-function onScroll(){
-    toText.scrollTop =  ( fromText.scrollTop *  toText.scrollHeight)/ fromText.scrollHeight;
-}
+        function onScroll() {
+            toText.scrollTop = (fromText.scrollTop * toText.scrollHeight) / fromText.scrollHeight;
+        }
     </script>
 </body>
+
 </html>
