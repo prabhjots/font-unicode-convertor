@@ -47,6 +47,9 @@
                     charToMoveRightIndex = 0;
                 }
             }
+            else if (config.moveRightChars.indexOf(charToAdd) > -1) {
+                charToAddOnRight = charToAdd;
+            }
             else if (config.moveLeftChars.indexOf(charToAdd) > -1 && output.length) {
                 insertCharOnLeft(output, config.moveAcrossCharacters, charToAdd, []);
             }
