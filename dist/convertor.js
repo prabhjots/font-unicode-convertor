@@ -26,7 +26,14 @@
             else {
                 charToAdd = stringToConvert[i];
             }
-            if (charToAddOnRight) {
+            if (config.moveRightChars.indexOf(charToAdd) > -1) {
+                if (charToAddOnRight) {
+                    output.push(charToAddOnRight);
+                }
+                charToAddOnRight = charToAdd;
+                charToMoveRightIndex = 0;
+            }
+            else if (charToAddOnRight) {
                 if (charToMoveRightIndex < 1) {
                     charToMoveRightIndex = 1;
                     output.push(charToAdd);
@@ -39,9 +46,6 @@
                     charToAddOnRight = null;
                     charToMoveRightIndex = 0;
                 }
-            }
-            else if (config.moveRightChars.indexOf(charToAdd) > -1) {
-                charToAddOnRight = charToAdd;
             }
             else if (config.moveLeftChars.indexOf(charToAdd) > -1 && output.length) {
                 insertCharOnLeft(output, config.moveAcrossCharacters, charToAdd, []);

@@ -17,5 +17,8 @@ test('convert sihary tests', () => {
     expect(convert("is")).toBe("ਸਿ");
     expect(convert("iml")).toBe("ਮਿਲ");
     expect(convert("il iK")).toBe("ਲਿ ਖਿ");
-    //expect(convert("iliK")).toBe("ਲਿਖਿ");
+    expect(convert("iliK")).toBe("ਲਿਖਿ");
+    expect(convert("iliKAw")).toBe("ਲਿਖਿਆ");
+    expect(convert("ividAwrQI")).toBe("ਵਿਦਿਆਰਥੀ");
+    expect(convert("isiK~Aw")).toBe("ਸਿਖਿੱਆ");
 });
