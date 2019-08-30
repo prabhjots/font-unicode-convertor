@@ -3,7 +3,9 @@
         "sourceMap": false,
         "pretty": true,
         "moduleResolution": "node",
-        "preserveConstEnums": false
+        "preserveConstEnums": false,
+        "outDir": "obj",
+        "module": "es6"
     },
     "include": [
         "src/**/*"],
