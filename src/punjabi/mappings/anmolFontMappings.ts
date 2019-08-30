@@ -1,3 +1,5 @@
+import { Char } from "../charEnum";
+
 export let anmolCharCodes = {
     [Char.IkOnkarVersion1a]: 0x3c,
     [Char.IkOnkarVersion1b]: 0x3e,

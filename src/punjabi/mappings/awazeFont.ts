@@ -1,3 +1,4 @@
+import { Char } from "../charEnum";
 export let awazeMappings = {
     //[Char.IkOnkarVersion1a]: 0x3c,
     //[Char.IkOnkarVersion1b]: 0x3e,

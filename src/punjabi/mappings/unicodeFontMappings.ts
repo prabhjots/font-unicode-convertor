@@ -1,3 +1,5 @@
+import { Char } from "../charEnum";
+
 export let unicodeMapping = {
     [Char.IkOnkarVersion1]: 0x0A74,
     //[Char.IkOnkarVersion1b]: ,

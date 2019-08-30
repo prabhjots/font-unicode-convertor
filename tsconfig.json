@@ -2,9 +2,12 @@
     "compilerOptions": {
         "sourceMap": false,
         "pretty": true,
+        "moduleResolution": "node",
+        "preserveConstEnums": false
     },
     "include": [
         "src/**/*"],
-    "exclude": [   
+    "exclude": [ 
+        "node_modules"  
     ]
 }

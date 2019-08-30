@@ -1,3 +1,5 @@
+import { Char } from "../charEnum";
+
 export let gurbaniLipi = {
     [Char.GZero]: 0x30,
     [Char.GOne]: 0x31,

@@ -7,6 +7,7 @@ import { gurbaniLipi } from "./mappings/gurbaniLipi";
 import { joyCharCodes } from "./mappings/joy";
 import { satlujMappings } from "./mappings/satluj";
 import { unicodeMapping } from "./mappings/unicodeFontMappings"
+import { Char } from "./charEnum"
 
 let moveAcrossChaSet = [
     [[Char.PairiHaha], [Char.PairiHaha2], [Char.Virama, Char.Hਹ]],

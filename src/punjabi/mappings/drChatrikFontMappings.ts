@@ -1,3 +1,5 @@
+import { Char } from "../charEnum";
+
 export let drChatrikMappings = {
     [Char.IkOnkarVersion1a]: 0xc3,
     [Char.IkOnkarVersion1b]: 0xc4,

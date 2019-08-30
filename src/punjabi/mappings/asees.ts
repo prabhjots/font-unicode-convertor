@@ -1,3 +1,4 @@
+import { Char } from "../charEnum";
 export let aseesCharCodes = {
     [Char.IkOnkarVersion1]: 0xc5,
     [Char.IkOnkarVersion1a]: 0x2039,

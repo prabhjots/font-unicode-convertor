@@ -1,3 +1,5 @@
+import { Char } from "../charEnum";
+
 export let satlujMappings = {
     [Char.IkOnkarVersion1]: 0xfd,
     //[Char.IkOnkarVersion1b]: 0x3e,

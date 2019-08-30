@@ -1,3 +1,5 @@
+import { Char } from "../charEnum";
+
 export let joyCharCodes = {
     [Char.IkOnkarVersion1]: 0x2dd,
     //[Char.IkOnkarVersion1b]: 0x3e,

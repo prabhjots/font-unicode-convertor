@@ -1,4 +1,4 @@
-const enum Char {
+export const enum Char {
   IkOnkarVersion1,   // ੴ GURMUKHI EK ONKAR • God is One                
   IkOnkarVersion1a,
   IkOnkarVersion1b,
