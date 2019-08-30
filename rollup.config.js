@@ -1,14 +1,12 @@
-import typescript from 'rollup-plugin-typescript';
 export default {
-    input: 'src/punjabi/punjabiFontConvertor.ts',
+    input: 'obj/punjabi/punjabiFontConvertor.js',
     output: {
         file: 'dist/convertor.js',
         format: 'umd',
         name: "PunjabiFontConvertor"
     },
     plugins: [
-        typescript()
-      ]
+    ]
 };
 
 
