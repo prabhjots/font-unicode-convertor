@@ -1,5 +1,5 @@
 namespace PunjabiFontConvertor {
-    export let satluj = {
+    export let satlujMappings = {
         [Char.IkOnkarVersion1]: 0xfd,
         //[Char.IkOnkarVersion1b]: 0x3e,
         //[Char.IkOnkarVersion2a]: 0xc5,

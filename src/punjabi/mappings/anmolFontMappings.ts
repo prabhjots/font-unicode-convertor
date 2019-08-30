@@ -1,5 +1,5 @@
 namespace PunjabiFontConvertor {
-    export let anmolMapping = {
+    export let anmolCharCodes = {
         [Char.IkOnkarVersion1a]: 0x3c,
         [Char.IkOnkarVersion1b]: 0x3e,
         [Char.IkOnkarVersion2a]: 0xc5,

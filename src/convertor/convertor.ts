@@ -1,6 +1,5 @@
 namespace Convertor {
-    export function convertStringUsingMapper(mapperConfig: IMapperConfig, stringToConvert: string): string {
-        let {mapper, maxWidth, moveRightChars, moveLeftChars, moveAcrossCharacters } = mapperConfig;
+    export function convertStringUsingMapperInternal(config: IMapperConfig, stringToConvert: string): string {
 
         let output: string[] = [];
 
@@ -8,14 +7,14 @@ namespace Convertor {
         let charToMoveRightIndex = 0;
 
         for (let i = 0; i < stringToConvert.length; i++) {
-            let j = maxWidth + 1;
+            let j = config.maxWidth + 1;
             let matchFound = false;
 
             let charToMatch = "";
             while (matchFound === false && j--) {
                 charToMatch = stringToConvert.substr(i, j);
 
-                if (charToMatch in mapper) {
+                if (charToMatch in config.mapper) {
                     matchFound = true;
                     i = i + (j - 1);
                 }
@@ -24,7 +23,7 @@ namespace Convertor {
             let charToAdd: string;
 
             if (matchFound) {
-                charToAdd = mapper[charToMatch];
+                charToAdd = config.mapper[charToMatch];
             } else {
                 charToAdd = stringToConvert[i];
             }
@@ -33,17 +32,17 @@ namespace Convertor {
                 if (charToMoveRightIndex < 1) {
                     charToMoveRightIndex = 1;
                     output.push(charToAdd);
-                } else if (moveAcrossCharacters.indexOf(charToAdd) > -1) {
+                } else if (config.moveAcrossCharacters.indexOf(charToAdd) > -1) {
                     output.push(charToAdd);
                 } else {
                     output.push(charToAddOnRight, charToAdd);
                     charToAddOnRight = null;
                     charToMoveRightIndex = 0;
                 }
-            } else if (moveRightChars.indexOf(charToAdd) > -1) {
+            } else if (config.moveRightChars.indexOf(charToAdd) > -1) {
                 charToAddOnRight = charToAdd;
-            } else if (moveLeftChars.indexOf(charToAdd) > -1 && output.length) {
-                insertCharOnLeft(output, moveAcrossCharacters, charToAdd, []);
+            } else if (config.moveLeftChars.indexOf(charToAdd) > -1 && output.length) {
+                insertCharOnLeft(output, config.moveAcrossCharacters, charToAdd, []);
             } else {
                 output.push(charToAdd);
             }
@@ -54,6 +53,13 @@ namespace Convertor {
         }
         return output.join("");
 
+    }
+
+    export function convertStringUsingMapper(config: IMapperConfig, stringToConvert: string): string {
+        if(stringToConvert){
+            return stringToConvert.split(" ").map(s => convertStringUsingMapperInternal(config, s)).join(" ");
+        }
+        return "";
     }
 
     function insertCharOnLeft(chars: string[], moveLeftAcrossChars: string[], characterToAdd: string, onRightChars: string[]) {
@@ -72,18 +78,17 @@ namespace Convertor {
     }
 
     export function getMapper(to: IMapping, from: IMapping, compositions: number[][][], moveAcrossCharSet: number[][][]): IMapperConfig {
-        let mappingLength = Math.max(to.characterCodes.length, from.characterCodes.length);
-
         let mapper: any = {};
 
-        for (let i = 0; i < mappingLength; i++) {
-            let fromChar = from.characterCodes[i];
-            let toChar = to.characterCodes[i];
+        for (var i in to.characterCodes) {
+            var fromChar = from.characterCodes[i];
+            var toChar = to.characterCodes[i];
 
             if (fromChar && toChar) {
                 mapper[getCharFromUnicode(fromChar)] = getCharFromUnicode(toChar);
             }
         }
+
         let maxWidth = 1;
 
         for (let compositionCharArrays of compositions) {
@@ -118,8 +123,8 @@ namespace Convertor {
         };
     }
 
-    function getCompositionCharacters(compositionCharArrays: number[][], codes: number[]) {
-        let characters:string[] = [];
+    function getCompositionCharacters(compositionCharArrays: number[][], codes: ICharCodes) {
+        let characters: string[] = [];
 
         for (let compositionChar of compositionCharArrays) {
             let isValid = true;
@@ -147,14 +152,29 @@ namespace Convertor {
     }
 
     export interface IMapping {
-        characterCodes: number[];
+        characterCodes: ICharCodes;
         moveRightCharacters: number[];
         moveRightAcrossCharacterSet?: number[][];
     }
 
+    export interface ICharCodes {
+        [key: number]: number
+    }
+
+    export function merge(...configs: ICharCodes[]): ICharCodes {
+        var c: ICharCodes = {};
+
+        for (let a of configs) {
+            for (var x in a) {
+                c[x] = a[x];
+            }
+        }
+        return c;
+    }
+
     export interface IMapperConfig {
-        mapper : {
-            [key: string] : string;
+        mapper: {
+            [key: string]: string;
         };
         maxWidth: number
         moveLeftChars: string[];

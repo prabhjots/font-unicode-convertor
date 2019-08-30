@@ -1,5 +1,5 @@
 namespace PunjabiFontConvertor {
-    export let joy = {
+    export let joyCharCodes = {
         [Char.IkOnkarVersion1]: 0x2dd,
         //[Char.IkOnkarVersion1b]: 0x3e,
         //[Char.IkOnkarVersion2a]: 0xc5,

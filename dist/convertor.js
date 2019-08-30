@@ -1,24 +1,23 @@
 var Convertor;
 (function (Convertor) {
-    function convertStringUsingMapper(mapperConfig, stringToConvert) {
-        var mapper = mapperConfig.mapper, maxWidth = mapperConfig.maxWidth, moveRightChars = mapperConfig.moveRightChars, moveLeftChars = mapperConfig.moveLeftChars, moveAcrossCharacters = mapperConfig.moveAcrossCharacters;
+    function convertStringUsingMapperInternal(config, stringToConvert) {
         var output = [];
         var charToAddOnRight = "";
         var charToMoveRightIndex = 0;
         for (var i = 0; i < stringToConvert.length; i++) {
-            var j = maxWidth + 1;
+            var j = config.maxWidth + 1;
             var matchFound = false;
             var charToMatch = "";
             while (matchFound === false && j--) {
                 charToMatch = stringToConvert.substr(i, j);
-                if (charToMatch in mapper) {
+                if (charToMatch in config.mapper) {
                     matchFound = true;
                     i = i + (j - 1);
                 }
             }
             var charToAdd = void 0;
             if (matchFound) {
-                charToAdd = mapper[charToMatch];
+                charToAdd = config.mapper[charToMatch];
             }
             else {
                 charToAdd = stringToConvert[i];
@@ -28,7 +27,7 @@ var Convertor;
                     charToMoveRightIndex = 1;
                     output.push(charToAdd);
                 }
-                else if (moveAcrossCharacters.indexOf(charToAdd) > -1) {
+                else if (config.moveAcrossCharacters.indexOf(charToAdd) > -1) {
                     output.push(charToAdd);
                 }
                 else {
@@ -37,11 +36,11 @@ var Convertor;
                     charToMoveRightIndex = 0;
                 }
             }
-            else if (moveRightChars.indexOf(charToAdd) > -1) {
+            else if (config.moveRightChars.indexOf(charToAdd) > -1) {
                 charToAddOnRight = charToAdd;
             }
-            else if (moveLeftChars.indexOf(charToAdd) > -1 && output.length) {
-                insertCharOnLeft(output, moveAcrossCharacters, charToAdd, []);
+            else if (config.moveLeftChars.indexOf(charToAdd) > -1 && output.length) {
+                insertCharOnLeft(output, config.moveAcrossCharacters, charToAdd, []);
             }
             else {
                 output.push(charToAdd);
@@ -51,6 +50,13 @@ var Convertor;
             output.push(charToAddOnRight);
         }
         return output.join("");
+    }
+    Convertor.convertStringUsingMapperInternal = convertStringUsingMapperInternal;
+    function convertStringUsingMapper(config, stringToConvert) {
+        if (stringToConvert) {
+            return stringToConvert.split(" ").map(function (s) { return convertStringUsingMapperInternal(config, s); }).join(" ");
+        }
+        return "";
     }
     Convertor.convertStringUsingMapper = convertStringUsingMapper;
     function insertCharOnLeft(chars, moveLeftAcrossChars, characterToAdd, onRightChars) {
@@ -69,9 +75,8 @@ var Convertor;
         }
     }
     function getMapper(to, from, compositions, moveAcrossCharSet) {
-        var mappingLength = Math.max(to.characterCodes.length, from.characterCodes.length);
         var mapper = {};
-        for (var i = 0; i < mappingLength; i++) {
+        for (var i in to.characterCodes) {
             var fromChar = from.characterCodes[i];
             var toChar = to.characterCodes[i];
             if (fromChar && toChar) {
@@ -85,10 +90,10 @@ var Convertor;
             if (toCharacter) {
                 var fromCharacters = getCompositionCharacters(compositionCharArrays, from.characterCodes);
                 for (var _a = 0, fromCharacters_1 = fromCharacters; _a < fromCharacters_1.length; _a++) {
-                    var fromChar = fromCharacters_1[_a];
-                    maxWidth = Math.max(maxWidth, fromChar.length);
-                    if (!(fromChar in mapper)) {
-                        mapper[fromChar] = toCharacter;
+                    var fromChar_1 = fromCharacters_1[_a];
+                    maxWidth = Math.max(maxWidth, fromChar_1.length);
+                    if (!(fromChar_1 in mapper)) {
+                        mapper[fromChar_1] = toCharacter;
                     }
                 }
             }
@@ -121,6 +126,7 @@ var Convertor;
                 }
                 else {
                     isValid = false;
+                    //onsole.error(`No code in to for ${code}`);
                 }
             }
             if (isValid) {
@@ -132,14 +138,30 @@ var Convertor;
     function getCharFromUnicode() {
         var unicodes = [];
         for (var _i = 0; _i < arguments.length; _i++) {
-            unicodes[_i - 0] = arguments[_i];
+            unicodes[_i] = arguments[_i];
         }
         return unicodes.map(function (c) { return String.fromCharCode(c); }).join("");
     }
+    function merge() {
+        var configs = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            configs[_i] = arguments[_i];
+        }
+        var c = {};
+        for (var _a = 0, configs_1 = configs; _a < configs_1.length; _a++) {
+            var a = configs_1[_a];
+            for (var x in a) {
+                c[x] = a[x];
+            }
+        }
+        return c;
+    }
+    Convertor.merge = merge;
 })(Convertor || (Convertor = {}));
 var PunjabiFontConvertor;
 (function (PunjabiFontConvertor) {
-    PunjabiFontConvertor.anmolMapping = (_a = {},
+    var _a;
+    PunjabiFontConvertor.anmolCharCodes = (_a = {},
         _a[1 /* IkOnkarVersion1a */] = 0x3c,
         _a[2 /* IkOnkarVersion1b */] = 0x3e,
         _a[4 /* IkOnkarVersion2a */] = 0xc5,
@@ -275,12 +297,11 @@ var PunjabiFontConvertor;
         _a[170 /* SingleQuoteCurlyRight */] = 0x2019,
         _a[172 /* DoubleQuoteCurlyLeft */] = 0x201c,
         _a[173 /* DoubleQuoteCurlyRight */] = 0x201d,
-        _a
-    );
-    var _a;
+        _a);
 })(PunjabiFontConvertor || (PunjabiFontConvertor = {}));
 var PunjabiFontConvertor;
 (function (PunjabiFontConvertor) {
+    var _a;
     PunjabiFontConvertor.unicodeMapping = (_a = {},
         _a[0 /* IkOnkarVersion1 */] = 0x0A74,
         //[Char.IkOnkarVersion1b]: ,
@@ -406,12 +427,11 @@ var PunjabiFontConvertor;
         _a[170 /* SingleQuoteCurlyRight */] = 0x2019,
         _a[172 /* DoubleQuoteCurlyLeft */] = 0x201c,
         _a[173 /* DoubleQuoteCurlyRight */] = 0x201d,
-        _a
-    );
-    var _a;
+        _a);
 })(PunjabiFontConvertor || (PunjabiFontConvertor = {}));
 var PunjabiFontConvertor;
 (function (PunjabiFontConvertor) {
+    var _a;
     PunjabiFontConvertor.drChatrikMappings = (_a = {},
         _a[1 /* IkOnkarVersion1a */] = 0xc3,
         _a[2 /* IkOnkarVersion1b */] = 0xc4,
@@ -511,12 +531,11 @@ var PunjabiFontConvertor;
         _a[170 /* SingleQuoteCurlyRight */] = 0x2019,
         _a[172 /* DoubleQuoteCurlyLeft */] = 0x201c,
         _a[173 /* DoubleQuoteCurlyRight */] = 0x201d,
-        _a
-    );
-    var _a;
+        _a);
 })(PunjabiFontConvertor || (PunjabiFontConvertor = {}));
 var PunjabiFontConvertor;
 (function (PunjabiFontConvertor) {
+    var _a;
     PunjabiFontConvertor.awazeMappings = (_a = {},
         //[Char.IkOnkarVersion1a]: 0x3c,
         //[Char.IkOnkarVersion1b]: 0x3e,
@@ -667,13 +686,12 @@ var PunjabiFontConvertor;
         _a[176 /* SquareBracketLeft2 */] = 0x7b,
         _a[177 /* SquareBracketRight */] = 0x5d,
         _a[178 /* SquareBracketRight2 */] = 0x7d,
-        _a
-    );
-    var _a;
+        _a);
 })(PunjabiFontConvertor || (PunjabiFontConvertor = {}));
 var PunjabiFontConvertor;
 (function (PunjabiFontConvertor) {
-    PunjabiFontConvertor.satluj = (_a = {},
+    var _a;
+    PunjabiFontConvertor.satlujMappings = (_a = {},
         _a[0 /* IkOnkarVersion1 */] = 0xfd,
         //[Char.IkOnkarVersion1b]: 0x3e,
         //[Char.IkOnkarVersion2a]: 0xc5,
@@ -831,13 +849,12 @@ var PunjabiFontConvertor;
         _a[182 /* LalaTippi */] = 0xa6,
         _a[183 /* TਥAunkar */] = 0x00,
         _a[184 /* CਚAunkar */] = 0x00,
-        _a
-    );
-    var _a;
+        _a);
 })(PunjabiFontConvertor || (PunjabiFontConvertor = {}));
 var PunjabiFontConvertor;
 (function (PunjabiFontConvertor) {
-    PunjabiFontConvertor.asees = (_a = {},
+    var _a;
+    PunjabiFontConvertor.aseesCharCodes = (_a = {},
         _a[0 /* IkOnkarVersion1 */] = 0xc5,
         _a[1 /* IkOnkarVersion1a */] = 0x2039,
         //[Char.IkOnkarVersion1b]: 0x3e,
@@ -988,13 +1005,12 @@ var PunjabiFontConvertor;
         _a[172 /* DoubleQuoteCurlyLeft */] = 0x201c,
         _a[173 /* DoubleQuoteCurlyRight */] = 0x201d,
         _a[174 /* DoubleQuoteCurlyRight2 */] = 0x40,
-        _a
-    );
-    var _a;
+        _a);
 })(PunjabiFontConvertor || (PunjabiFontConvertor = {}));
 var PunjabiFontConvertor;
 (function (PunjabiFontConvertor) {
-    PunjabiFontConvertor.joy = (_a = {},
+    var _a;
+    PunjabiFontConvertor.joyCharCodes = (_a = {},
         _a[0 /* IkOnkarVersion1 */] = 0x2dd,
         //[Char.IkOnkarVersion1b]: 0x3e,
         //[Char.IkOnkarVersion2a]: 0xc5,
@@ -1173,12 +1189,11 @@ var PunjabiFontConvertor;
         _a[186 /* Hai2 */] = 0x2db,
         _a[183 /* TਥAunkar */] = 0x2da,
         _a[184 /* CਚAunkar */] = 0xb8,
-        _a
-    );
-    var _a;
+        _a);
 })(PunjabiFontConvertor || (PunjabiFontConvertor = {}));
 var PunjabiFontConvertor;
 (function (PunjabiFontConvertor) {
+    var _a;
     PunjabiFontConvertor.gurbaniLipi = (_a = {},
         _a[126 /* GZero */] = 0x30,
         _a[127 /* GOne */] = 0x31,
@@ -1200,20 +1215,18 @@ var PunjabiFontConvertor;
         _a[144 /* EnglishSeven */] = 0x37,
         _a[145 /* EnglishEight */] = 0x38,
         _a[146 /* EnglishNine */] = 0x39,
-        _a
-    );
-    var _a;
+        _a);
 })(PunjabiFontConvertor || (PunjabiFontConvertor = {}));
-///<reference path="../convertor/convertor" />
-///<reference path="./charEnum" />
-///<reference path="./mappings/anmolFontMappings" />
-///<reference path="./mappings/unicodeFontMappings" />
-///<reference path="./mappings/drChatrikFontMappings" />
-///<reference path="./mappings/awazeFont" />
-///<reference path="./mappings/satluj" />
-///<reference path="./mappings/asees" />
-///<reference path="./mappings/joy" />
-///<reference path="./mappings/gurbaniLipi" />
+///<reference path="../convertor/convertor.ts" />
+///<reference path="./charEnum.ts" />
+///<reference path="./mappings/anmolFontMappings.ts" />
+///<reference path="./mappings/unicodeFontMappings.ts" />
+///<reference path="./mappings/drChatrikFontMappings.ts" />
+///<reference path="./mappings/awazeFont.ts" />
+///<reference path="./mappings/satluj.ts" />
+///<reference path="./mappings/asees.ts" />
+///<reference path="./mappings/joy.ts" />
+///<reference path="./mappings/gurbaniLipi.ts" />
 var PunjabiFontConvertor;
 (function (PunjabiFontConvertor) {
     var moveAcrossChaSet = [
@@ -1299,43 +1312,43 @@ var PunjabiFontConvertor;
     var fontConvertorConfigs = {
         "Arial Unicode MS": {
             moveRightCharacters: [97 /* Sihari */],
-            characterCodes: makeArray(PunjabiFontConvertor.unicodeMapping)
+            characterCodes: PunjabiFontConvertor.unicodeMapping
         },
         "AnmolUni": {
             moveRightCharacters: [97 /* Sihari */],
-            characterCodes: makeArray(PunjabiFontConvertor.unicodeMapping)
+            characterCodes: PunjabiFontConvertor.unicodeMapping
         },
         "AnmolLipi": {
             moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiFontConvertor.anmolMapping)
+            characterCodes: PunjabiFontConvertor.anmolCharCodes
         },
         "DrChatrikWeb": {
             moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiFontConvertor.drChatrikMappings)
+            characterCodes: PunjabiFontConvertor.drChatrikMappings
         },
         "Awaze": {
             moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiFontConvertor.awazeMappings)
+            characterCodes: PunjabiFontConvertor.awazeMappings
         },
         "Satluj": {
             moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiFontConvertor.satluj)
+            characterCodes: PunjabiFontConvertor.satlujMappings
         },
         "Asees": {
             moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiFontConvertor.asees)
+            characterCodes: PunjabiFontConvertor.aseesCharCodes
         },
         "Joy": {
             moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiFontConvertor.joy)
+            characterCodes: PunjabiFontConvertor.joyCharCodes
         },
         "GurbaniLipi": {
             moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiFontConvertor.anmolMapping, PunjabiFontConvertor.gurbaniLipi)
+            characterCodes: Convertor.merge(PunjabiFontConvertor.anmolCharCodes, PunjabiFontConvertor.gurbaniLipi)
         },
         "GurmukhiLys020": {
             moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiFontConvertor.anmolMapping)
+            characterCodes: PunjabiFontConvertor.anmolCharCodes
         }
     };
     function convert(str, toFontName, fromFontName) {
@@ -1345,20 +1358,4 @@ var PunjabiFontConvertor;
         return Convertor.convertStringUsingMapper(mapperConfig, str);
     }
     PunjabiFontConvertor.convert = convert;
-    function makeArray() {
-        var configs = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            configs[_i - 0] = arguments[_i];
-        }
-        var c = [];
-        for (var _a = 0, configs_1 = configs; _a < configs_1.length; _a++) {
-            var a = configs_1[_a];
-            for (var x in a) {
-                if (a.hasOwnProperty(x)) {
-                    c[x] = a[x];
-                }
-            }
-        }
-        return c;
-    }
 })(PunjabiFontConvertor || (PunjabiFontConvertor = {}));

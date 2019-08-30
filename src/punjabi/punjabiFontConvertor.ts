@@ -1,13 +1,13 @@
-///<reference path="../convertor/convertor" />
-///<reference path="./charEnum" />
-///<reference path="./mappings/anmolFontMappings" />
-///<reference path="./mappings/unicodeFontMappings" />
-///<reference path="./mappings/drChatrikFontMappings" />
-///<reference path="./mappings/awazeFont" />
-///<reference path="./mappings/satluj" />
-///<reference path="./mappings/asees" />
-///<reference path="./mappings/joy" />
-///<reference path="./mappings/gurbaniLipi" />
+///<reference path="../convertor/convertor.ts" />
+///<reference path="./charEnum.ts" />
+///<reference path="./mappings/anmolFontMappings.ts" />
+///<reference path="./mappings/unicodeFontMappings.ts" />
+///<reference path="./mappings/drChatrikFontMappings.ts" />
+///<reference path="./mappings/awazeFont.ts" />
+///<reference path="./mappings/satluj.ts" />
+///<reference path="./mappings/asees.ts" />
+///<reference path="./mappings/joy.ts" />
+///<reference path="./mappings/gurbaniLipi.ts" />
 namespace PunjabiFontConvertor {
     let moveAcrossChaSet = [
         [[Char.PairiHaha],[Char.PairiHaha2], [Char.Virama, Char.Hਹ]],
@@ -96,43 +96,43 @@ namespace PunjabiFontConvertor {
     let fontConvertorConfigs: { [key: string]: Convertor.IMapping } = {
         "Arial Unicode MS": {
             moveRightCharacters: [Char.Sihari],
-            characterCodes: makeArray(PunjabiFontConvertor.unicodeMapping)
+            characterCodes: PunjabiFontConvertor.unicodeMapping
         },
         "AnmolUni": {
             moveRightCharacters: [Char.Sihari],
-            characterCodes: makeArray(PunjabiFontConvertor.unicodeMapping)
+            characterCodes: PunjabiFontConvertor.unicodeMapping
         },
         "AnmolLipi": {
             moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiFontConvertor.anmolMapping)
+            characterCodes: PunjabiFontConvertor.anmolCharCodes
         },
         "DrChatrikWeb": {
             moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiFontConvertor.drChatrikMappings)
+            characterCodes: PunjabiFontConvertor.drChatrikMappings
         },
         "Awaze": {
             moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiFontConvertor.awazeMappings)
+            characterCodes: PunjabiFontConvertor.awazeMappings
         },
         "Satluj": {
             moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiFontConvertor.satluj)
+            characterCodes: PunjabiFontConvertor.satlujMappings
         },
         "Asees": {
             moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiFontConvertor.asees)
+            characterCodes: PunjabiFontConvertor.aseesCharCodes
         },
         "Joy": {
             moveRightCharacters: [],
-            characterCodes : makeArray(PunjabiFontConvertor.joy)
+            characterCodes : PunjabiFontConvertor.joyCharCodes
         },
         "GurbaniLipi": {
             moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiFontConvertor.anmolMapping, PunjabiFontConvertor.gurbaniLipi)
+            characterCodes: Convertor.merge(PunjabiFontConvertor.anmolCharCodes, PunjabiFontConvertor.gurbaniLipi)
         },
         "GurmukhiLys020": {
             moveRightCharacters: [],
-            characterCodes: makeArray(PunjabiFontConvertor.anmolMapping)
+            characterCodes: PunjabiFontConvertor.anmolCharCodes
         },
     };
 
@@ -144,16 +144,5 @@ namespace PunjabiFontConvertor {
         return Convertor.convertStringUsingMapper(mapperConfig, str);
     }
 
-    function makeArray(...configs: any[]) {
-        var c: number[] = [];
-
-        for (let a of configs) {
-            for (var x in a) {
-                if (a.hasOwnProperty(x)) {
-                    c[x] = a[x];
-                }
-            }
-        }
-        return c;
-    }
+    
 }

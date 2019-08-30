@@ -1,5 +1,5 @@
 namespace PunjabiFontConvertor {
-    export let asees = {
+    export let aseesCharCodes = {
         [Char.IkOnkarVersion1]: 0xc5,
         [Char.IkOnkarVersion1a]: 0x2039,
         //[Char.IkOnkarVersion1b]: 0x3e,
