@@ -1,164 +1,182 @@
-namespace Convertor {
-    export function convertStringUsingMapper(mapperConfig: IMapperConfig, stringToConvert: string): string {
-        let {mapper, maxWidth, moveRightChars, moveLeftChars, moveAcrossCharacters } = mapperConfig;
+export function convertStringUsingMapperInternal(config: IMapperConfig, stringToConvert: string): string {
 
-        let output: string[] = [];
+    let output: string[] = [];
 
-        let charToAddOnRight = "";
-        let charToMoveRightIndex = 0;
+    let charToAddOnRight = "";
+    let charToMoveRightIndex = 0;
 
-        for (let i = 0; i < stringToConvert.length; i++) {
-            let j = maxWidth + 1;
-            let matchFound = false;
+    for (let i = 0; i < stringToConvert.length; i++) {
+        let j = config.maxWidth + 1;
+        let matchFound = false;
 
-            let charToMatch = "";
-            while (matchFound === false && j--) {
-                charToMatch = stringToConvert.substr(i, j);
+        let charToMatch = "";
+        while (matchFound === false && j--) {
+            charToMatch = stringToConvert.substr(i, j);
 
-                if (charToMatch in mapper) {
-                    matchFound = true;
-                    i = i + (j - 1);
-                }
+            if (charToMatch in config.mapper) {
+                matchFound = true;
+                i = i + (j - 1);
             }
+        }
 
-            let charToAdd: string;
+        let charToAdd: string;
 
-            if (matchFound) {
-                charToAdd = mapper[charToMatch];
-            } else {
-                charToAdd = stringToConvert[i];
-            }
-
-            if (charToAddOnRight) {
-                if (charToMoveRightIndex < 1) {
-                    charToMoveRightIndex = 1;
-                    output.push(charToAdd);
-                } else if (moveAcrossCharacters.indexOf(charToAdd) > -1) {
-                    output.push(charToAdd);
-                } else {
-                    output.push(charToAddOnRight, charToAdd);
-                    charToAddOnRight = null;
-                    charToMoveRightIndex = 0;
-                }
-            } else if (moveRightChars.indexOf(charToAdd) > -1) {
-                charToAddOnRight = charToAdd;
-            } else if (moveLeftChars.indexOf(charToAdd) > -1 && output.length) {
-                insertCharOnLeft(output, moveAcrossCharacters, charToAdd, []);
-            } else {
-                output.push(charToAdd);
-            }
+        if (matchFound) {
+            charToAdd = config.mapper[charToMatch];
+        } else {
+            charToAdd = stringToConvert[i];
         }
 
         if (charToAddOnRight) {
-            output.push(charToAddOnRight);
-        }
-        return output.join("");
-
-    }
-
-    function insertCharOnLeft(chars: string[], moveLeftAcrossChars: string[], characterToAdd: string, onRightChars: string[]) {
-        let lastChar = chars.pop();
-
-        if (lastChar) {
-            if (moveLeftAcrossChars.indexOf(lastChar) > -1) {
-                onRightChars.unshift(lastChar);
-                insertCharOnLeft(chars, moveLeftAcrossChars, characterToAdd, onRightChars);
+            if (charToMoveRightIndex < 1) {
+                charToMoveRightIndex = 1;
+                output.push(charToAdd);
+            } else if (config.moveAcrossCharacters.indexOf(charToAdd) > -1) {
+                output.push(charToAdd);
             } else {
-                chars.push(characterToAdd, lastChar, ...onRightChars);
+                output.push(charToAddOnRight, charToAdd);
+                charToAddOnRight = null;
+                charToMoveRightIndex = 0;
             }
+        } else if (config.moveRightChars.indexOf(charToAdd) > -1) {
+            charToAddOnRight = charToAdd;
+        } else if (config.moveLeftChars.indexOf(charToAdd) > -1 && output.length) {
+            insertCharOnLeft(output, config.moveAcrossCharacters, charToAdd, []);
         } else {
-            chars.push(characterToAdd, ...onRightChars);
+            output.push(charToAdd);
         }
     }
 
-    export function getMapper(to: IMapping, from: IMapping, compositions: number[][][], moveAcrossCharSet: number[][][]): IMapperConfig {
-        let mappingLength = Math.max(to.characterCodes.length, from.characterCodes.length);
+    if (charToAddOnRight) {
+        output.push(charToAddOnRight);
+    }
+    return output.join("");
 
-        let mapper: any = {};
+}
 
-        for (let i = 0; i < mappingLength; i++) {
-            let fromChar = from.characterCodes[i];
-            let toChar = to.characterCodes[i];
+export function convertStringUsingMapper(config: IMapperConfig, stringToConvert: string): string {
+    if (stringToConvert) {
+        return stringToConvert.split(" ").map(s => convertStringUsingMapperInternal(config, s)).join(" ");
+    }
+    return "";
+}
 
-            if (fromChar && toChar) {
-                mapper[getCharFromUnicode(fromChar)] = getCharFromUnicode(toChar);
-            }
+function insertCharOnLeft(chars: string[], moveLeftAcrossChars: string[], characterToAdd: string, onRightChars: string[]) {
+    let lastChar = chars.pop();
+
+    if (lastChar) {
+        if (moveLeftAcrossChars.indexOf(lastChar) > -1) {
+            onRightChars.unshift(lastChar);
+            insertCharOnLeft(chars, moveLeftAcrossChars, characterToAdd, onRightChars);
+        } else {
+            chars.push(characterToAdd, lastChar, ...onRightChars);
         }
-        let maxWidth = 1;
+    } else {
+        chars.push(characterToAdd, ...onRightChars);
+    }
+}
 
-        for (let compositionCharArrays of compositions) {
+export function getMapper(to: IMapping, from: IMapping, compositions: number[][][], moveAcrossCharSet: number[][][]): IMapperConfig {
+    let mapper: any = {};
 
-            let toCharacter = getCompositionCharacters(compositionCharArrays, to.characterCodes)[0];
+    for (var i in to.characterCodes) {
+        var fromChar = from.characterCodes[i];
+        var toChar = to.characterCodes[i];
 
-            if (toCharacter) {
-                let fromCharacters = getCompositionCharacters(compositionCharArrays, from.characterCodes);
+        if (fromChar && toChar) {
+            mapper[getCharFromUnicode(fromChar)] = getCharFromUnicode(toChar);
+        }
+    }
 
-                for (let fromChar of fromCharacters) {
-                    maxWidth = Math.max(maxWidth, fromChar.length);
+    let maxWidth = 1;
 
-                    if (!(fromChar in mapper)) {
-                        mapper[fromChar] = toCharacter;
-                    }
+    for (let compositionCharArrays of compositions) {
+
+        let toCharacter = getCompositionCharacters(compositionCharArrays, to.characterCodes)[0];
+
+        if (toCharacter) {
+            let fromCharacters = getCompositionCharacters(compositionCharArrays, from.characterCodes);
+
+            for (let fromChar of fromCharacters) {
+                maxWidth = Math.max(maxWidth, fromChar.length);
+
+                if (!(fromChar in mapper)) {
+                    mapper[fromChar] = toCharacter;
                 }
             }
         }
-
-        let moveLeftCharIndexes = from.moveRightCharacters.filter(a => to.moveRightCharacters.indexOf(a) === -1);
-        let moveRightCharIndexes = to.moveRightCharacters.filter(a => from.moveRightCharacters.indexOf(a) === -1);
-
-        let moveAcrossCharacters = moveAcrossCharSet
-            .map(a => getCompositionCharacters(a, to.characterCodes))
-            .reduce((a, b) => a.concat(b), []);
-        return {
-            mapper,
-            maxWidth,
-            moveLeftChars: moveLeftCharIndexes.map(c => getCharFromUnicode(to.characterCodes[c])),
-            moveAcrossCharacters,
-            moveRightChars: moveRightCharIndexes.map(c => getCharFromUnicode(to.characterCodes[c])),
-        };
     }
 
-    function getCompositionCharacters(compositionCharArrays: number[][], codes: number[]) {
-        let characters:string[] = [];
+    let moveLeftCharIndexes = from.moveRightCharacters.filter(a => to.moveRightCharacters.indexOf(a) === -1);
+    let moveRightCharIndexes = to.moveRightCharacters.filter(a => from.moveRightCharacters.indexOf(a) === -1);
 
-        for (let compositionChar of compositionCharArrays) {
-            let isValid = true;
-            let charCodes: number[] = [];
-            for (let code of compositionChar) {
-                let toCode = codes[code];
+    let moveAcrossCharacters = moveAcrossCharSet
+        .map(a => getCompositionCharacters(a, to.characterCodes))
+        .reduce((a, b) => a.concat(b), []);
+    return {
+        mapper,
+        maxWidth,
+        moveLeftChars: moveLeftCharIndexes.map(c => getCharFromUnicode(to.characterCodes[c])),
+        moveAcrossCharacters,
+        moveRightChars: moveRightCharIndexes.map(c => getCharFromUnicode(to.characterCodes[c])),
+    };
+}
 
-                if (toCode) {
-                    charCodes.push(toCode);
-                } else {
-                    isValid = false;
-                    //onsole.error(`No code in to for ${code}`);
-                }
-            }
+function getCompositionCharacters(compositionCharArrays: number[][], codes: ICharCodes) {
+    let characters: string[] = [];
 
-            if (isValid) {
-                characters.push(getCharFromUnicode(...charCodes));
+    for (let compositionChar of compositionCharArrays) {
+        let isValid = true;
+        let charCodes: number[] = [];
+        for (let code of compositionChar) {
+            let toCode = codes[code];
+
+            if (toCode) {
+                charCodes.push(toCode);
+            } else {
+                isValid = false;
+                //onsole.error(`No code in to for ${code}`);
             }
         }
-        return characters;
-    }
 
-    function getCharFromUnicode(...unicodes: number[]): string {
-        return unicodes.map(c => String.fromCharCode(c)).join("");
+        if (isValid) {
+            characters.push(getCharFromUnicode(...charCodes));
+        }
     }
+    return characters;
+}
 
-    export interface IMapping {
-        characterCodes: number[];
-        moveRightCharacters: number[];
-        moveRightAcrossCharacterSet?: number[][];
-    }
+function getCharFromUnicode(...unicodes: number[]): string {
+    return unicodes.map(c => String.fromCharCode(c)).join("");
+}
 
-    export interface IMapperConfig {
-        mapper : {
-            [key: string] : string;
-        };
-        maxWidth: number
-        moveLeftChars: string[];
-        moveRightChars: string[];
-        moveAcrossCharacters: string[];
+export interface IMapping {
+    characterCodes: ICharCodes;
+    moveRightCharacters: number[];
+    moveRightAcrossCharacterSet?: number[][];
+}
+
+export interface ICharCodes {
+    [key: number]: number
+}
+
+export function merge(...configs: ICharCodes[]): ICharCodes {
+    var c: ICharCodes = {};
+
+    for (let a of configs) {
+        for (var x in a) {
+            c[x] = a[x];
+        }
     }
+    return c;
+}
+
+export interface IMapperConfig {
+    mapper: {
+        [key: string]: string;
+    };
+    maxWidth: number
+    moveLeftChars: string[];
+    moveRightChars: string[];
+    moveAcrossCharacters: string[];
 }

@@ -1,10 +1,15 @@
 {
     "compilerOptions": {
-        "target": "es3",        
         "sourceMap": false,
         "pretty": true,
-        "outFile": "dist/convertor.js"        
+        "moduleResolution": "node",
+        "preserveConstEnums": false,
+        "outDir": "obj",
+        "module": "es6"
     },
-    "exclude": [       
+    "include": [
+        "src/**/*"],
+    "exclude": [ 
+        "node_modules"  
     ]
 }
