@@ -57,7 +57,7 @@ export let unicodeMapping = {
     [Char.FPairiBindiਫ਼]: 0x0A5E,
     [Char.LPairiBindiਲ਼]: 0x0A33,
     [Char.PairiBindi]: 0x0A3C,
-    //[Char.Dot]:,
+    [Char.Dot]: ".".charCodeAt(0),
     //[Char.PairiHaha]: ,
     //[Char.PairiRara]: 
     //[Char.PairiChacha]: ,

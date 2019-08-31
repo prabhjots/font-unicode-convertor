@@ -99,4 +99,5 @@ export let drChatrikMappings = {
     [Char.SingleQuoteCurlyRight]: 0x2019,
     [Char.DoubleQuoteCurlyLeft]: 0x201c,
     [Char.DoubleQuoteCurlyRight]: 0x201d,
+    [Char.Dot]: '['.charCodeAt(0)
 }
