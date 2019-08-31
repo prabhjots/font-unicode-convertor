@@ -16,7 +16,7 @@ ReactDOM.render(
             return el("tr", null,
                 el("th", null, s.Unicode),
                 el("th", { style: { fontFamily: "AnmolLipi" } }, s.AnmolLipi),
-                el("th", { style: { fontFamily: "DrChatrikWeb" } }, s.DrChatrikWeb),
+                el("th", { style: { fontFamily: "Chatrik" } }, s.DrChatrikWeb),
                 el("th", { style: { fontFamily: "Satluj" } }, s.Satluj),
                 el("th", { style: { fontFamily: "Joy" } }, s.Joy),
                 el("th", { style: { fontFamily: "Asees" } }, s.Asees),

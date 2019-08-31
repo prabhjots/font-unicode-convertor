@@ -1,7 +1,6 @@
 const PunjabiFontConvertor = require("../dist/convertor");
 const { samples } = require("./samples")
 
-
 function getCodes(str) {
     var codes = [];
     for (var i = 0; i < str.length; i++) {
@@ -46,6 +45,3 @@ expect.extend({
 test("test samples", () => {
     samples.forEach(sample => expect(sample).checkFontConvert())
 })
-
-
-
