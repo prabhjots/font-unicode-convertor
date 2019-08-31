@@ -1,14 +1,10 @@
 const PunjabiFontConvertor = require("../dist/convertor");
+const { samples } = require("./samples")
 
-var samples = [
-    { "Unicode": "ਲਿਖਿਆ", "AnmolLipi": "iliKAw", "DrChatrikWeb": "iliKaf", "Satluj": "ÇñÇÖÁÅ", "Asees": "fbfynk", "Joy": "fbfynk", "GurbaniLipi": "iliKAw", "GurmukhiLys020": "iliKAw" },
-    { "Unicode": "ਵਿਦਿਆਰਥੀ", "AnmolLipi": "ividAwrQI", "DrChatrikWeb": "ividafrQI", "Satluj": "ÇòÇçÁÅðæÆ", "Asees": "ftfdnkoEh", "Joy": "ftfdnkoEh" },
-    { "Unicode": ".", "AnmolLipi": ".", "DrChatrikWeb": "[", "Satluj": ".", "Asees": ".", /*"Joy": "d" */ },
-]
 
-function getCodes(str){
+function getCodes(str) {
     var codes = [];
-    for(var i = 0 ; i < str.length; i++){
+    for (var i = 0; i < str.length; i++) {
         codes.push(str.charCodeAt(i).toString(16));
     }
     return codes.join(" ");
@@ -31,7 +27,7 @@ expect.extend({
                                     + `Received: ${this.utils.printReceived(received)}\n\n`
                                     + `       From Codes : ${getCodes(fromText)}\n`
                                     + `To Expected Codes : ${getCodes(expected)}\n`
-                                    + `  To Actual Codes : ${getCodes(received)}\n` ,
+                                    + `  To Actual Codes : ${getCodes(received)}\n`,
                                 pass: false,
                             };
                         }
