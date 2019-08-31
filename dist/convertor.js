@@ -691,6 +691,7 @@
         [170 /* SingleQuoteCurlyRight */]: 0x2019,
         [172 /* DoubleQuoteCurlyLeft */]: 0x201c,
         [173 /* DoubleQuoteCurlyRight */]: 0x201d,
+        [65 /* Dot */]: '['.charCodeAt(0)
     };
 
     let gurbaniLipi = {
@@ -1114,7 +1115,7 @@
         [61 /* FPairiBindiਫ਼ */]: 0x0A5E,
         [62 /* LPairiBindiਲ਼ */]: 0x0A33,
         [63 /* PairiBindi */]: 0x0A3C,
-        //[Char.Dot]:,
+        [65 /* Dot */]: ".".charCodeAt(0),
         //[Char.PairiHaha]: ,
         //[Char.PairiRara]: 
         //[Char.PairiChacha]: ,
@@ -1265,15 +1266,14 @@
         [[185 /* Hai */], [186 /* Hai2 */], [26 /* Hਹ */, 111 /* Dulavan */]],
         [[13 /* UਉBindi */], [12 /* Uਉ */, 85 /* Bindi */], [11 /* Uੳ */, 103 /* Aunkar */, 85 /* Bindi */]],
     ];
+    const unicodeMConfig = {
+        moveRightCharacters: [97 /* Sihari */],
+        characterCodes: unicodeMapping
+    };
     let fontConvertorConfigs = {
-        "Arial Unicode MS": {
-            moveRightCharacters: [97 /* Sihari */],
-            characterCodes: unicodeMapping
-        },
-        "AnmolUni": {
-            moveRightCharacters: [97 /* Sihari */],
-            characterCodes: unicodeMapping
-        },
+        "Arial Unicode MS": unicodeMConfig,
+        "AnmolUni": unicodeMConfig,
+        "Unicode": unicodeMConfig,
         "AnmolLipi": {
             moveRightCharacters: [],
             characterCodes: anmolCharCodes

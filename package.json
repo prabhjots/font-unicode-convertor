@@ -11,6 +11,6 @@
     "build": "tsc && rollup --config"
   },
   "dependencies": {
-   
+    "lodash": "^4.17.15"
   }
 }
