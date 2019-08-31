@@ -59,7 +59,7 @@ export let satlujMappings = {
     [Char.FPairiBindiਫ਼]: 0xf8,
     [Char.LPairiBindiਲ਼]: 0xff,
     //[Char.PairiBindi]: 0xe6,
-    //[Char.Dot]: 0x50,
+    [Char.Dot]: ".".charCodeAt(0),
     //[Char.PairiHaha]: 0x48,
     //[Char.PairiHahaDulainkar]: 0xa7,
     [Char.PairiRara]: 0xcc,
