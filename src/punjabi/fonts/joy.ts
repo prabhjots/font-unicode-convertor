@@ -60,7 +60,7 @@ export let joyCharCodes = {
     [Char.FPairiBindiਫ਼]: 0xaf,
     [Char.LPairiBindiਲ਼]: 0x2c7,
     //[Char.PairiBindi]: 0xe6,
-    //[Char.Dot]: 0x50,
+    [Char.Dot]: "H".charCodeAt(0),
     [Char.PairiHaha]: 0x51,
     [Char.PairiHaha2]: 0x2211,
     //[Char.PairiHahaDulainkar]: 0xa7,

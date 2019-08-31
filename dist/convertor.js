@@ -777,7 +777,7 @@
         [61 /* FPairiBindiਫ਼ */]: 0xaf,
         [62 /* LPairiBindiਲ਼ */]: 0x2c7,
         //[Char.PairiBindi]: 0xe6,
-        //[Char.Dot]: 0x50,
+        [65 /* Dot */]: "H".charCodeAt(0),
         [66 /* PairiHaha */]: 0x51,
         [67 /* PairiHaha2 */]: 0x2211,
         //[Char.PairiHahaDulainkar]: 0xa7,
