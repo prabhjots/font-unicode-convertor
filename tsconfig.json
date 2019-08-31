@@ -5,11 +5,12 @@
         "moduleResolution": "node",
         "preserveConstEnums": false,
         "outDir": "obj",
-        "module": "es6"
+        "module": "es6",
+        "target": "es6"
     },
     "include": [
-        "src/**/*"],
+        "src/**/*"
+    ],
     "exclude": [ 
-        "node_modules"  
     ]
 }

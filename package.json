@@ -8,6 +8,9 @@
   },
   "scripts": {
     "test": "jest --watch",
-    "build": "rollup --config"
+    "build": "tsc && rollup --config"
+  },
+  "dependencies": {
+   
   }
 }
