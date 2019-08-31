@@ -1,12 +1,12 @@
 import * as Convertor from "../convertor/convertor";
-import { anmolCharCodes } from "./mappings/anmolFontMappings";
-import { aseesCharCodes } from "./mappings/asees";
-import { awazeMappings } from "./mappings/awazeFont";
-import { drChatrikMappings } from "./mappings/drChatrikFontMappings";
-import { gurbaniLipi } from "./mappings/gurbaniLipi";
-import { joyCharCodes } from "./mappings/joy";
-import { satlujMappings } from "./mappings/satluj";
-import { unicodeMapping } from "./mappings/unicodeFontMappings"
+import { anmolCharCodes } from "./fonts/anmol";
+import { aseesCharCodes } from "./fonts/asees";
+import { awazeMappings } from "./fonts/awaze";
+import { drChatrikMappings } from "./fonts/drChatrik";
+import { gurbaniLipi } from "./fonts/gurbaniLipi";
+import { joyCharCodes } from "./fonts/joy";
+import { satlujMappings } from "./fonts/satluj";
+import { unicodeMapping } from "./fonts/unicode"
 import { Char } from "./charEnum"
 
 let moveAcrossChaSet = [
@@ -93,15 +93,15 @@ let compositions: number[][][] = [
     [[Char.UਉBindi], [Char.Uਉ, Char.Bindi], [Char.Uੳ, Char.Aunkar, Char.Bindi]],
 ];
 
+const unicodeMConfig = {
+    moveRightCharacters: [Char.Sihari],
+    characterCodes: unicodeMapping
+}
+
 let fontConvertorConfigs: { [key: string]: Convertor.IMapping } = {
-    "Arial Unicode MS": {
-        moveRightCharacters: [Char.Sihari],
-        characterCodes: unicodeMapping
-    },
-    "AnmolUni": {
-        moveRightCharacters: [Char.Sihari],
-        characterCodes: unicodeMapping
-    },
+    "Arial Unicode MS": unicodeMConfig,
+    "AnmolUni": unicodeMConfig,
+    "Unicode": unicodeMConfig,
     "AnmolLipi": {
         moveRightCharacters: [],
         characterCodes: anmolCharCodes
