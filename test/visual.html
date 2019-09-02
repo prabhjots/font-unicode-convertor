@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,19 +30,25 @@
         ReactDOM.render(el(Page), document.getElementById('root'));
 
         function Page() {
-            const [text, setText] = React.useState("");
+            var s = React.useState("");
+            var text = s[0];
+            var setText = s[1];
             var items = getSamples(text);
+            var downloadText = "exports.samples=" + JSON.stringify(items, null, 4);
+            
             return el("div", null,
-                el(FontTable, { samples: items }),
                 el("textarea", {
                     className: "form-conrol",
                     onChange: function (e) {
                         setText(e.target.value)
                     }
                 }),
-                el("button", null, "Download")
+                el("a", {
+                    href: "data:text/plain;charset=utf-8," + encodeURIComponent(downloadText),
+                    download: "samples.js"
+                }, "Download"),
+                el(FontTable, { samples: items })
             );
-
         }
 
         function FontTable(props) {
@@ -68,10 +80,10 @@
                 _.uniq(
                     _.compact(
                         _.concat(
-                            text.split(" "),
+                            text.split(/\s+/),
                             samples.map(function (a) { return a.Unicode })))));
-            
-            return items.map(function(i){
+
+            return items.map(function (i) {
                 return {
                     Unicode: i,
                     AnmolLipi: PunjabiFontConvertor.convert(i, "AnmolLipi", "Unicode"),
