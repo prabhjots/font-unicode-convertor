@@ -7,19 +7,41 @@
 </head>
 
 <body>
+    <div id="root"></div>
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <div id="root"></div>
+    <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.js"></script>
+    <script src="../dist/convertor.js"></script>
     <script>
         var exports = {};
     </script>
     <script src="samples.js"></script>
+
     <script>
         var samples = exports.samples;
         var el = React.createElement;
 
-        ReactDOM.render(
-            el("table", { className: "table" },
+        ReactDOM.render(el(Page), document.getElementById('root'));
+
+        function Page() {
+            const [text, setText] = React.useState("");
+            var items = getSamples(text);
+            return el("div", null,
+                el(FontTable, { samples: items }),
+                el("textarea", {
+                    className: "form-conrol",
+                    onChange: function (e) {
+                        setText(e.target.value)
+                    }
+                }),
+                el("button", null, "Download")
+            );
+
+        }
+
+        function FontTable(props) {
+            var samples = props.samples;
+            return el("table", { className: "table" },
                 el("thead", null,
                     el("tr", null,
                         el("th", { scope: "col" }, "Unicode"),
@@ -30,7 +52,7 @@
                         el("th", { scope: "col" }, "Asees"),
                         el("th", { scope: "col" }, "Gurbani Lipi"))),
                 el("tbody", null, samples.map(function (s) {
-                    return el("tr", null,
+                    return el("tr", { key: s.Unicode },
                         el("th", null, s.Unicode),
                         el("th", { style: { fontFamily: "AnmolLipi" } }, s.AnmolLipi),
                         el("th", { style: { fontFamily: "Chatrik" } }, s.DrChatrikWeb),
@@ -38,8 +60,29 @@
                         el("th", { style: { fontFamily: "Joy" } }, s.Joy),
                         el("th", { style: { fontFamily: "Asees" } }, s.Asees),
                         el("th", { style: { fontFamily: "GurbaniLipi" } }, s.GurbaniLipi));
-                }))),
-            document.getElementById('root'));
+                })));
+        }
+
+        function getSamples(text) {
+            var items = _.sortBy(
+                _.uniq(
+                    _.compact(
+                        _.concat(
+                            text.split(" "),
+                            samples.map(function (a) { return a.Unicode })))));
+            
+            return items.map(function(i){
+                return {
+                    Unicode: i,
+                    AnmolLipi: PunjabiFontConvertor.convert(i, "AnmolLipi", "Unicode"),
+                    DrChatrikWeb: PunjabiFontConvertor.convert(i, "DrChatrikWeb", "Unicode"),
+                    Satluj: PunjabiFontConvertor.convert(i, "Satluj", "Unicode"),
+                    Joy: PunjabiFontConvertor.convert(i, "Joy", "Unicode"),
+                    Asees: PunjabiFontConvertor.convert(i, "Asees", "Unicode"),
+                    GurbaniLipi: PunjabiFontConvertor.convert(i, "GurbaniLipi", "Unicode"),
+                }
+            })
+        }
     </script>
 </body>
 
