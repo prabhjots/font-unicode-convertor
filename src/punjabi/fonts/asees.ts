@@ -62,7 +62,7 @@ export let aseesCharCodes = {
     [Char.FPairiBindiਫ਼]: 0x7c,
     [Char.LPairiBindiਲ਼]: 0x2b,
     [Char.PairiBindi]: 0x61,
-    [Char.Dot]: ".".charCodeAt(0),
+    [Char.Dot]: "H".charCodeAt(0),
     [Char.PairiHaha]: 0x51,
     [Char.PairiHahaDulainkar]: 0xa7,
     [Char.PairiRara]: 0x71,
