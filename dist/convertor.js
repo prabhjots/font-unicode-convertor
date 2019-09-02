@@ -1146,6 +1146,7 @@
         [118 /* Virama */]: 0x0A4D,
         [119 /* Udaat */]: 0x0A51,
         [120 /* Danda */]: 0x0964,
+        [122 /* Danda2 */]: 0x7c,
         [124 /* DoubleDanda */]: 0x0965,
         [126 /* GZero */]: 0x0A66,
         [127 /* GOne */]: 0x0A67,
