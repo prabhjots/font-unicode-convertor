@@ -88,6 +88,7 @@ export let unicodeMapping = {
     [Char.Virama]: 0x0A4D,
     [Char.Udaat]: 0x0A51,
     [Char.Danda]: 0x0964,
+    [Char.Danda2]: 0x7c,
     [Char.DoubleDanda]: 0x0965,
     [Char.GZero]: 0x0A66,
     [Char.GOne]: 0x0A67,
