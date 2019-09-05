@@ -1,4 +1,4 @@
-export function convertStringUsingMapperInternal(config: IMapperConfig, stringToConvert: string): string {
+export function convertStringUsingMapper(config: IMapperConfig, stringToConvert: string): string {
 
     let output: string[] = [];
 
@@ -58,13 +58,6 @@ export function convertStringUsingMapperInternal(config: IMapperConfig, stringTo
 
 }
 
-export function convertStringUsingMapper(config: IMapperConfig, stringToConvert: string): string {
-    if (stringToConvert) {
-        return stringToConvert.split(" ").map(s => convertStringUsingMapperInternal(config, s)).join(" ");
-    }
-    return "";
-}
-
 function insertCharOnLeft(chars: string[], moveLeftAcrossChars: string[], characterToAdd: string, onRightChars: string[]) {
     let lastChar = chars.pop();
 
@@ -80,7 +73,7 @@ function insertCharOnLeft(chars: string[], moveLeftAcrossChars: string[], charac
     }
 }
 
-export function getMapper(to: IMapping, from: IMapping, compositions: number[][][], moveAcrossCharSet: number[][][]): IMapperConfig {
+export function getMapper(to: IMapping, from: IMapping, groups: string[][][], tightGroups: string[][][]): IMapperConfig {
     let mapper: any = {};
 
     for (var i in to.characterCodes) {
@@ -88,13 +81,13 @@ export function getMapper(to: IMapping, from: IMapping, compositions: number[][]
         var toChar = to.characterCodes[i];
 
         if (fromChar && toChar) {
-            mapper[getCharFromUnicode(fromChar)] = getCharFromUnicode(toChar);
+            mapper[fromChar] = toChar;
         }
     }
 
     let maxWidth = 1;
 
-    for (let compositionCharArrays of compositions) {
+    for (let compositionCharArrays of groups) {
 
         let toCharacter = getCompositionCharacters(compositionCharArrays, to.characterCodes)[0];
 
@@ -114,24 +107,24 @@ export function getMapper(to: IMapping, from: IMapping, compositions: number[][]
     let moveLeftCharIndexes = from.moveRightCharacters.filter(a => to.moveRightCharacters.indexOf(a) === -1);
     let moveRightCharIndexes = to.moveRightCharacters.filter(a => from.moveRightCharacters.indexOf(a) === -1);
 
-    let moveAcrossCharacters = moveAcrossCharSet
+    let moveAcrossCharacters = tightGroups
         .map(a => getCompositionCharacters(a, to.characterCodes))
         .reduce((a, b) => a.concat(b), []);
     return {
         mapper,
         maxWidth,
-        moveLeftChars: moveLeftCharIndexes.map(c => getCharFromUnicode(to.characterCodes[c])),
+        moveLeftChars: moveLeftCharIndexes.map(c => to.characterCodes[c]),
         moveAcrossCharacters,
-        moveRightChars: moveRightCharIndexes.map(c => getCharFromUnicode(to.characterCodes[c])),
+        moveRightChars: moveRightCharIndexes.map(c => to.characterCodes[c]),
     };
 }
 
-function getCompositionCharacters(compositionCharArrays: number[][], codes: ICharCodes) {
+function getCompositionCharacters(compositionCharArrays: string[][], codes: IChars) {
     let characters: string[] = [];
 
     for (let compositionChar of compositionCharArrays) {
         let isValid = true;
-        let charCodes: number[] = [];
+        let charCodes: string[] = [];
         for (let code of compositionChar) {
             let toCode = codes[code];
 
@@ -144,28 +137,25 @@ function getCompositionCharacters(compositionCharArrays: number[][], codes: ICha
         }
 
         if (isValid) {
-            characters.push(getCharFromUnicode(...charCodes));
+            characters.push(charCodes.join(""));
         }
     }
     return characters;
 }
 
-function getCharFromUnicode(...unicodes: number[]): string {
-    return unicodes.map(c => String.fromCharCode(c)).join("");
-}
 
 export interface IMapping {
-    characterCodes: ICharCodes;
-    moveRightCharacters: number[];
-    moveRightAcrossCharacterSet?: number[][];
+    characterCodes: IChars;
+    moveRightCharacters: string[];
+    moveRightAcrossCharacterSet?: string[];
 }
 
-export interface ICharCodes {
-    [key: number]: number
+export interface IChars {
+    [key: string]: string
 }
 
-export function merge(...configs: ICharCodes[]): ICharCodes {
-    var c: ICharCodes = {};
+export function merge(...configs: IChars[]): IChars {
+    var c: IChars = {};
 
     for (let a of configs) {
         for (var x in a) {
