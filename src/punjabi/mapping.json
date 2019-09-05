@@ -1482,8 +1482,9 @@
             ]
         ]
     ],
-    "mappings": {
-        "Unicode": {
+    "mappings": [
+        {
+            "name": "unicode",
             "moveRightCharacters": [
                 "Sihari"
             ],
@@ -1591,7 +1592,8 @@
                 "DoubleQuoteCurlyRight": "”"
             }
         },
-        "AnmolLipi": {
+        {
+            "name": "anmol",
             "moveRightCharacters": [],
             "characterCodes": {
                 "IkOnkarVersion1a": "<",
@@ -1719,7 +1721,8 @@
                 "DoubleQuoteCurlyRight": "”"
             }
         },
-        "DrChatrikWeb": {
+        {
+            "name": "chatrik",
             "moveRightCharacters": [],
             "characterCodes": {
                 "IkOnkarVersion1a": "Ã",
@@ -1821,7 +1824,8 @@
                 "DoubleQuoteCurlyRight": "”"
             }
         },
-        "Awaze": {
+        {
+            "name": "awaze",
             "moveRightCharacters": [],
             "characterCodes": {
                 "IkOnkarVersion3": "÷",
@@ -1952,7 +1956,8 @@
                 "SquareBracketRight2": "}"
             }
         },
-        "Satluj": {
+        {
+            "name": "satluj",
             "moveRightCharacters": [],
             "characterCodes": {
                 "IkOnkarVersion1": "ý",
@@ -2056,7 +2061,8 @@
                 "LalaTippi": "¦"
             }
         },
-        "Asees": {
+        {
+            "name": "asees",
             "moveRightCharacters": [],
             "characterCodes": {
                 "IkOnkarVersion1": "Å",
@@ -2180,7 +2186,8 @@
                 "DoubleQuoteCurlyRight2": "@"
             }
         },
-        "Joy": {
+        {
+            "name": "joy",
             "moveRightCharacters": [],
             "characterCodes": {
                 "IkOnkarVersion1": "˝",
@@ -2305,5 +2312,5 @@
                 "Hai2": "˛"
             }
         }
-    }
+    ]
 }
