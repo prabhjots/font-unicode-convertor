@@ -14,11 +14,7 @@ export default {
              preferConst: false, 
               compact: true, 
           }),
-        typescript({
-            "resolveJsonModule": true,
-            "esModuleInterop": true,
-            "moduleResolution": "node"
-        })
+        typescript()
     ]
 };
 
