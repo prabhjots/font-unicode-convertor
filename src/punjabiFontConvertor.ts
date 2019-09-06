@@ -1,7 +1,8 @@
-import * as Convertor from "../convertor/convertor";
-import { mappings, tightGroups, groups } from "./mapping.json"
+import * as Convertor from "./convertor";
+import {mappings, tightGroups, groups } from "./punjabiMapping.json"
+export var punjabiMapping = {mappings, tightGroups, groups };
 
-function findMapping(name) {
+function findMapping(name: string) {
     let nameToUse = getNameToUseForMapping(name);
     return mappings.filter(m => m.name == nameToUse)[0];
 }
@@ -22,22 +23,22 @@ function getNameToUseForMapping(name: string) {
 
 var allGroups = tightGroups.concat(groups);
 
-function memoize(func) {
-    var memo = {};
+function memoize<T extends Function>(func: T) {
+    var memo: any = {};
     var slice = Array.prototype.slice;
-  
-    return function() {
-      var args = slice.call(arguments);
-  
-      if (args in memo)
-        return memo[args];
-      else
-        return (memo[args] = func.apply(this, args));
-  
-    }
-  }
 
-var getMapper:any = memoize(function getMapper(to:string, from:string){
+    return function () {
+        var args: any = slice.call(arguments);
+
+        if (args in memo)
+            return memo[args];
+        else
+            return (memo[args] = func.apply(null, args));
+
+    }
+}
+
+var getMapper: any = memoize(function getMapper(to: string, from: string) {
     return Convertor.getMapper(findMapping(to), findMapping(from), allGroups, tightGroups);
 })
 

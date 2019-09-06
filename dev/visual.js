@@ -1,4 +1,4 @@
-import {samples} from "./samples";
+import {samples} from "../test/samples";
 var el = React.createElement;
 
 ReactDOM.render(

@@ -10,12 +10,6 @@ Test Page at https://prabhjots.github.io/font-unicode-convertor/test/visual.html
 Build
 
 ```bash
-tsc && npx rollup --config
+yarn build
 ```
 
-Create Visual Test
-
-```bash
-cd test
-parcel build visual.html --no-minify --no-source-maps --no-content-hash
-```
