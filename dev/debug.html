@@ -66,8 +66,7 @@
                         el("th", { scope: "col" }, "Dr Chartik"),
                         el("th", { scope: "col" }, "Satluj"),
                         el("th", { scope: "col" }, "Joy"),
-                        el("th", { scope: "col" }, "Asees"),
-                        el("th", { scope: "col" }, "Gurbani Lipi"))),
+                        el("th", { scope: "col" }, "Asees"))),
                 el("tbody", null, samples.map(function (s) {
 
                     return el("tr", { key: s.Unicode },
@@ -76,8 +75,7 @@
                         cell(s.DrChatrikWeb, "DrChatrikWeb"),
                         cell(s.Satluj, "Satluj"),
                         cell(s.Joy, "Joy"),
-                        cell(s.Asees, "Asees"),
-                        cell(s.GurbaniLipi, "GurbaniLipi"));
+                        cell(s.Asees, "Asees"));
                 })));
         }
 
@@ -110,7 +108,6 @@
                     Satluj: PunjabiFontConvertor.convert(i, "Satluj", source),
                     Joy: PunjabiFontConvertor.convert(i, "Joy", source),
                     Asees: PunjabiFontConvertor.convert(i, "Asees", source),
-                    GurbaniLipi: PunjabiFontConvertor.convert(i, "GurbaniLipi", source),
                 }
             })
         }

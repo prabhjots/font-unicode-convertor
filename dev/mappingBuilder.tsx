@@ -224,5 +224,4 @@ function getCodes(f){
     }
     return c;
 }
-console.log(JSON.stringify(mappings))
-ReactDOM.render(<div>Hello World</div>, document.getElementById("root"))
+

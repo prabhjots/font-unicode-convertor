@@ -1,6 +1,6 @@
 import * as Convertor from "./convertor";
-import {mappings, tightGroups, groups } from "./punjabiMapping.json"
-export var punjabiMapping = {mappings, tightGroups, groups };
+import { mappings, tightGroups, groups } from "./punjabiMapping.json"
+export var punjabiMapping = { mappings, tightGroups, groups };
 
 function findMapping(name: string) {
     let nameToUse = getNameToUseForMapping(name);
@@ -38,8 +38,16 @@ function memoize<T extends Function>(func: T) {
     }
 }
 
-var getMapper: any = memoize(function getMapper(to: string, from: string) {
-    return Convertor.getMapper(findMapping(to), findMapping(from), allGroups, tightGroups);
+var getMapper: any = memoize(function getMapper(toFontName: string, fromFontName: string) {
+    var to = findMapping(toFontName);
+    if (!to) {
+        console.error("Could not find mapping for", toFontName)
+    }
+    var from = findMapping(fromFontName);
+    if (!from) {
+        console.error("Could not find mapping for", fromFontName)
+    }
+    return Convertor.getMapper(to, from, allGroups, tightGroups);
 })
 
 export function convert(str: string, toFontName: string, fromFontName: string) {
