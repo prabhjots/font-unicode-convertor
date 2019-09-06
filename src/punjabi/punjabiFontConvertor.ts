@@ -1,9 +1,9 @@
 import * as Convertor from "../convertor/convertor";
-import { mappings as m } from "./mapping"
+import { mappings, tightGroups, groups } from "./mapping.json"
 
 function findMapping(name) {
     let nameToUse = getNameToUseForMapping(name);
-    return m.mappings.filter(m => m.name == nameToUse)[0];
+    return mappings.filter(m => m.name == nameToUse)[0];
 }
 
 function getNameToUseForMapping(name: string) {
@@ -20,8 +20,7 @@ function getNameToUseForMapping(name: string) {
     }
 }
 
-var tightGroups = m.tightGroups;
-var groups = [... m.tightGroups, m.groups];
+var allGroups = tightGroups.concat(groups);
 
 function memoize(func) {
     var memo = {};
@@ -39,7 +38,7 @@ function memoize(func) {
   }
 
 var getMapper:any = memoize(function getMapper(to:string, from:string){
-    return Convertor.getMapper(findMapping(to), findMapping(from), groups, tightGroups);
+    return Convertor.getMapper(findMapping(to), findMapping(from), allGroups, tightGroups);
 })
 
 export function convert(str: string, toFontName: string, fromFontName: string) {
