@@ -66,10 +66,12 @@ function insertCharOnLeft(chars: string[], moveLeftAcrossChars: string[], charac
             onRightChars.unshift(lastChar);
             insertCharOnLeft(chars, moveLeftAcrossChars, characterToAdd, onRightChars);
         } else {
-            chars.push(characterToAdd, lastChar, ...onRightChars);
+            chars.push(characterToAdd, lastChar);
+            chars.push(...onRightChars);
         }
     } else {
-        chars.push(characterToAdd, ...onRightChars);
+        chars.push(characterToAdd);
+        chars.push(...onRightChars);
     }
 }
 

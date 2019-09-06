@@ -7,7 +7,7 @@
     <style>
         textarea {
             width: 100%;
-            height: 200px;
+            height: 30px;
         }
     </style>
 </head>
@@ -18,35 +18,40 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.js"></script>
     <script src="../dist/convertor.js"></script>
-    <script>
-        var exports = {};
-    </script>
-    <script src="samples.js"></script>
 
     <script>
-        var samples = exports.samples;
         var el = React.createElement;
 
         ReactDOM.render(el(Page), document.getElementById('root'));
 
         function Page() {
-            var s = React.useState("");
+            var urlParams = new URLSearchParams(window.location.search);
+
+            var s = React.useState(urlParams.get("text"));
             var text = s[0];
             var setText = s[1];
-            var items = getSamples(text);
+            var source = urlParams.get("source") || "Unicode";
+            var items = getSamples(text, source);
             var downloadText = "exports.samples=" + JSON.stringify(items, null, 4);
 
             return el("div", null,
                 el("textarea", {
                     className: "form-conrol",
+                    value: text,
                     onChange: function (e) {
                         setText(e.target.value)
-                    }
+                    },
+                    style: { fontFamily: getFontFamily(source) }
                 }),
                 el("a", {
                     href: "data:text/plain;charset=utf-8," + encodeURIComponent(downloadText),
                     download: "samples.js"
                 }, "Download"),
+                
+                el("a", {
+                    style: {paddingLeft: "10px"},
+                    href: "./visual.html",
+                }, "Visual"),
                 el(FontTable, { samples: items })
             );
         }
@@ -61,45 +66,58 @@
                         el("th", { scope: "col" }, "Dr Chartik"),
                         el("th", { scope: "col" }, "Satluj"),
                         el("th", { scope: "col" }, "Joy"),
-                        el("th", { scope: "col" }, "Asees"),
-                        el("th", { scope: "col" }, "Gurbani Lipi"))),
+                        el("th", { scope: "col" }, "Asees"))),
                 el("tbody", null, samples.map(function (s) {
+
                     return el("tr", { key: s.Unicode },
                         cell(s.Unicode, "Unicode"),
                         cell(s.AnmolLipi, "AnmolLipi"),
                         cell(s.DrChatrikWeb, "DrChatrikWeb"),
                         cell(s.Satluj, "Satluj"),
                         cell(s.Joy, "Joy"),
-                        cell(s.Asees, "Asees"),
-                        cell(s.GurbaniLipi, "GurbaniLipi"));
+                        cell(s.Asees, "Asees"));
                 })));
         }
 
-        function cell(text, font) {
-            var fontFamily = font === "DrChatrikWeb" ? "Chatrik" : font;
-            return el("th", { style: { fontFamily: fontFamily } },
-                el("a", { href: "./debug.html?source=" + font + "&text=" + text }, text));
+        function getFontFamily(font){
+            switch(font){
+                case "GurbaniLipi":
+                    return "Gurbani-Lipi";
+            }
+            return font === "DrChatrikWeb" ? "Chatrik" : font;
         }
 
-        function getSamples(text) {
-            var items = _.sortBy(
-                _.uniq(
-                    _.compact(
-                        _.concat(
-                            text.split(/\s+/),
-                            samples.map(function (a) { return a.Unicode })))));
+        function cell(text, font) {
+            return el("th", null,
+                el("a", {
+                    href: "./debug.html?source=" + font + "&text=" + text,
+                    style: { fontFamily: getFontFamily(font) }
+                }, text),
+                el("br"),
+                el("div", null, getCodes(text)));
+        }
+
+        function getSamples(text, source) {
+            var items = text.split(/\s+/);
 
             return items.map(function (i) {
                 return {
-                    Unicode: i,
-                    AnmolLipi: PunjabiFontConvertor.convert(i, "AnmolLipi", "Unicode"),
-                    DrChatrikWeb: PunjabiFontConvertor.convert(i, "DrChatrikWeb", "Unicode"),
-                    Satluj: PunjabiFontConvertor.convert(i, "Satluj", "Unicode"),
-                    Joy: PunjabiFontConvertor.convert(i, "Joy", "Unicode"),
-                    Asees: PunjabiFontConvertor.convert(i, "Asees", "Unicode"),
-                    GurbaniLipi: PunjabiFontConvertor.convert(i, "GurbaniLipi", "Unicode"),
+                    Unicode: PunjabiFontConvertor.convert(i, "Unicode", source),
+                    AnmolLipi: PunjabiFontConvertor.convert(i, "AnmolLipi", source),
+                    DrChatrikWeb: PunjabiFontConvertor.convert(i, "DrChatrikWeb", source),
+                    Satluj: PunjabiFontConvertor.convert(i, "Satluj", source),
+                    Joy: PunjabiFontConvertor.convert(i, "Joy", source),
+                    Asees: PunjabiFontConvertor.convert(i, "Asees", source),
                 }
             })
+        }
+
+        function getCodes(str) {
+            var codes = [];
+            for (var i = 0; i < str.length; i++) {
+                codes.push(str.charCodeAt(i).toString(16));
+            }
+            return codes.join(" ");
         }
     </script>
 </body>
