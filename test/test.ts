@@ -1,4 +1,4 @@
-const PunjabiFontConvertor = require("../dist/convertor");
+import * as  PunjabiFontConvertor from "../src/punjabiFontConvertor";
 const { samples } = require("./samples")
 
 function getCodes(str) {
@@ -14,7 +14,7 @@ expect.extend({
         for (var to in sample) {
             if (sample.hasOwnProperty(to)) {
                 for (var from in sample) {
-                    if (sample.hasOwnProperty(from) && to != from) {
+                    if (sample.hasOwnProperty(from) && to != from && to!= "GurbaniLipi" && from != "GurbaniLipi") {
                         var fromText = sample[from];
                         var expected = sample[to];
                         var received = PunjabiFontConvertor.convert(fromText, to, from);
@@ -43,5 +43,5 @@ expect.extend({
 });
 
 test("test samples", () => {
-    samples.forEach(sample => expect(sample).checkFontConvert())
+    samples.forEach(sample => (<any>expect(sample)).checkFontConvert())
 })

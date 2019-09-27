@@ -1,16 +1,8 @@
 {
-    "compilerOptions": {
-        "sourceMap": false,
-        "pretty": true,
-        "moduleResolution": "node",
-        "preserveConstEnums": false,
-        "outDir": "obj",
-        "module": "es6",
-        "target": "es6"
-    },
-    "include": [
-        "src/**/*"
-    ],
-    "exclude": [ 
-    ]
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "sourceMap": false                  
+  }
 }

@@ -5,8 +5,7 @@ exports.samples=[
         "DrChatrikWeb": "(apryÈn)",
         "Satluj": "(Áêð¶ôé)",
         "Joy": "(ngo/ÙB)",
-        "Asees": "(ngo/PB)",
-        "GurbaniLipi": "(AprySn)"
+        "Asees": "(ngo/PB)"
     },
     {
         "Unicode": "(ਟੀਮ)",
@@ -14,8 +13,7 @@ exports.samples=[
         "DrChatrikWeb": "(tIm)",
         "Satluj": "(àÆî)",
         "Joy": "(Nhw)",
-        "Asees": "(Nhw)",
-        "GurbaniLipi": "(tIm)"
+        "Asees": "(Nhw)"
     },
     {
         "Unicode": "(ਬੀਬੀ",
@@ -23,8 +21,7 @@ exports.samples=[
         "DrChatrikWeb": "(bIbI",
         "Satluj": "(ìÆìÆ",
         "Joy": "(phph",
-        "Asees": "(phph",
-        "GurbaniLipi": "(bIbI"
+        "Asees": "(phph"
     },
     {
         "Unicode": ".",
@@ -32,17 +29,15 @@ exports.samples=[
         "DrChatrikWeb": "[",
         "Satluj": ".",
         "Joy": "H",
-        "Asees": "H",
-        "GurbaniLipi": "."
+        "Asees": "H"
     },
     {
         "Unicode": "|",
-        "AnmolLipi": "|",
+        "AnmolLipi": "[",
         "DrChatrikWeb": "|",
-        "Satluj": "|",
-        "Joy": "|",
-        "Asees": "|",
-        "GurbaniLipi": "|"
+        "Satluj": "Í",
+        "Joy": ".",
+        "Asees": "|"
     },
     {
         "Unicode": "ਅਗਲੀ",
@@ -50,8 +45,7 @@ exports.samples=[
         "DrChatrikWeb": "aglI",
         "Satluj": "Á×ñÆ",
         "Joy": "nrbh",
-        "Asees": "nrbh",
-        "GurbaniLipi": "AglI"
+        "Asees": "nrbh"
     },
     {
         "Unicode": "ਅਗਵਾਈ",
@@ -59,8 +53,7 @@ exports.samples=[
         "DrChatrikWeb": "agvfeI",
         "Satluj": "Á×òÅÂÆ",
         "Joy": "nrtkJh",
-        "Asees": "nrtkJh",
-        "GurbaniLipi": "AgvweI"
+        "Asees": "nrtkJh"
     },
     {
         "Unicode": "ਅਤੇ",
@@ -68,8 +61,7 @@ exports.samples=[
         "DrChatrikWeb": "aqy",
         "Satluj": "Áå¶",
         "Joy": "ns/",
-        "Asees": "ns/",
-        "GurbaniLipi": "Aqy"
+        "Asees": "ns/"
     },
     {
         "Unicode": "ਅਦਾਲਤ",
@@ -77,8 +69,7 @@ exports.samples=[
         "DrChatrikWeb": "adflq",
         "Satluj": "ÁçÅñå",
         "Joy": "ndkbs",
-        "Asees": "ndkbs",
-        "GurbaniLipi": "Adwlq"
+        "Asees": "ndkbs"
     },
     {
         "Unicode": "ਅਨੁਮਾਨ",
@@ -86,8 +77,7 @@ exports.samples=[
         "DrChatrikWeb": "anumfn",
         "Satluj": "ÁéੁîÅé",
         "Joy": "nB[wkB",
-        "Asees": "nB[wkB",
-        "GurbaniLipi": "Anumwn"
+        "Asees": "nB[wkB"
     },
     {
         "Unicode": "ਅਰਜੀ",
@@ -95,8 +85,7 @@ exports.samples=[
         "DrChatrikWeb": "arjI",
         "Satluj": "ÁðÜÆ",
         "Joy": "noih",
-        "Asees": "noih",
-        "GurbaniLipi": "ArjI"
+        "Asees": "noih"
     },
     {
         "Unicode": "ਅੰਕੜੇ",
@@ -104,8 +93,7 @@ exports.samples=[
         "DrChatrikWeb": "aMkVy",
         "Satluj": "Á¿Õó¶",
         "Joy": "nzeV/",
-        "Asees": "nzeV/",
-        "GurbaniLipi": "AMkVy"
+        "Asees": "nzeV/"
     },
     {
         "Unicode": "ਅੰਸ਼ਕ",
@@ -113,8 +101,7 @@ exports.samples=[
         "DrChatrikWeb": "aMÈk",
         "Satluj": "Á¿ôÕ",
         "Joy": "nzÙe",
-        "Asees": "nzPe",
-        "GurbaniLipi": "AMSk"
+        "Asees": "nzPe"
     },
     {
         "Unicode": "ਆਇਆ",
@@ -122,8 +109,7 @@ exports.samples=[
         "DrChatrikWeb": "afieaf",
         "Satluj": "ÁÅÇÂÁÅ",
         "Joy": "nkfJnk",
-        "Asees": "nkfJnk",
-        "GurbaniLipi": "AwieAw"
+        "Asees": "nkfJnk"
     },
     {
         "Unicode": "ਆਈ",
@@ -131,8 +117,7 @@ exports.samples=[
         "DrChatrikWeb": "afeI",
         "Satluj": "ÁÅÂÆ",
         "Joy": "nkJh",
-        "Asees": "nkJh",
-        "GurbaniLipi": "AweI"
+        "Asees": "nkJh"
     },
     {
         "Unicode": "ਆਈ.ਜੀ.",
@@ -140,8 +125,7 @@ exports.samples=[
         "DrChatrikWeb": "afeI[jI[",
         "Satluj": "ÁÅÂÆ.ÜÆ.",
         "Joy": "nkJhHihH",
-        "Asees": "nkJhHihH",
-        "GurbaniLipi": "AweI.jI."
+        "Asees": "nkJhHihH"
     },
     {
         "Unicode": "ਆਈਆਂ",
@@ -149,8 +133,7 @@ exports.samples=[
         "DrChatrikWeb": "afeIaF",
         "Satluj": "ÁÅÂÆÁ»",
         "Joy": "nkJhnª",
-        "Asees": "nkJhnK",
-        "GurbaniLipi": "AweIAW"
+        "Asees": "nkJhnK"
     },
     {
         "Unicode": "ਆਏ",
@@ -158,8 +141,7 @@ exports.samples=[
         "DrChatrikWeb": "afey",
         "Satluj": "ÁÅÂ¶",
         "Joy": "nkJ/",
-        "Asees": "nkJ/",
-        "GurbaniLipi": "Awey"
+        "Asees": "nkJ/"
     },
     {
         "Unicode": "ਆਪਣੀ",
@@ -167,8 +149,7 @@ exports.samples=[
         "DrChatrikWeb": "afpxI",
         "Satluj": "ÁÅêäÆ",
         "Joy": "nkgDh",
-        "Asees": "nkgDh",
-        "GurbaniLipi": "AwpxI"
+        "Asees": "nkgDh"
     },
     {
         "Unicode": "ਆਪਣੇ",
@@ -176,8 +157,7 @@ exports.samples=[
         "DrChatrikWeb": "afpxy",
         "Satluj": "ÁÅêä¶",
         "Joy": "nkgD/",
-        "Asees": "nkgD/",
-        "GurbaniLipi": "Awpxy"
+        "Asees": "nkgD/"
     },
     {
         "Unicode": "ਇਕ",
@@ -185,8 +165,7 @@ exports.samples=[
         "DrChatrikWeb": "iek",
         "Satluj": "ÇÂÕ",
         "Joy": "fJe",
-        "Asees": "fJe",
-        "GurbaniLipi": "iek"
+        "Asees": "fJe"
     },
     {
         "Unicode": "ਇਜਾਜ਼ਤ",
@@ -194,8 +173,7 @@ exports.samples=[
         "DrChatrikWeb": "iejfËq",
         "Satluj": "ÇÂÜÅ÷å",
         "Joy": "fJik˜s",
-        "Asees": "fJikIs",
-        "GurbaniLipi": "iejwzq"
+        "Asees": "fJikIs"
     },
     {
         "Unicode": "ਇਨ੍ਹਾਂ",
@@ -203,8 +181,7 @@ exports.samples=[
         "DrChatrikWeb": "ienHF",
         "Satluj": "ÇÂé੍Ô»",
         "Joy": "fJBQª",
-        "Asees": "fJBQK",
-        "GurbaniLipi": "ienHW"
+        "Asees": "fJBQK"
     },
     {
         "Unicode": "ਇਸ",
@@ -212,8 +189,7 @@ exports.samples=[
         "DrChatrikWeb": "ies",
         "Satluj": "ÇÂÃ",
         "Joy": "fJ;",
-        "Asees": "fJ;",
-        "GurbaniLipi": "ies"
+        "Asees": "fJ;"
     },
     {
         "Unicode": "ਇਸੇ",
@@ -221,8 +197,7 @@ exports.samples=[
         "DrChatrikWeb": "iesy",
         "Satluj": "ÇÂÃ¶",
         "Joy": "fJ;/",
-        "Asees": "fJ;/",
-        "GurbaniLipi": "iesy"
+        "Asees": "fJ;/"
     },
     {
         "Unicode": "ਇਹ",
@@ -230,8 +205,7 @@ exports.samples=[
         "DrChatrikWeb": "ieh",
         "Satluj": "ÇÂÔ",
         "Joy": "fJj",
-        "Asees": "fJj",
-        "GurbaniLipi": "ieh"
+        "Asees": "fJj"
     },
     {
         "Unicode": "ਇਹੀ",
@@ -239,8 +213,7 @@ exports.samples=[
         "DrChatrikWeb": "iehI",
         "Satluj": "ÇÂÔÆ",
         "Joy": "fJjh",
-        "Asees": "fJjh",
-        "GurbaniLipi": "iehI"
+        "Asees": "fJjh"
     },
     {
         "Unicode": "ਇੰਨੇ",
@@ -248,8 +221,7 @@ exports.samples=[
         "DrChatrikWeb": "ieMny",
         "Satluj": "ÇÂ¿é¶",
         "Joy": "fJzB/",
-        "Asees": "fJzB/",
-        "GurbaniLipi": "ieMny"
+        "Asees": "fJzB/"
     },
     {
         "Unicode": "ਇੱਥੇ",
@@ -257,8 +229,7 @@ exports.samples=[
         "DrChatrikWeb": "iewQy",
         "Satluj": "ÇÂੱæ¶",
         "Joy": "fJµE/",
-        "Asees": "fJ~E/",
-        "GurbaniLipi": "ie~Qy"
+        "Asees": "fJ~E/"
     },
     {
         "Unicode": "ਉਕਤ",
@@ -266,8 +237,7 @@ exports.samples=[
         "DrChatrikWeb": "Aukq",
         "Satluj": "ਉÕå",
         "Joy": "T[es",
-        "Asees": "T[es",
-        "GurbaniLipi": "aukq"
+        "Asees": "T[es"
     },
     {
         "Unicode": "ਉਨ੍ਹਾਂ",
@@ -275,8 +245,7 @@ exports.samples=[
         "DrChatrikWeb": "AunHF",
         "Satluj": "ਉé੍Ô»",
         "Joy": "T[BQª",
-        "Asees": "T[BQK",
-        "GurbaniLipi": "aunHW"
+        "Asees": "T[BQK"
     },
     {
         "Unicode": "ਉਸ",
@@ -284,8 +253,7 @@ exports.samples=[
         "DrChatrikWeb": "Aus",
         "Satluj": "ਉÃ",
         "Joy": "T[;",
-        "Asees": "T[;",
-        "GurbaniLipi": "aus"
+        "Asees": "T[;"
     },
     {
         "Unicode": "ਉਸਦੇ",
@@ -293,8 +261,7 @@ exports.samples=[
         "DrChatrikWeb": "Ausdy",
         "Satluj": "ਉÃç¶",
         "Joy": "T[;d/",
-        "Asees": "T[;d/",
-        "GurbaniLipi": "ausdy"
+        "Asees": "T[;d/"
     },
     {
         "Unicode": "ਉਹ",
@@ -302,8 +269,7 @@ exports.samples=[
         "DrChatrikWeb": "Auh",
         "Satluj": "ਉÔ",
         "Joy": "T[j",
-        "Asees": "T[j",
-        "GurbaniLipi": "auh"
+        "Asees": "T[j"
     },
     {
         "Unicode": "ਉੱਚ",
@@ -311,8 +277,7 @@ exports.samples=[
         "DrChatrikWeb": "Auwc",
         "Satluj": "ਉੱÚ",
         "Joy": "T[µu",
-        "Asees": "T[~u",
-        "GurbaniLipi": "au~c"
+        "Asees": "T[~u"
     },
     {
         "Unicode": "ਉੱਚ-ਅਦਾਲਤ",
@@ -320,8 +285,7 @@ exports.samples=[
         "DrChatrikWeb": "Auwc-adflq",
         "Satluj": "ਉੱÚ-ÁçÅñå",
         "Joy": "T[µu-ndkbs",
-        "Asees": "T[~u-ndkbs",
-        "GurbaniLipi": "au~c-Adwlq"
+        "Asees": "T[~u-ndkbs"
     },
     {
         "Unicode": "ਉੱਤੇ",
@@ -329,8 +293,7 @@ exports.samples=[
         "DrChatrikWeb": "Auwqy",
         "Satluj": "ਉੱå¶",
         "Joy": "T[µs/",
-        "Asees": "T[~s/",
-        "GurbaniLipi": "au~qy"
+        "Asees": "T[~s/"
     },
     {
         "Unicode": "ਏਕੜ",
@@ -338,8 +301,7 @@ exports.samples=[
         "DrChatrikWeb": "eykV",
         "Satluj": "Â¶Õó",
         "Joy": "J/eV",
-        "Asees": "J/eV",
-        "GurbaniLipi": "eykV"
+        "Asees": "J/eV"
     },
     {
         "Unicode": "ਐਸ.ਪੀ.",
@@ -347,8 +309,7 @@ exports.samples=[
         "DrChatrikWeb": "aYs[pI[",
         "Satluj": "ÁËÃ.êÆ.",
         "Joy": "n?;HghH",
-        "Asees": "n?;HghH",
-        "GurbaniLipi": "AYs.pI."
+        "Asees": "n?;HghH"
     },
     {
         "Unicode": "ਓਥੇ",
@@ -356,8 +317,7 @@ exports.samples=[
         "DrChatrikWeb": "ਓQy",
         "Satluj": "úæ¶",
         "Joy": "UE/",
-        "Asees": "UE/",
-        "GurbaniLipi": "EQy"
+        "Asees": "UE/"
     },
     {
         "Unicode": "ਕਈ",
@@ -365,8 +325,7 @@ exports.samples=[
         "DrChatrikWeb": "keI",
         "Satluj": "ÕÂÆ",
         "Joy": "eJh",
-        "Asees": "eJh",
-        "GurbaniLipi": "keI"
+        "Asees": "eJh"
     },
     {
         "Unicode": "ਕਤਲਾਂ",
@@ -374,8 +333,7 @@ exports.samples=[
         "DrChatrikWeb": "kqlF",
         "Satluj": "Õåñ»",
         "Joy": "esbª",
-        "Asees": "esbK",
-        "GurbaniLipi": "kqlW"
+        "Asees": "esbK"
     },
     {
         "Unicode": "ਕਰ",
@@ -383,8 +341,7 @@ exports.samples=[
         "DrChatrikWeb": "kr",
         "Satluj": "Õð",
         "Joy": "eo",
-        "Asees": "eo",
-        "GurbaniLipi": "kr"
+        "Asees": "eo"
     },
     {
         "Unicode": "ਕਰਕੇ",
@@ -392,8 +349,7 @@ exports.samples=[
         "DrChatrikWeb": "krky",
         "Satluj": "ÕðÕ¶",
         "Joy": "eoe/",
-        "Asees": "eoe/",
-        "GurbaniLipi": "krky"
+        "Asees": "eoe/"
     },
     {
         "Unicode": "ਕਰਦੇ",
@@ -401,8 +357,7 @@ exports.samples=[
         "DrChatrikWeb": "krdy",
         "Satluj": "Õðç¶",
         "Joy": "eod/",
-        "Asees": "eod/",
-        "GurbaniLipi": "krdy"
+        "Asees": "eod/"
     },
     {
         "Unicode": "ਕਰਨ",
@@ -410,8 +365,7 @@ exports.samples=[
         "DrChatrikWeb": "krn",
         "Satluj": "Õðé",
         "Joy": "eoB",
-        "Asees": "eoB",
-        "GurbaniLipi": "krn"
+        "Asees": "eoB"
     },
     {
         "Unicode": "ਕਰਵਾਇਆ",
@@ -419,8 +373,7 @@ exports.samples=[
         "DrChatrikWeb": "krvfieaf",
         "Satluj": "ÕðòÅÇÂÁÅ",
         "Joy": "eotkfJnk",
-        "Asees": "eotkfJnk",
-        "GurbaniLipi": "krvwieAw"
+        "Asees": "eotkfJnk"
     },
     {
         "Unicode": "ਕਰਵਾਉਣ",
@@ -428,8 +381,7 @@ exports.samples=[
         "DrChatrikWeb": "krvfAux",
         "Satluj": "ÕðòÅਉä",
         "Joy": "eotkT[D",
-        "Asees": "eotkT[D",
-        "GurbaniLipi": "krvwaux"
+        "Asees": "eotkT[D"
     },
     {
         "Unicode": "ਕਾਰਨ",
@@ -437,8 +389,7 @@ exports.samples=[
         "DrChatrikWeb": "kfrn",
         "Satluj": "ÕÅðé",
         "Joy": "ekoB",
-        "Asees": "ekoB",
-        "GurbaniLipi": "kwrn"
+        "Asees": "ekoB"
     },
     {
         "Unicode": "ਕਾਰਵਾਈ",
@@ -446,8 +397,7 @@ exports.samples=[
         "DrChatrikWeb": "kfrvfeI",
         "Satluj": "ÕÅðòÅÂÆ",
         "Joy": "ekotkJh",
-        "Asees": "ekotkJh",
-        "GurbaniLipi": "kwrvweI"
+        "Asees": "ekotkJh"
     },
     {
         "Unicode": "ਕਾਰਸੇਵਾ",
@@ -455,8 +405,7 @@ exports.samples=[
         "DrChatrikWeb": "kfrsyvf",
         "Satluj": "ÕÅðÃ¶òÅ",
         "Joy": "eko;/tk",
-        "Asees": "eko;/tk",
-        "GurbaniLipi": "kwrsyvw"
+        "Asees": "eko;/tk"
     },
     {
         "Unicode": "ਕਿ",
@@ -464,8 +413,7 @@ exports.samples=[
         "DrChatrikWeb": "ik",
         "Satluj": "ÇÕ",
         "Joy": "fe",
-        "Asees": "fe",
-        "GurbaniLipi": "ik"
+        "Asees": "fe"
     },
     {
         "Unicode": "ਕਿਸਾਨ",
@@ -473,8 +421,7 @@ exports.samples=[
         "DrChatrikWeb": "iksfn",
         "Satluj": "ÇÕÃÅé",
         "Joy": "fe;kB",
-        "Asees": "fe;kB",
-        "GurbaniLipi": "ikswn"
+        "Asees": "fe;kB"
     },
     {
         "Unicode": "ਕਿਹਾ",
@@ -482,8 +429,7 @@ exports.samples=[
         "DrChatrikWeb": "ikhf",
         "Satluj": "ÇÕÔÅ",
         "Joy": "fejk",
-        "Asees": "fejk",
-        "GurbaniLipi": "ikhw"
+        "Asees": "fejk"
     },
     {
         "Unicode": "ਕੀਤਾ",
@@ -491,8 +437,7 @@ exports.samples=[
         "DrChatrikWeb": "kIqf",
         "Satluj": "ÕÆåÅ",
         "Joy": "ehsk",
-        "Asees": "ehsk",
-        "GurbaniLipi": "kIqw"
+        "Asees": "ehsk"
     },
     {
         "Unicode": "ਕੀਤੀ",
@@ -500,8 +445,7 @@ exports.samples=[
         "DrChatrikWeb": "kIqI",
         "Satluj": "ÕÆåÆ",
         "Joy": "ehsh",
-        "Asees": "ehsh",
-        "GurbaniLipi": "kIqI"
+        "Asees": "ehsh"
     },
     {
         "Unicode": "ਕੁੱਲ",
@@ -509,8 +453,7 @@ exports.samples=[
         "DrChatrikWeb": "kuwl",
         "Satluj": "Õੁੱñ",
         "Joy": "e[µb",
-        "Asees": "e[~b",
-        "GurbaniLipi": "ku~l"
+        "Asees": "e[~b"
     },
     {
         "Unicode": "ਕੇ",
@@ -518,8 +461,7 @@ exports.samples=[
         "DrChatrikWeb": "ky",
         "Satluj": "Õ¶",
         "Joy": "e/",
-        "Asees": "e/",
-        "GurbaniLipi": "ky"
+        "Asees": "e/"
     },
     {
         "Unicode": "ਕੇਂਦਰ",
@@ -527,8 +469,7 @@ exports.samples=[
         "DrChatrikWeb": "kyNdr",
         "Satluj": "Õ¶ºçð",
         "Joy": "e/∫do",
-        "Asees": "e/Ado",
-        "GurbaniLipi": "kyNdr"
+        "Asees": "e/Ado"
     },
     {
         "Unicode": "ਕੇਂਦਰੀ",
@@ -536,8 +477,7 @@ exports.samples=[
         "DrChatrikWeb": "kyNdrI",
         "Satluj": "Õ¶ºçðÆ",
         "Joy": "e/∫doh",
-        "Asees": "e/Adoh",
-        "GurbaniLipi": "kyNdrI"
+        "Asees": "e/Adoh"
     },
     {
         "Unicode": "ਕੋਰਟ",
@@ -545,8 +485,7 @@ exports.samples=[
         "DrChatrikWeb": "kort",
         "Satluj": "Õੋðà",
         "Joy": "eØoN",
-        "Asees": "e'oN",
-        "GurbaniLipi": "kort"
+        "Asees": "e'oN"
     },
     {
         "Unicode": "ਕੋਲ",
@@ -554,8 +493,7 @@ exports.samples=[
         "DrChatrikWeb": "kol",
         "Satluj": "Õੋñ",
         "Joy": "eØb",
-        "Asees": "e'b",
-        "GurbaniLipi": "kol"
+        "Asees": "e'b"
     },
     {
         "Unicode": "ਕੋਲੋਂ",
@@ -563,8 +501,7 @@ exports.samples=[
         "DrChatrikWeb": "koloN",
         "Satluj": "Õੋñੋº",
         "Joy": "eØbØ∫",
-        "Asees": "e'b'A",
-        "GurbaniLipi": "koloN"
+        "Asees": "e'b'A"
     },
     {
         "Unicode": "ਕੋਸ਼ਿਸ਼",
@@ -572,8 +509,7 @@ exports.samples=[
         "DrChatrikWeb": "koiÈÈ",
         "Satluj": "ÕੋÇôô",
         "Joy": "eØfÙÙ",
-        "Asees": "e'fPP",
-        "GurbaniLipi": "koiSS"
+        "Asees": "e'fPP"
     },
     {
         "Unicode": "ਕੌਰ",
@@ -581,8 +517,7 @@ exports.samples=[
         "DrChatrikWeb": "kOr",
         "Satluj": "ÕÏð",
         "Joy": "e\"o",
-        "Asees": "e\"o",
-        "GurbaniLipi": "kOr"
+        "Asees": "e\"o"
     },
     {
         "Unicode": "ਕੌਰ,",
@@ -590,8 +525,7 @@ exports.samples=[
         "DrChatrikWeb": "kOr,",
         "Satluj": "ÕÏð,",
         "Joy": "e\"o,",
-        "Asees": "e\"o,",
-        "GurbaniLipi": "kOr,"
+        "Asees": "e\"o,"
     },
     {
         "Unicode": "ਕੱਚੇ",
@@ -599,8 +533,7 @@ exports.samples=[
         "DrChatrikWeb": "kwcy",
         "Satluj": "ÕੱÚ¶",
         "Joy": "eµu/",
-        "Asees": "e~u/",
-        "GurbaniLipi": "k~cy"
+        "Asees": "e~u/"
     },
     {
         "Unicode": "ਖਬਰਖਾਨੇ",
@@ -608,8 +541,7 @@ exports.samples=[
         "DrChatrikWeb": "KbrKfny",
         "Satluj": "ÖìðÖÅé¶",
         "Joy": "ypoykB/",
-        "Asees": "ypoykB/",
-        "GurbaniLipi": "KbrKwny"
+        "Asees": "ypoykB/"
     },
     {
         "Unicode": "ਖਬਰਾਂ",
@@ -617,8 +549,7 @@ exports.samples=[
         "DrChatrikWeb": "KbrF",
         "Satluj": "Öìð»",
         "Joy": "ypoª",
-        "Asees": "ypoK",
-        "GurbaniLipi": "KbrW"
+        "Asees": "ypoK"
     },
     {
         "Unicode": "ਖਰਾਬ",
@@ -626,8 +557,7 @@ exports.samples=[
         "DrChatrikWeb": "Krfb",
         "Satluj": "ÖðÅì",
         "Joy": "yokp",
-        "Asees": "yokp",
-        "GurbaniLipi": "Krwb"
+        "Asees": "yokp"
     },
     {
         "Unicode": "ਖਾਸ",
@@ -635,8 +565,7 @@ exports.samples=[
         "DrChatrikWeb": "Kfs",
         "Satluj": "ÖÅÃ",
         "Joy": "yk;",
-        "Asees": "yk;",
-        "GurbaniLipi": "Kws"
+        "Asees": "yk;"
     },
     {
         "Unicode": "ਖੂਬੀ",
@@ -644,8 +573,7 @@ exports.samples=[
         "DrChatrikWeb": "KUbI",
         "Satluj": "Ö±ìÆ",
         "Joy": "y{ph",
-        "Asees": "y{ph",
-        "GurbaniLipi": "KUbI"
+        "Asees": "y{ph"
     },
     {
         "Unicode": "ਗਈ",
@@ -653,8 +581,7 @@ exports.samples=[
         "DrChatrikWeb": "geI",
         "Satluj": "×ÂÆ",
         "Joy": "rJh",
-        "Asees": "rJh",
-        "GurbaniLipi": "geI"
+        "Asees": "rJh"
     },
     {
         "Unicode": "ਗਏ",
@@ -662,8 +589,7 @@ exports.samples=[
         "DrChatrikWeb": "gey",
         "Satluj": "×Â¶",
         "Joy": "rJ/",
-        "Asees": "rJ/",
-        "GurbaniLipi": "gey"
+        "Asees": "rJ/"
     },
     {
         "Unicode": "ਗਵਾਹਾਂ",
@@ -671,8 +597,7 @@ exports.samples=[
         "DrChatrikWeb": "gvfhF",
         "Satluj": "×òÅÔ»",
         "Joy": "rtkjª",
-        "Asees": "rtkjK",
-        "GurbaniLipi": "gvwhW"
+        "Asees": "rtkjK"
     },
     {
         "Unicode": "ਗਵਾਹੀਆਂ",
@@ -680,8 +605,7 @@ exports.samples=[
         "DrChatrikWeb": "gvfhIaF",
         "Satluj": "×òÅÔÆÁ»",
         "Joy": "rtkjhnª",
-        "Asees": "rtkjhnK",
-        "GurbaniLipi": "gvwhIAW"
+        "Asees": "rtkjhnK"
     },
     {
         "Unicode": "ਗਿਆ",
@@ -689,8 +613,7 @@ exports.samples=[
         "DrChatrikWeb": "igaf",
         "Satluj": "Ç×ÁÅ",
         "Joy": "frnk",
-        "Asees": "frnk",
-        "GurbaniLipi": "igAw"
+        "Asees": "frnk"
     },
     {
         "Unicode": "ਗਿਣਤੀ",
@@ -698,8 +621,7 @@ exports.samples=[
         "DrChatrikWeb": "igxqI",
         "Satluj": "Ç×äåÆ",
         "Joy": "frDsh",
-        "Asees": "frDsh",
-        "GurbaniLipi": "igxqI"
+        "Asees": "frDsh"
     },
     {
         "Unicode": "ਗੁਰਮੀਤ",
@@ -707,8 +629,7 @@ exports.samples=[
         "DrChatrikWeb": "gurmIq",
         "Satluj": "×ੁðîÆå",
         "Joy": "r[owhs",
-        "Asees": "r[owhs",
-        "GurbaniLipi": "gurmIq"
+        "Asees": "r[owhs"
     },
     {
         "Unicode": "ਗੈਰ-ਕਾਨੂੰਨੀ",
@@ -716,8 +637,7 @@ exports.samples=[
         "DrChatrikWeb": "gYr-kfnUMnI",
         "Satluj": "×Ëð-ÕÅùéÆ",
         "Joy": "r?o-ek˘Bh",
-        "Asees": "r?o-ekƒBh",
-        "GurbaniLipi": "gYr-kwƒnI"
+        "Asees": "r?o-ekƒBh"
     },
     {
         "Unicode": "ਗੈਰਕਾਨੂੰਨੀ",
@@ -725,8 +645,7 @@ exports.samples=[
         "DrChatrikWeb": "gYrkfnUMnI",
         "Satluj": "×ËðÕÅùéÆ",
         "Joy": "r?oek˘Bh",
-        "Asees": "r?oekƒBh",
-        "GurbaniLipi": "gYrkwƒnI"
+        "Asees": "r?oekƒBh"
     },
     {
         "Unicode": "ਗੱਲ",
@@ -734,8 +653,7 @@ exports.samples=[
         "DrChatrikWeb": "gwl",
         "Satluj": "×ੱñ",
         "Joy": "rµb",
-        "Asees": "r~b",
-        "GurbaniLipi": "g~l"
+        "Asees": "r~b"
     },
     {
         "Unicode": "ਘਰ",
@@ -743,8 +661,7 @@ exports.samples=[
         "DrChatrikWeb": "Gr",
         "Satluj": "Øð",
         "Joy": "xo",
-        "Asees": "xo",
-        "GurbaniLipi": "Gr"
+        "Asees": "xo"
     },
     {
         "Unicode": "ਘਰਾ",
@@ -752,8 +669,7 @@ exports.samples=[
         "DrChatrikWeb": "Grf",
         "Satluj": "ØðÅ",
         "Joy": "xok",
-        "Asees": "xok",
-        "GurbaniLipi": "Grw"
+        "Asees": "xok"
     },
     {
         "Unicode": "ਘਰਾਂ",
@@ -761,8 +677,7 @@ exports.samples=[
         "DrChatrikWeb": "GrF",
         "Satluj": "Øð»",
         "Joy": "xoª",
-        "Asees": "xoK",
-        "GurbaniLipi": "GrW"
+        "Asees": "xoK"
     },
     {
         "Unicode": "ਚ",
@@ -770,8 +685,7 @@ exports.samples=[
         "DrChatrikWeb": "c",
         "Satluj": "Ú",
         "Joy": "u",
-        "Asees": "u",
-        "GurbaniLipi": "c"
+        "Asees": "u"
     },
     {
         "Unicode": "ਚਰਨ",
@@ -779,8 +693,7 @@ exports.samples=[
         "DrChatrikWeb": "crn",
         "Satluj": "Úðé",
         "Joy": "uoB",
-        "Asees": "uoB",
-        "GurbaniLipi": "crn"
+        "Asees": "uoB"
     },
     {
         "Unicode": "ਚੁੱਕ",
@@ -788,8 +701,7 @@ exports.samples=[
         "DrChatrikWeb": "cuwk",
         "Satluj": "ÚੁੱÕ",
         "Joy": "¸µe",
-        "Asees": "u[~e",
-        "GurbaniLipi": "cu~k"
+        "Asees": "u[~e"
     },
     {
         "Unicode": "ਚੁੱਕੇ",
@@ -797,8 +709,7 @@ exports.samples=[
         "DrChatrikWeb": "cuwky",
         "Satluj": "ÚੁੱÕ¶",
         "Joy": "¸µe/",
-        "Asees": "u[~e/",
-        "GurbaniLipi": "cu~ky"
+        "Asees": "u[~e/"
     },
     {
         "Unicode": "ਚੰਡੀਗੜ੍ਹ:",
@@ -806,8 +717,7 @@ exports.samples=[
         "DrChatrikWeb": "cMzIgVH:",
         "Satluj": "Ú¿âÆ×ó੍Ô:",
         "Joy": "uzvhrVQ:",
-        "Asees": "uzvhrVQL",
-        "GurbaniLipi": "cMfIgVH:"
+        "Asees": "uzvhrVQL"
     },
     {
         "Unicode": "ਚੱਲ",
@@ -815,8 +725,7 @@ exports.samples=[
         "DrChatrikWeb": "cwl",
         "Satluj": "Úੱñ",
         "Joy": "uµb",
-        "Asees": "u~b",
-        "GurbaniLipi": "c~l"
+        "Asees": "u~b"
     },
     {
         "Unicode": "ਛਾਪੇਮਾਰੀ",
@@ -824,8 +733,7 @@ exports.samples=[
         "DrChatrikWeb": "CfpymfrI",
         "Satluj": "ÛÅê¶îÅðÆ",
         "Joy": "Skg/wkoh",
-        "Asees": "Skg/wkoh",
-        "GurbaniLipi": "CwpymwrI"
+        "Asees": "Skg/wkoh"
     },
     {
         "Unicode": "ਛੇ",
@@ -833,8 +741,7 @@ exports.samples=[
         "DrChatrikWeb": "Cy",
         "Satluj": "Û¶",
         "Joy": "S/",
-        "Asees": "S/",
-        "GurbaniLipi": "Cy"
+        "Asees": "S/"
     },
     {
         "Unicode": "ਜਦੋਂਕਿ",
@@ -842,8 +749,7 @@ exports.samples=[
         "DrChatrikWeb": "jdoNik",
         "Satluj": "ÜçੋºÇÕ",
         "Joy": "idØ∫fe",
-        "Asees": "id'Afe",
-        "GurbaniLipi": "jdoNik"
+        "Asees": "id'Afe"
     },
     {
         "Unicode": "ਜਵਾਬ",
@@ -851,8 +757,7 @@ exports.samples=[
         "DrChatrikWeb": "jvfb",
         "Satluj": "ÜòÅì",
         "Joy": "itkp",
-        "Asees": "itkp",
-        "GurbaniLipi": "jvwb"
+        "Asees": "itkp"
     },
     {
         "Unicode": "ਜਾ",
@@ -860,8 +765,7 @@ exports.samples=[
         "DrChatrikWeb": "jf",
         "Satluj": "ÜÅ",
         "Joy": "ik",
-        "Asees": "ik",
-        "GurbaniLipi": "jw"
+        "Asees": "ik"
     },
     {
         "Unicode": "ਜਾਂ",
@@ -869,8 +773,7 @@ exports.samples=[
         "DrChatrikWeb": "jF",
         "Satluj": "Ü»",
         "Joy": "iª",
-        "Asees": "iK",
-        "GurbaniLipi": "jW"
+        "Asees": "iK"
     },
     {
         "Unicode": "ਜਾਂਚ",
@@ -878,8 +781,7 @@ exports.samples=[
         "DrChatrikWeb": "jFc",
         "Satluj": "Ü»Ú",
         "Joy": "iªu",
-        "Asees": "iKu",
-        "GurbaniLipi": "jWc"
+        "Asees": "iKu"
     },
     {
         "Unicode": "ਜਾਇਜ਼ਾ",
@@ -887,8 +789,7 @@ exports.samples=[
         "DrChatrikWeb": "jfieËf",
         "Satluj": "ÜÅÇÂ÷Å",
         "Joy": "ikfJ˜k",
-        "Asees": "ikfJIk",
-        "GurbaniLipi": "jwiezw"
+        "Asees": "ikfJIk"
     },
     {
         "Unicode": "ਜਾਣ",
@@ -896,8 +797,7 @@ exports.samples=[
         "DrChatrikWeb": "jfx",
         "Satluj": "ÜÅä",
         "Joy": "ikD",
-        "Asees": "ikD",
-        "GurbaniLipi": "jwx"
+        "Asees": "ikD"
     },
     {
         "Unicode": "ਜਾਣਕਾਰੀ",
@@ -905,8 +805,7 @@ exports.samples=[
         "DrChatrikWeb": "jfxkfrI",
         "Satluj": "ÜÅäÕÅðÆ",
         "Joy": "ikDekoh",
-        "Asees": "ikDekoh",
-        "GurbaniLipi": "jwxkwrI"
+        "Asees": "ikDekoh"
     },
     {
         "Unicode": "ਜਾਨ",
@@ -914,8 +813,7 @@ exports.samples=[
         "DrChatrikWeb": "jfn",
         "Satluj": "ÜÅé",
         "Joy": "ikB",
-        "Asees": "ikB",
-        "GurbaniLipi": "jwn"
+        "Asees": "ikB"
     },
     {
         "Unicode": "ਜਾਵੇ",
@@ -923,8 +821,7 @@ exports.samples=[
         "DrChatrikWeb": "jfvy",
         "Satluj": "ÜÅò¶",
         "Joy": "ikt/",
-        "Asees": "ikt/",
-        "GurbaniLipi": "jwvy"
+        "Asees": "ikt/"
     },
     {
         "Unicode": "ਜਾਵੇ।",
@@ -932,8 +829,7 @@ exports.samples=[
         "DrChatrikWeb": "jfvy.",
         "Satluj": "ÜÅò¶¢",
         "Joy": "ikt/Õ",
-        "Asees": "ikt/.",
-        "GurbaniLipi": "jwvy["
+        "Asees": "ikt/।"
     },
     {
         "Unicode": "ਜਿਲ੍ਹੇ",
@@ -941,8 +837,7 @@ exports.samples=[
         "DrChatrikWeb": "ijlHy",
         "Satluj": "ÇÜñ੍Ô¶",
         "Joy": "fibQ/",
-        "Asees": "fibQ/",
-        "GurbaniLipi": "ijlHy"
+        "Asees": "fibQ/"
     },
     {
         "Unicode": "ਜਿਸ",
@@ -950,8 +845,7 @@ exports.samples=[
         "DrChatrikWeb": "ijs",
         "Satluj": "ÇÜÃ",
         "Joy": "fi;",
-        "Asees": "fi;",
-        "GurbaniLipi": "ijs"
+        "Asees": "fi;"
     },
     {
         "Unicode": "ਜਿੱਥੇ",
@@ -959,8 +853,7 @@ exports.samples=[
         "DrChatrikWeb": "ijwQy",
         "Satluj": "ÇÜੱæ¶",
         "Joy": "fiµE/",
-        "Asees": "fi~E/",
-        "GurbaniLipi": "ij~Qy"
+        "Asees": "fi~E/"
     },
     {
         "Unicode": "ਜੀਆਂ",
@@ -968,8 +861,7 @@ exports.samples=[
         "DrChatrikWeb": "jIaF",
         "Satluj": "ÜÆÁ»",
         "Joy": "ihnª",
-        "Asees": "ihnK",
-        "GurbaniLipi": "jIAW"
+        "Asees": "ihnK"
     },
     {
         "Unicode": "ਜੁੜੇ",
@@ -977,8 +869,7 @@ exports.samples=[
         "DrChatrikWeb": "juVy",
         "Satluj": "Üੁó¶",
         "Joy": "i[V/",
-        "Asees": "i[V/",
-        "GurbaniLipi": "juVy"
+        "Asees": "i[V/"
     },
     {
         "Unicode": "ਜੋ",
@@ -986,8 +877,7 @@ exports.samples=[
         "DrChatrikWeb": "jo",
         "Satluj": "Üੋ",
         "Joy": "iØ",
-        "Asees": "i'",
-        "GurbaniLipi": "jo"
+        "Asees": "i'"
     },
     {
         "Unicode": "ਝੋਨੇ",
@@ -995,8 +885,7 @@ exports.samples=[
         "DrChatrikWeb": "Jony",
         "Satluj": "Þੋé¶",
         "Joy": "MØB/",
-        "Asees": "M'B/",
-        "GurbaniLipi": "Jony"
+        "Asees": "M'B/"
     },
     {
         "Unicode": "ਟੁੱਟੇ;",
@@ -1004,8 +893,7 @@ exports.samples=[
         "DrChatrikWeb": "tuwty;",
         "Satluj": "àੁੱà¶;",
         "Joy": "N[µN/l",
-        "Asees": "N[~N/l",
-        "GurbaniLipi": "tu~ty;"
+        "Asees": "N[~N/l"
     },
     {
         "Unicode": "ਟੋਲੀ",
@@ -1013,8 +901,7 @@ exports.samples=[
         "DrChatrikWeb": "tolI",
         "Satluj": "àੋñÆ",
         "Joy": "NØbh",
-        "Asees": "N'bh",
-        "GurbaniLipi": "tolI"
+        "Asees": "N'bh"
     },
     {
         "Unicode": "ਠਾਣਿਆਂ",
@@ -1022,8 +909,7 @@ exports.samples=[
         "DrChatrikWeb": "TfixaF",
         "Satluj": "áÅÇäÁ»",
         "Joy": "mkfDnª",
-        "Asees": "mkfDnK",
-        "GurbaniLipi": "TwixAW"
+        "Asees": "mkfDnK"
     },
     {
         "Unicode": "ਡੇਂਗੂ",
@@ -1031,8 +917,7 @@ exports.samples=[
         "DrChatrikWeb": "zyNgU",
         "Satluj": "â¶º×±",
         "Joy": "v/∫r{",
-        "Asees": "v/Ar{",
-        "GurbaniLipi": "fyNgU"
+        "Asees": "v/Ar{"
     },
     {
         "Unicode": "ਡੇਗੂ",
@@ -1040,8 +925,7 @@ exports.samples=[
         "DrChatrikWeb": "zygU",
         "Satluj": "â¶×±",
         "Joy": "v/r{",
-        "Asees": "v/r{",
-        "GurbaniLipi": "fygU"
+        "Asees": "v/r{"
     },
     {
         "Unicode": "ਤਬਾਹ",
@@ -1049,8 +933,7 @@ exports.samples=[
         "DrChatrikWeb": "qbfh",
         "Satluj": "åìÅÔ",
         "Joy": "spkj",
-        "Asees": "spkj",
-        "GurbaniLipi": "qbwh"
+        "Asees": "spkj"
     },
     {
         "Unicode": "ਤਬਾਹੀ",
@@ -1058,8 +941,7 @@ exports.samples=[
         "DrChatrikWeb": "qbfhI",
         "Satluj": "åìÅÔÆ",
         "Joy": "spkjh",
-        "Asees": "spkjh",
-        "GurbaniLipi": "qbwhI"
+        "Asees": "spkjh"
     },
     {
         "Unicode": "ਤਰਨ",
@@ -1067,8 +949,7 @@ exports.samples=[
         "DrChatrikWeb": "qrn",
         "Satluj": "åðé",
         "Joy": "soB",
-        "Asees": "soB",
-        "GurbaniLipi": "qrn"
+        "Asees": "soB"
     },
     {
         "Unicode": "ਤਰ੍ਹਾਂ",
@@ -1076,8 +957,7 @@ exports.samples=[
         "DrChatrikWeb": "qrHF",
         "Satluj": "åð੍Ô»",
         "Joy": "soQª",
-        "Asees": "soQK",
-        "GurbaniLipi": "qrHW"
+        "Asees": "soQK"
     },
     {
         "Unicode": "ਤਸ਼ੱਦਦ",
@@ -1085,8 +965,7 @@ exports.samples=[
         "DrChatrikWeb": "qÈwdd",
         "Satluj": "åôੱçç",
         "Joy": "sÙµdd",
-        "Asees": "sP~dd",
-        "GurbaniLipi": "qS~dd"
+        "Asees": "sP~dd"
     },
     {
         "Unicode": "ਤਾਂ",
@@ -1094,8 +973,7 @@ exports.samples=[
         "DrChatrikWeb": "qF",
         "Satluj": "å»",
         "Joy": "sª",
-        "Asees": "sK",
-        "GurbaniLipi": "qW"
+        "Asees": "sK"
     },
     {
         "Unicode": "ਤਾਰਨ",
@@ -1103,8 +981,7 @@ exports.samples=[
         "DrChatrikWeb": "qfrn",
         "Satluj": "åÅðé",
         "Joy": "skoB",
-        "Asees": "skoB",
-        "GurbaniLipi": "qwrn"
+        "Asees": "skoB"
     },
     {
         "Unicode": "ਤਿੰਨ",
@@ -1112,8 +989,7 @@ exports.samples=[
         "DrChatrikWeb": "iqMn",
         "Satluj": "Çå¿é",
         "Joy": "fszB",
-        "Asees": "fszB",
-        "GurbaniLipi": "iqMn"
+        "Asees": "fszB"
     },
     {
         "Unicode": "ਤੇ",
@@ -1121,8 +997,7 @@ exports.samples=[
         "DrChatrikWeb": "qy",
         "Satluj": "å¶",
         "Joy": "s/",
-        "Asees": "s/",
-        "GurbaniLipi": "qy"
+        "Asees": "s/"
     },
     {
         "Unicode": "ਤੋਂ",
@@ -1130,8 +1005,7 @@ exports.samples=[
         "DrChatrikWeb": "qoN",
         "Satluj": "åੋº",
         "Joy": "sØ∫",
-        "Asees": "s'A",
-        "GurbaniLipi": "qoN"
+        "Asees": "s'A"
     },
     {
         "Unicode": "ਤੌਰ",
@@ -1139,8 +1013,7 @@ exports.samples=[
         "DrChatrikWeb": "qOr",
         "Satluj": "åÏð",
         "Joy": "s\"o",
-        "Asees": "s\"o",
-        "GurbaniLipi": "qOr"
+        "Asees": "s\"o"
     },
     {
         "Unicode": "ਤੱਕ",
@@ -1148,8 +1021,7 @@ exports.samples=[
         "DrChatrikWeb": "qwk",
         "Satluj": "åੱÕ",
         "Joy": "sµe",
-        "Asees": "s~e",
-        "GurbaniLipi": "q~k"
+        "Asees": "s~e"
     },
     {
         "Unicode": "ਥਾਵਾਂ",
@@ -1157,8 +1029,7 @@ exports.samples=[
         "DrChatrikWeb": "QfvF",
         "Satluj": "æÅò»",
         "Joy": "Ektª",
-        "Asees": "EktK",
-        "GurbaniLipi": "QwvW"
+        "Asees": "EktK"
     },
     {
         "Unicode": "ਦਬਾਅ",
@@ -1166,8 +1037,7 @@ exports.samples=[
         "DrChatrikWeb": "dbfa",
         "Satluj": "çìÅÁ",
         "Joy": "dpkn",
-        "Asees": "dpkn",
-        "GurbaniLipi": "dbwA"
+        "Asees": "dpkn"
     },
     {
         "Unicode": "ਦਰਿਆ",
@@ -1175,8 +1045,7 @@ exports.samples=[
         "DrChatrikWeb": "diraf",
         "Satluj": "çÇðÁÅ",
         "Joy": "dfonk",
-        "Asees": "dfonk",
-        "GurbaniLipi": "dirAw"
+        "Asees": "dfonk"
     },
     {
         "Unicode": "ਦਰਿਆਵਾਂ",
@@ -1184,8 +1053,7 @@ exports.samples=[
         "DrChatrikWeb": "dirafvF",
         "Satluj": "çÇðÁÅò»",
         "Joy": "dfonktª",
-        "Asees": "dfonktK",
-        "GurbaniLipi": "dirAwvW"
+        "Asees": "dfonktK"
     },
     {
         "Unicode": "ਦਸਤੇ",
@@ -1193,8 +1061,7 @@ exports.samples=[
         "DrChatrikWeb": "dsqy",
         "Satluj": "çÃå¶",
         "Joy": "d;s/",
-        "Asees": "d;s/",
-        "GurbaniLipi": "dsqy"
+        "Asees": "d;s/"
     },
     {
         "Unicode": "ਦਾ",
@@ -1202,8 +1069,7 @@ exports.samples=[
         "DrChatrikWeb": "df",
         "Satluj": "çÅ",
         "Joy": "dk",
-        "Asees": "dk",
-        "GurbaniLipi": "dw"
+        "Asees": "dk"
     },
     {
         "Unicode": "ਦਾਅਵਾ",
@@ -1211,8 +1077,7 @@ exports.samples=[
         "DrChatrikWeb": "dfavf",
         "Satluj": "çÅÁòÅ",
         "Joy": "dkntk",
-        "Asees": "dkntk",
-        "GurbaniLipi": "dwAvw"
+        "Asees": "dkntk"
     },
     {
         "Unicode": "ਦਾਖਲ",
@@ -1220,8 +1085,7 @@ exports.samples=[
         "DrChatrikWeb": "dfKl",
         "Satluj": "çÅÖñ",
         "Joy": "dkyb",
-        "Asees": "dkyb",
-        "GurbaniLipi": "dwKl"
+        "Asees": "dkyb"
     },
     {
         "Unicode": "ਦਿਨਾਂ",
@@ -1229,8 +1093,7 @@ exports.samples=[
         "DrChatrikWeb": "idnF",
         "Satluj": "Ççé»",
         "Joy": "fdBª",
-        "Asees": "fdBK",
-        "GurbaniLipi": "idnW"
+        "Asees": "fdBK"
     },
     {
         "Unicode": "ਦਿਨੀਂ",
@@ -1238,8 +1101,7 @@ exports.samples=[
         "DrChatrikWeb": "idnIN",
         "Satluj": "ÇçéÄ",
         "Joy": "fdB]",
-        "Asees": "fdBhA",
-        "GurbaniLipi": "idnIN"
+        "Asees": "fdBhA"
     },
     {
         "Unicode": "ਦਿੱਤਾ",
@@ -1247,8 +1109,7 @@ exports.samples=[
         "DrChatrikWeb": "idwqf",
         "Satluj": "ÇçੱåÅ",
         "Joy": "fdµsk",
-        "Asees": "fd~sk",
-        "GurbaniLipi": "id~qw"
+        "Asees": "fd~sk"
     },
     {
         "Unicode": "ਦਿੱਤੀ",
@@ -1256,8 +1117,7 @@ exports.samples=[
         "DrChatrikWeb": "idwqI",
         "Satluj": "ÇçੱåÆ",
         "Joy": "fdµsh",
-        "Asees": "fd~sh",
-        "GurbaniLipi": "id~qI"
+        "Asees": "fd~sh"
     },
     {
         "Unicode": "ਦੀ",
@@ -1265,8 +1125,7 @@ exports.samples=[
         "DrChatrikWeb": "dI",
         "Satluj": "çÆ",
         "Joy": "dh",
-        "Asees": "dh",
-        "GurbaniLipi": "dI"
+        "Asees": "dh"
     },
     {
         "Unicode": "ਦੇ",
@@ -1274,8 +1133,7 @@ exports.samples=[
         "DrChatrikWeb": "dy",
         "Satluj": "ç¶",
         "Joy": "d/",
-        "Asees": "d/",
-        "GurbaniLipi": "dy"
+        "Asees": "d/"
     },
     {
         "Unicode": "ਦੇਣ",
@@ -1283,8 +1141,7 @@ exports.samples=[
         "DrChatrikWeb": "dyx",
         "Satluj": "ç¶ä",
         "Joy": "d/D",
-        "Asees": "d/D",
-        "GurbaniLipi": "dyx"
+        "Asees": "d/D"
     },
     {
         "Unicode": "ਦੌਰਾਨ",
@@ -1292,8 +1149,7 @@ exports.samples=[
         "DrChatrikWeb": "dOrfn",
         "Satluj": "çÏðÅé",
         "Joy": "d\"okB",
-        "Asees": "d\"okB",
-        "GurbaniLipi": "dOrwn"
+        "Asees": "d\"okB"
     },
     {
         "Unicode": "ਦ੍ਰਿਸ਼।",
@@ -1301,8 +1157,7 @@ exports.samples=[
         "DrChatrikWeb": "idRÈ.",
         "Satluj": "ÇçÌô¢",
         "Joy": "fdÃÙÕ",
-        "Asees": "fdqP.",
-        "GurbaniLipi": "idRS["
+        "Asees": "fdqP।"
     },
     {
         "Unicode": "ਦੱਸਣਯੋਗ",
@@ -1310,8 +1165,7 @@ exports.samples=[
         "DrChatrikWeb": "dwsxXog",
         "Satluj": "çੱÃäïੋ×",
         "Joy": "dµ;D:Ør",
-        "Asees": "d~;D:'r",
-        "GurbaniLipi": "d~sxXog"
+        "Asees": "d~;D:'r"
     },
     {
         "Unicode": "ਦੱਸਿਆ",
@@ -1319,8 +1173,7 @@ exports.samples=[
         "DrChatrikWeb": "dwisaf",
         "Satluj": "çੱÇÃÁÅ",
         "Joy": "dµf;nk",
-        "Asees": "d~f;nk",
-        "GurbaniLipi": "d~isAw"
+        "Asees": "d~f;nk"
     },
     {
         "Unicode": "ਦੱਸੀ",
@@ -1328,8 +1181,7 @@ exports.samples=[
         "DrChatrikWeb": "dwsI",
         "Satluj": "çੱÃÆ",
         "Joy": "dµ;h",
-        "Asees": "d~;h",
-        "GurbaniLipi": "d~sI"
+        "Asees": "d~;h"
     },
     {
         "Unicode": "ਨਜਦੀਕੀ",
@@ -1337,8 +1189,7 @@ exports.samples=[
         "DrChatrikWeb": "njdIkI",
         "Satluj": "éÜçÆÕÆ",
         "Joy": "Bidheh",
-        "Asees": "Bidheh",
-        "GurbaniLipi": "njdIkI"
+        "Asees": "Bidheh"
     },
     {
         "Unicode": "ਨਦੀ",
@@ -1346,8 +1197,7 @@ exports.samples=[
         "DrChatrikWeb": "ndI",
         "Satluj": "éçÆ",
         "Joy": "Bdh",
-        "Asees": "Bdh",
-        "GurbaniLipi": "ndI"
+        "Asees": "Bdh"
     },
     {
         "Unicode": "ਨਸ਼ਰ",
@@ -1355,8 +1205,7 @@ exports.samples=[
         "DrChatrikWeb": "nÈr",
         "Satluj": "éôð",
         "Joy": "BÙo",
-        "Asees": "BPo",
-        "GurbaniLipi": "nSr"
+        "Asees": "BPo"
     },
     {
         "Unicode": "ਨਾ",
@@ -1364,8 +1213,7 @@ exports.samples=[
         "DrChatrikWeb": "nf",
         "Satluj": "éÅ",
         "Joy": "Bk",
-        "Asees": "Bk",
-        "GurbaniLipi": "nw"
+        "Asees": "Bk"
     },
     {
         "Unicode": "ਨਾਂ",
@@ -1373,8 +1221,7 @@ exports.samples=[
         "DrChatrikWeb": "nF",
         "Satluj": "é»",
         "Joy": "Bª",
-        "Asees": "BK",
-        "GurbaniLipi": "nW"
+        "Asees": "BK"
     },
     {
         "Unicode": "ਨਾਲ",
@@ -1382,8 +1229,7 @@ exports.samples=[
         "DrChatrikWeb": "nfl",
         "Satluj": "éÅñ",
         "Joy": "Bkb",
-        "Asees": "Bkb",
-        "GurbaniLipi": "nwl"
+        "Asees": "Bkb"
     },
     {
         "Unicode": "ਨੁਕਸਾਨ",
@@ -1391,8 +1237,7 @@ exports.samples=[
         "DrChatrikWeb": "nuksfn",
         "Satluj": "éੁÕÃÅé",
         "Joy": "B[e;kB",
-        "Asees": "B[e;kB",
-        "GurbaniLipi": "nukswn"
+        "Asees": "B[e;kB"
     },
     {
         "Unicode": "ਨੁਕਸਾਨ;",
@@ -1400,8 +1245,7 @@ exports.samples=[
         "DrChatrikWeb": "nuksfn;",
         "Satluj": "éੁÕÃÅé;",
         "Joy": "B[e;kBl",
-        "Asees": "B[e;kBl",
-        "GurbaniLipi": "nukswn;"
+        "Asees": "B[e;kBl"
     },
     {
         "Unicode": "ਨੁਕਸਾਨੇ",
@@ -1409,8 +1253,7 @@ exports.samples=[
         "DrChatrikWeb": "nuksfny",
         "Satluj": "éੁÕÃÅé¶",
         "Joy": "B[e;kB/",
-        "Asees": "B[e;kB/",
-        "GurbaniLipi": "nukswny"
+        "Asees": "B[e;kB/"
     },
     {
         "Unicode": "ਨੂੰ",
@@ -1418,8 +1261,7 @@ exports.samples=[
         "DrChatrikWeb": "nUM",
         "Satluj": "ù",
         "Joy": "˘",
-        "Asees": "ƒ",
-        "GurbaniLipi": "ƒ"
+        "Asees": "ƒ"
     },
     {
         "Unicode": "ਨੇ",
@@ -1427,8 +1269,7 @@ exports.samples=[
         "DrChatrikWeb": "ny",
         "Satluj": "é¶",
         "Joy": "B/",
-        "Asees": "B/",
-        "GurbaniLipi": "ny"
+        "Asees": "B/"
     },
     {
         "Unicode": "ਪਈ",
@@ -1436,8 +1277,7 @@ exports.samples=[
         "DrChatrikWeb": "peI",
         "Satluj": "êÂÆ",
         "Joy": "gJh",
-        "Asees": "gJh",
-        "GurbaniLipi": "peI"
+        "Asees": "gJh"
     },
     {
         "Unicode": "ਪਏ",
@@ -1445,8 +1285,7 @@ exports.samples=[
         "DrChatrikWeb": "pey",
         "Satluj": "êÂ¶",
         "Joy": "gJ/",
-        "Asees": "gJ/",
-        "GurbaniLipi": "pey"
+        "Asees": "gJ/"
     },
     {
         "Unicode": "ਪਤੀ",
@@ -1454,8 +1293,7 @@ exports.samples=[
         "DrChatrikWeb": "pqI",
         "Satluj": "êåÆ",
         "Joy": "gsh",
-        "Asees": "gsh",
-        "GurbaniLipi": "pqI"
+        "Asees": "gsh"
     },
     {
         "Unicode": "ਪਰ",
@@ -1463,8 +1301,7 @@ exports.samples=[
         "DrChatrikWeb": "pr",
         "Satluj": "êð",
         "Joy": "go",
-        "Asees": "go",
-        "GurbaniLipi": "pr"
+        "Asees": "go"
     },
     {
         "Unicode": "ਪਰਵਾਰ",
@@ -1472,8 +1309,7 @@ exports.samples=[
         "DrChatrikWeb": "prvfr",
         "Satluj": "êðòÅð",
         "Joy": "gotko",
-        "Asees": "gotko",
-        "GurbaniLipi": "prvwr"
+        "Asees": "gotko"
     },
     {
         "Unicode": "ਪਰਵਾਰਕ",
@@ -1481,8 +1317,7 @@ exports.samples=[
         "DrChatrikWeb": "prvfrk",
         "Satluj": "êðòÅðÕ",
         "Joy": "gotkoe",
-        "Asees": "gotkoe",
-        "GurbaniLipi": "prvwrk"
+        "Asees": "gotkoe"
     },
     {
         "Unicode": "ਪਸ਼ੂ",
@@ -1490,8 +1325,7 @@ exports.samples=[
         "DrChatrikWeb": "pÈU",
         "Satluj": "êô±",
         "Joy": "gÙ{",
-        "Asees": "gP{",
-        "GurbaniLipi": "pSU"
+        "Asees": "gP{"
     },
     {
         "Unicode": "ਪਸ਼ੂਆਂ",
@@ -1499,8 +1333,7 @@ exports.samples=[
         "DrChatrikWeb": "pÈUaF",
         "Satluj": "êô±Á»",
         "Joy": "gÙ{nª",
-        "Asees": "gP{nK",
-        "GurbaniLipi": "pSUAW"
+        "Asees": "gP{nK"
     },
     {
         "Unicode": "ਪਹੁੰਚ",
@@ -1508,8 +1341,7 @@ exports.samples=[
         "DrChatrikWeb": "phuMc",
         "Satluj": "êÔੁ¿Ú",
         "Joy": "gj[zu",
-        "Asees": "gj[zu",
-        "GurbaniLipi": "phuMc"
+        "Asees": "gj[zu"
     },
     {
         "Unicode": "ਪਾਣੀ",
@@ -1517,8 +1349,7 @@ exports.samples=[
         "DrChatrikWeb": "pfxI",
         "Satluj": "êÅäÆ",
         "Joy": "gkDh",
-        "Asees": "gkDh",
-        "GurbaniLipi": "pwxI"
+        "Asees": "gkDh"
     },
     {
         "Unicode": "ਪਾੜ",
@@ -1526,8 +1357,7 @@ exports.samples=[
         "DrChatrikWeb": "pfV",
         "Satluj": "êÅó",
         "Joy": "gkV",
-        "Asees": "gkV",
-        "GurbaniLipi": "pwV"
+        "Asees": "gkV"
     },
     {
         "Unicode": "ਪਿੰਡ",
@@ -1535,8 +1365,7 @@ exports.samples=[
         "DrChatrikWeb": "ipMz",
         "Satluj": "Çê¿â",
         "Joy": "fgzv",
-        "Asees": "fgzv",
-        "GurbaniLipi": "ipMf"
+        "Asees": "fgzv"
     },
     {
         "Unicode": "ਪੁਆਧ",
@@ -1544,8 +1373,7 @@ exports.samples=[
         "DrChatrikWeb": "puafD",
         "Satluj": "êੁÁÅè",
         "Joy": "g[nkX",
-        "Asees": "g[nkX",
-        "GurbaniLipi": "puAwD"
+        "Asees": "g[nkX"
     },
     {
         "Unicode": "ਪੁਲਿਸ",
@@ -1553,8 +1381,7 @@ exports.samples=[
         "DrChatrikWeb": "puils",
         "Satluj": "êੁÇñÃ",
         "Joy": "g[fb;",
-        "Asees": "g[fb;",
-        "GurbaniLipi": "puils"
+        "Asees": "g[fb;"
     },
     {
         "Unicode": "ਪੁੱਤਰ",
@@ -1562,8 +1389,7 @@ exports.samples=[
         "DrChatrikWeb": "puwqr",
         "Satluj": "êੁੱåð",
         "Joy": "g[µso",
-        "Asees": "g[~so",
-        "GurbaniLipi": "pu~qr"
+        "Asees": "g[~so"
     },
     {
         "Unicode": "ਪੁੱਤਰ)",
@@ -1571,8 +1397,7 @@ exports.samples=[
         "DrChatrikWeb": "puwqr)",
         "Satluj": "êੁੱåð)",
         "Joy": "g[µso)",
-        "Asees": "g[~so)",
-        "GurbaniLipi": "pu~qr)"
+        "Asees": "g[~so)"
     },
     {
         "Unicode": "ਪੂਰੀ",
@@ -1580,8 +1405,7 @@ exports.samples=[
         "DrChatrikWeb": "pUrI",
         "Satluj": "ê±ðÆ",
         "Joy": "g{oh",
-        "Asees": "g{oh",
-        "GurbaniLipi": "pUrI"
+        "Asees": "g{oh"
     },
     {
         "Unicode": "ਪੰਜਾਬ",
@@ -1589,8 +1413,7 @@ exports.samples=[
         "DrChatrikWeb": "pMjfb",
         "Satluj": "ê¿ÜÅì",
         "Joy": "gzikp",
-        "Asees": "gzikp",
-        "GurbaniLipi": "pMjwb"
+        "Asees": "gzikp"
     },
     {
         "Unicode": "ਪੱਕੇ",
@@ -1598,8 +1421,7 @@ exports.samples=[
         "DrChatrikWeb": "pwky",
         "Satluj": "êੱÕ¶",
         "Joy": "gµe/",
-        "Asees": "g~e/",
-        "GurbaniLipi": "p~ky"
+        "Asees": "g~e/"
     },
     {
         "Unicode": "ਫਰਿਆਦ",
@@ -1607,8 +1429,7 @@ exports.samples=[
         "DrChatrikWeb": "Pirafd",
         "Satluj": "ëÇðÁÅç",
         "Joy": "cfonkd",
-        "Asees": "cfonkd",
-        "GurbaniLipi": "PirAwd"
+        "Asees": "cfonkd"
     },
     {
         "Unicode": "ਫਸਲ",
@@ -1616,8 +1437,7 @@ exports.samples=[
         "DrChatrikWeb": "Psl",
         "Satluj": "ëÃñ",
         "Joy": "c;b",
-        "Asees": "c;b",
-        "GurbaniLipi": "Psl"
+        "Asees": "c;b"
     },
     {
         "Unicode": "ਫਸਲਾਂ",
@@ -1625,8 +1445,7 @@ exports.samples=[
         "DrChatrikWeb": "PslF",
         "Satluj": "ëÃñ»",
         "Joy": "c;bª",
-        "Asees": "c;bK",
-        "GurbaniLipi": "PslW"
+        "Asees": "c;bK"
     },
     {
         "Unicode": "ਫੈਸਲੇ",
@@ -1634,8 +1453,7 @@ exports.samples=[
         "DrChatrikWeb": "PYsly",
         "Satluj": "ëËÃñ¶",
         "Joy": "c?;b/",
-        "Asees": "c?;b/",
-        "GurbaniLipi": "PYsly"
+        "Asees": "c?;b/"
     },
     {
         "Unicode": "ਬਣਾਇਆ",
@@ -1643,8 +1461,7 @@ exports.samples=[
         "DrChatrikWeb": "bxfieaf",
         "Satluj": "ìäÅÇÂÁÅ",
         "Joy": "pDkfJnk",
-        "Asees": "pDkfJnk",
-        "GurbaniLipi": "bxwieAw"
+        "Asees": "pDkfJnk"
     },
     {
         "Unicode": "ਬਣਾਉਣ",
@@ -1652,8 +1469,7 @@ exports.samples=[
         "DrChatrikWeb": "bxfAux",
         "Satluj": "ìäÅਉä",
         "Joy": "pDkT[D",
-        "Asees": "pDkT[D",
-        "GurbaniLipi": "bxwaux"
+        "Asees": "pDkT[D"
     },
     {
         "Unicode": "ਬਦਲੇ",
@@ -1661,8 +1477,7 @@ exports.samples=[
         "DrChatrikWeb": "bdly",
         "Satluj": "ìçñ¶",
         "Joy": "pdb/",
-        "Asees": "pdb/",
-        "GurbaniLipi": "bdly"
+        "Asees": "pdb/"
     },
     {
         "Unicode": "ਬਰਸਾਤੀ",
@@ -1670,8 +1485,7 @@ exports.samples=[
         "DrChatrikWeb": "brsfqI",
         "Satluj": "ìðÃÅåÆ",
         "Joy": "po;ksh",
-        "Asees": "po;ksh",
-        "GurbaniLipi": "brswqI"
+        "Asees": "po;ksh"
     },
     {
         "Unicode": "ਬਾਅਦ",
@@ -1679,8 +1493,7 @@ exports.samples=[
         "DrChatrikWeb": "bfad",
         "Satluj": "ìÅÁç",
         "Joy": "pknd",
-        "Asees": "pknd",
-        "GurbaniLipi": "bwAd"
+        "Asees": "pknd"
     },
     {
         "Unicode": "ਬਾਬਾ",
@@ -1688,8 +1501,7 @@ exports.samples=[
         "DrChatrikWeb": "bfbf",
         "Satluj": "ìÅìÅ",
         "Joy": "pkpk",
-        "Asees": "pkpk",
-        "GurbaniLipi": "bwbw"
+        "Asees": "pkpk"
     },
     {
         "Unicode": "ਬਿਆਨ",
@@ -1697,8 +1509,7 @@ exports.samples=[
         "DrChatrikWeb": "ibafn",
         "Satluj": "ÇìÁÅé",
         "Joy": "fpnkB",
-        "Asees": "fpnkB",
-        "GurbaniLipi": "ibAwn"
+        "Asees": "fpnkB"
     },
     {
         "Unicode": "ਬਿਊਰੋ",
@@ -1706,8 +1517,7 @@ exports.samples=[
         "DrChatrikWeb": "ibAUro",
         "Satluj": "ÇìÀ±ðੋ",
         "Joy": "fpT{oØ",
-        "Asees": "fpT{o'",
-        "GurbaniLipi": "ibaUro"
+        "Asees": "fpT{o'"
     },
     {
         "Unicode": "ਬੀਤੇ",
@@ -1715,8 +1525,7 @@ exports.samples=[
         "DrChatrikWeb": "bIqy",
         "Satluj": "ìÆå¶",
         "Joy": "phs/",
-        "Asees": "phs/",
-        "GurbaniLipi": "bIqy"
+        "Asees": "phs/"
     },
     {
         "Unicode": "ਬੀਬੀ",
@@ -1724,8 +1533,7 @@ exports.samples=[
         "DrChatrikWeb": "bIbI",
         "Satluj": "ìÆìÆ",
         "Joy": "phph",
-        "Asees": "phph",
-        "GurbaniLipi": "bIbI"
+        "Asees": "phph"
     },
     {
         "Unicode": "ਬੁਰੀ",
@@ -1733,8 +1541,7 @@ exports.samples=[
         "DrChatrikWeb": "burI",
         "Satluj": "ìੁðÆ",
         "Joy": "p[oh",
-        "Asees": "p[oh",
-        "GurbaniLipi": "burI"
+        "Asees": "p[oh"
     },
     {
         "Unicode": "ਬੁੱਦਕੀ",
@@ -1742,8 +1549,7 @@ exports.samples=[
         "DrChatrikWeb": "buwdkI",
         "Satluj": "ìੁੱçÕÆ",
         "Joy": "p[µdeh",
-        "Asees": "p[~deh",
-        "GurbaniLipi": "bu~dkI"
+        "Asees": "p[~deh"
     },
     {
         "Unicode": "ਬੰਦ",
@@ -1751,8 +1557,7 @@ exports.samples=[
         "DrChatrikWeb": "bMd",
         "Satluj": "ì¿ç",
         "Joy": "pzd",
-        "Asees": "pzd",
-        "GurbaniLipi": "bMd"
+        "Asees": "pzd"
     },
     {
         "Unicode": "ਬੰਨ੍ਹ",
@@ -1760,8 +1565,7 @@ exports.samples=[
         "DrChatrikWeb": "bMnH",
         "Satluj": "ì¿é੍Ô",
         "Joy": "pzBQ",
-        "Asees": "pzBQ",
-        "GurbaniLipi": "bMnH"
+        "Asees": "pzBQ"
     },
     {
         "Unicode": "ਭਰਾਵਾਂ,",
@@ -1769,8 +1573,7 @@ exports.samples=[
         "DrChatrikWeb": "BrfvF,",
         "Satluj": "íðÅò»,",
         "Joy": "Goktª,",
-        "Asees": "GoktK,",
-        "GurbaniLipi": "BrwvW,"
+        "Asees": "GoktK,"
     },
     {
         "Unicode": "ਭਾਂਰੀ",
@@ -1778,8 +1581,7 @@ exports.samples=[
         "DrChatrikWeb": "BFrI",
         "Satluj": "í»ðÆ",
         "Joy": "Gªoh",
-        "Asees": "GKoh",
-        "GurbaniLipi": "BWrI"
+        "Asees": "GKoh"
     },
     {
         "Unicode": "ਭਾਜਪਾ",
@@ -1787,8 +1589,7 @@ exports.samples=[
         "DrChatrikWeb": "Bfjpf",
         "Satluj": "íÅÜêÅ",
         "Joy": "Gkigk",
-        "Asees": "Gkigk",
-        "GurbaniLipi": "Bwjpw"
+        "Asees": "Gkigk"
     },
     {
         "Unicode": "ਭਾਰਤੀ",
@@ -1796,8 +1597,7 @@ exports.samples=[
         "DrChatrikWeb": "BfrqI",
         "Satluj": "íÅðåÆ",
         "Joy": "Gkosh",
-        "Asees": "Gkosh",
-        "GurbaniLipi": "BwrqI"
+        "Asees": "Gkosh"
     },
     {
         "Unicode": "ਭਾਵੇਂ",
@@ -1805,8 +1605,7 @@ exports.samples=[
         "DrChatrikWeb": "BfvyN",
         "Satluj": "íÅò¶º",
         "Joy": "Gkt/∫",
-        "Asees": "Gkt/A",
-        "GurbaniLipi": "BwvyN"
+        "Asees": "Gkt/A"
     },
     {
         "Unicode": "ਭੇਜ",
@@ -1814,8 +1613,7 @@ exports.samples=[
         "DrChatrikWeb": "Byj",
         "Satluj": "í¶Ü",
         "Joy": "G/i",
-        "Asees": "G/i",
-        "GurbaniLipi": "Byj"
+        "Asees": "G/i"
     },
     {
         "Unicode": "ਮਰਨ",
@@ -1823,8 +1621,7 @@ exports.samples=[
         "DrChatrikWeb": "mrn",
         "Satluj": "îðé",
         "Joy": "woB",
-        "Asees": "woB",
-        "GurbaniLipi": "mrn"
+        "Asees": "woB"
     },
     {
         "Unicode": "ਮਰੇ;",
@@ -1832,8 +1629,7 @@ exports.samples=[
         "DrChatrikWeb": "mry;",
         "Satluj": "îð¶;",
         "Joy": "wo/l",
-        "Asees": "wo/l",
-        "GurbaniLipi": "mry;"
+        "Asees": "wo/l"
     },
     {
         "Unicode": "ਮਾਮਲਿਆਂ",
@@ -1841,8 +1637,7 @@ exports.samples=[
         "DrChatrikWeb": "mfmilaF",
         "Satluj": "îÅîÇñÁ»",
         "Joy": "wkwfbnª",
-        "Asees": "wkwfbnK",
-        "GurbaniLipi": "mwmilAW"
+        "Asees": "wkwfbnK"
     },
     {
         "Unicode": "ਮਾਮਲੇ",
@@ -1850,8 +1645,7 @@ exports.samples=[
         "DrChatrikWeb": "mfmly",
         "Satluj": "îÅîñ¶",
         "Joy": "wkwb/",
-        "Asees": "wkwb/",
-        "GurbaniLipi": "mwmly"
+        "Asees": "wkwb/"
     },
     {
         "Unicode": "ਮਾਰ",
@@ -1859,8 +1653,7 @@ exports.samples=[
         "DrChatrikWeb": "mfr",
         "Satluj": "îÅð",
         "Joy": "wko",
-        "Asees": "wko",
-        "GurbaniLipi": "mwr"
+        "Asees": "wko"
     },
     {
         "Unicode": "ਮਾਰਚ",
@@ -1868,8 +1661,7 @@ exports.samples=[
         "DrChatrikWeb": "mfrc",
         "Satluj": "îÅðÚ",
         "Joy": "wkou",
-        "Asees": "wkou",
-        "GurbaniLipi": "mwrc"
+        "Asees": "wkou"
     },
     {
         "Unicode": "ਮਿਲਦੇ",
@@ -1877,8 +1669,7 @@ exports.samples=[
         "DrChatrikWeb": "imldy",
         "Satluj": "Çîñç¶",
         "Joy": "fwbd/",
-        "Asees": "fwbd/",
-        "GurbaniLipi": "imldy"
+        "Asees": "fwbd/"
     },
     {
         "Unicode": "ਮੁਅਵਜ਼ਾ",
@@ -1886,8 +1677,7 @@ exports.samples=[
         "DrChatrikWeb": "muavËf",
         "Satluj": "îੁÁò÷Å",
         "Joy": "w[nt˜k",
-        "Asees": "w[ntIk",
-        "GurbaniLipi": "muAvzw"
+        "Asees": "w[ntIk"
     },
     {
         "Unicode": "ਮੁਕਦਮੇਂ",
@@ -1895,8 +1685,7 @@ exports.samples=[
         "DrChatrikWeb": "mukdmyN",
         "Satluj": "îੁÕçî¶º",
         "Joy": "w[edw/∫",
-        "Asees": "w[edw/A",
-        "GurbaniLipi": "mukdmyN"
+        "Asees": "w[edw/A"
     },
     {
         "Unicode": "ਮੁਕੰਮਲ",
@@ -1904,8 +1693,7 @@ exports.samples=[
         "DrChatrikWeb": "mukMml",
         "Satluj": "îੁÕ¿îñ",
         "Joy": "w[ezwb",
-        "Asees": "w[ezwb",
-        "GurbaniLipi": "mukMml"
+        "Asees": "w[ezwb"
     },
     {
         "Unicode": "ਮੁਜਰਮ",
@@ -1913,8 +1701,7 @@ exports.samples=[
         "DrChatrikWeb": "mujrm",
         "Satluj": "îੁÜðî",
         "Joy": "w[iow",
-        "Asees": "w[iow",
-        "GurbaniLipi": "mujrm"
+        "Asees": "w[iow"
     },
     {
         "Unicode": "ਮੁਤਾਬਕ",
@@ -1922,8 +1709,7 @@ exports.samples=[
         "DrChatrikWeb": "muqfbk",
         "Satluj": "îੁåÅìÕ",
         "Joy": "w[skpe",
-        "Asees": "w[skpe",
-        "GurbaniLipi": "muqwbk"
+        "Asees": "w[skpe"
     },
     {
         "Unicode": "ਮੁਹਾਲੀ",
@@ -1931,8 +1717,7 @@ exports.samples=[
         "DrChatrikWeb": "muhflI",
         "Satluj": "îੁÔÅñÆ",
         "Joy": "w[jkbh",
-        "Asees": "w[jkbh",
-        "GurbaniLipi": "muhwlI"
+        "Asees": "w[jkbh"
     },
     {
         "Unicode": "ਮੁਜ਼ਰਮ",
@@ -1940,8 +1725,7 @@ exports.samples=[
         "DrChatrikWeb": "muËrm",
         "Satluj": "îੁ÷ðî",
         "Joy": "w[˜ow",
-        "Asees": "w[Iow",
-        "GurbaniLipi": "muzrm"
+        "Asees": "w[Iow"
     },
     {
         "Unicode": "ਮੌਤ",
@@ -1949,8 +1733,7 @@ exports.samples=[
         "DrChatrikWeb": "mOq",
         "Satluj": "îÏå",
         "Joy": "w\"s",
-        "Asees": "w\"s",
-        "GurbaniLipi": "mOq"
+        "Asees": "w\"s"
     },
     {
         "Unicode": "ਰਕਬੇ",
@@ -1958,8 +1741,7 @@ exports.samples=[
         "DrChatrikWeb": "rkby",
         "Satluj": "ðÕì¶",
         "Joy": "oep/",
-        "Asees": "oep/",
-        "GurbaniLipi": "rkby"
+        "Asees": "oep/"
     },
     {
         "Unicode": "ਰਹੀ",
@@ -1967,8 +1749,7 @@ exports.samples=[
         "DrChatrikWeb": "rhI",
         "Satluj": "ðÔÆ",
         "Joy": "ojh",
-        "Asees": "ojh",
-        "GurbaniLipi": "rhI"
+        "Asees": "ojh"
     },
     {
         "Unicode": "ਰਹੇ",
@@ -1976,8 +1757,7 @@ exports.samples=[
         "DrChatrikWeb": "rhy",
         "Satluj": "ðÔ¶",
         "Joy": "oj/",
-        "Asees": "oj/",
-        "GurbaniLipi": "rhy"
+        "Asees": "oj/"
     },
     {
         "Unicode": "ਰਾਮ",
@@ -1985,8 +1765,7 @@ exports.samples=[
         "DrChatrikWeb": "rfm",
         "Satluj": "ðÅî",
         "Joy": "okw",
-        "Asees": "okw",
-        "GurbaniLipi": "rwm"
+        "Asees": "okw"
     },
     {
         "Unicode": "ਰਾਹੀਂ",
@@ -1994,8 +1773,7 @@ exports.samples=[
         "DrChatrikWeb": "rfhIN",
         "Satluj": "ðÅÔÄ",
         "Joy": "okj]",
-        "Asees": "okjhA",
-        "GurbaniLipi": "rwhIN"
+        "Asees": "okjhA"
     },
     {
         "Unicode": "ਰਿਸ਼ਤੇਦਾਰ",
@@ -2003,8 +1781,7 @@ exports.samples=[
         "DrChatrikWeb": "irÈqydfr",
         "Satluj": "Çðôå¶çÅð",
         "Joy": "foÙs/dko",
-        "Asees": "foPs/dko",
-        "GurbaniLipi": "irSqydwr"
+        "Asees": "foPs/dko"
     },
     {
         "Unicode": "ਰਿਸ਼ਤੇਦਾਰਾਂ",
@@ -2012,8 +1789,7 @@ exports.samples=[
         "DrChatrikWeb": "irÈqydfrF",
         "Satluj": "Çðôå¶çÅð»",
         "Joy": "foÙs/dkoª",
-        "Asees": "foPs/dkoK",
-        "GurbaniLipi": "irSqydwrW"
+        "Asees": "foPs/dkoK"
     },
     {
         "Unicode": "ਰਿਹਾ",
@@ -2021,8 +1797,7 @@ exports.samples=[
         "DrChatrikWeb": "irhf",
         "Satluj": "ÇðÔÅ",
         "Joy": "fojk",
-        "Asees": "fojk",
-        "GurbaniLipi": "irhw"
+        "Asees": "fojk"
     },
     {
         "Unicode": "ਰੋਕ",
@@ -2030,8 +1805,7 @@ exports.samples=[
         "DrChatrikWeb": "rok",
         "Satluj": "ðੋÕ",
         "Joy": "oØe",
-        "Asees": "o'e",
-        "GurbaniLipi": "rok"
+        "Asees": "o'e"
     },
     {
         "Unicode": "ਰੋਪੜ",
@@ -2039,8 +1813,7 @@ exports.samples=[
         "DrChatrikWeb": "ropV",
         "Satluj": "ðੋêó",
         "Joy": "oØgV",
-        "Asees": "o'gV",
-        "GurbaniLipi": "ropV"
+        "Asees": "o'gV"
     },
     {
         "Unicode": "ਰੱਖਣ",
@@ -2048,8 +1821,7 @@ exports.samples=[
         "DrChatrikWeb": "rwKx",
         "Satluj": "ðੱÖä",
         "Joy": "oµyD",
-        "Asees": "o~yD",
-        "GurbaniLipi": "r~Kx"
+        "Asees": "o~yD"
     },
     {
         "Unicode": "ਰੱਖੇ",
@@ -2057,8 +1829,7 @@ exports.samples=[
         "DrChatrikWeb": "rwKy",
         "Satluj": "ðੱÖ¶",
         "Joy": "oµy/",
-        "Asees": "o~y/",
-        "GurbaniLipi": "r~Ky"
+        "Asees": "o~y/"
     },
     {
         "Unicode": "ਰੱਦ",
@@ -2066,8 +1837,7 @@ exports.samples=[
         "DrChatrikWeb": "rwd",
         "Satluj": "ðੱç",
         "Joy": "oµd",
-        "Asees": "o~d",
-        "GurbaniLipi": "r~d"
+        "Asees": "o~d"
     },
     {
         "Unicode": "ਲਈ",
@@ -2075,8 +1845,7 @@ exports.samples=[
         "DrChatrikWeb": "leI",
         "Satluj": "ñÂÆ",
         "Joy": "bJh",
-        "Asees": "bJh",
-        "GurbaniLipi": "leI"
+        "Asees": "bJh"
     },
     {
         "Unicode": "ਲਲਚਾਉਣ",
@@ -2084,8 +1853,7 @@ exports.samples=[
         "DrChatrikWeb": "llcfAux",
         "Satluj": "ññÚÅਉä",
         "Joy": "bbukT[D",
-        "Asees": "bbukT[D",
-        "GurbaniLipi": "llcwaux"
+        "Asees": "bbukT[D"
     },
     {
         "Unicode": "ਲਾਈ",
@@ -2093,8 +1861,7 @@ exports.samples=[
         "DrChatrikWeb": "lfeI",
         "Satluj": "ñÅÂÆ",
         "Joy": "bkJh",
-        "Asees": "bkJh",
-        "GurbaniLipi": "lweI"
+        "Asees": "bkJh"
     },
     {
         "Unicode": "ਲਾਏ",
@@ -2102,8 +1869,7 @@ exports.samples=[
         "DrChatrikWeb": "lfey",
         "Satluj": "ñÅÂ¶",
         "Joy": "bkJ/",
-        "Asees": "bkJ/",
-        "GurbaniLipi": "lwey"
+        "Asees": "bkJ/"
     },
     {
         "Unicode": "ਲਿਆ",
@@ -2111,8 +1877,7 @@ exports.samples=[
         "DrChatrikWeb": "ilaf",
         "Satluj": "ÇñÁÅ",
         "Joy": "fbnk",
-        "Asees": "fbnk",
-        "GurbaniLipi": "ilAw"
+        "Asees": "fbnk"
     },
     {
         "Unicode": "ਲਿਖਿਆ",
@@ -2120,8 +1885,7 @@ exports.samples=[
         "DrChatrikWeb": "iliKaf",
         "Satluj": "ÇñÇÖÁÅ",
         "Joy": "fbfynk",
-        "Asees": "fbfynk",
-        "GurbaniLipi": "iliKAw"
+        "Asees": "fbfynk"
     },
     {
         "Unicode": "ਲੈ",
@@ -2129,8 +1893,7 @@ exports.samples=[
         "DrChatrikWeb": "lY",
         "Satluj": "ñË",
         "Joy": "b?",
-        "Asees": "b?",
-        "GurbaniLipi": "lY"
+        "Asees": "b?"
     },
     {
         "Unicode": "ਲੱਖ",
@@ -2138,8 +1901,7 @@ exports.samples=[
         "DrChatrikWeb": "lwK",
         "Satluj": "ñੱÖ",
         "Joy": "bµy",
-        "Asees": "b~y",
-        "GurbaniLipi": "l~K"
+        "Asees": "b~y"
     },
     {
         "Unicode": "ਵਾਲੇ",
@@ -2147,8 +1909,7 @@ exports.samples=[
         "DrChatrikWeb": "vfly",
         "Satluj": "òÅñ¶",
         "Joy": "tkb/",
-        "Asees": "tkb/",
-        "GurbaniLipi": "vwly"
+        "Asees": "tkb/"
     },
     {
         "Unicode": "ਵਿਚ",
@@ -2156,8 +1917,7 @@ exports.samples=[
         "DrChatrikWeb": "ivc",
         "Satluj": "ÇòÚ",
         "Joy": "ftu",
-        "Asees": "ftu",
-        "GurbaniLipi": "ivc"
+        "Asees": "ftu"
     },
     {
         "Unicode": "ਵਿਚਲੇ",
@@ -2165,8 +1925,7 @@ exports.samples=[
         "DrChatrikWeb": "ivcly",
         "Satluj": "ÇòÚñ¶",
         "Joy": "ftub/",
-        "Asees": "ftub/",
-        "GurbaniLipi": "ivcly"
+        "Asees": "ftub/"
     },
     {
         "Unicode": "ਵਿਚੋਂ",
@@ -2174,8 +1933,7 @@ exports.samples=[
         "DrChatrikWeb": "ivcoN",
         "Satluj": "ÇòÚੋº",
         "Joy": "ftuØ∫",
-        "Asees": "ftu'A",
-        "GurbaniLipi": "ivcoN"
+        "Asees": "ftu'A"
     },
     {
         "Unicode": "ਵਿਦਿਆਰਥੀ",
@@ -2183,8 +1941,7 @@ exports.samples=[
         "DrChatrikWeb": "ividafrQI",
         "Satluj": "ÇòÇçÁÅðæÆ",
         "Joy": "ftfdnkoEh",
-        "Asees": "ftfdnkoEh",
-        "GurbaniLipi": "ividAwrQI"
+        "Asees": "ftfdnkoEh"
     },
     {
         "Unicode": "ਵਿੱਚ",
@@ -2192,8 +1949,7 @@ exports.samples=[
         "DrChatrikWeb": "ivwc",
         "Satluj": "ÇòੱÚ",
         "Joy": "ftµu",
-        "Asees": "ft~u",
-        "GurbaniLipi": "iv~c"
+        "Asees": "ft~u"
     },
     {
         "Unicode": "ਵੀ",
@@ -2201,8 +1957,7 @@ exports.samples=[
         "DrChatrikWeb": "vI",
         "Satluj": "òÆ",
         "Joy": "th",
-        "Asees": "th",
-        "GurbaniLipi": "vI"
+        "Asees": "th"
     },
     {
         "Unicode": "ਵੇਖਦਾ",
@@ -2210,8 +1965,7 @@ exports.samples=[
         "DrChatrikWeb": "vyKdf",
         "Satluj": "ò¶ÖçÅ",
         "Joy": "t/ydk",
-        "Asees": "t/ydk",
-        "GurbaniLipi": "vyKdw"
+        "Asees": "t/ydk"
     },
     {
         "Unicode": "ਵੇਲੇ",
@@ -2219,8 +1973,7 @@ exports.samples=[
         "DrChatrikWeb": "vyly",
         "Satluj": "ò¶ñ¶",
         "Joy": "t/b/",
-        "Asees": "t/b/",
-        "GurbaniLipi": "vyly"
+        "Asees": "t/b/"
     },
     {
         "Unicode": "ਵੜੇ",
@@ -2228,8 +1981,7 @@ exports.samples=[
         "DrChatrikWeb": "vVy",
         "Satluj": "òó¶",
         "Joy": "tV/",
-        "Asees": "tV/",
-        "GurbaniLipi": "vVy"
+        "Asees": "tV/"
     },
     {
         "Unicode": "ਵੱਡੀ",
@@ -2237,8 +1989,7 @@ exports.samples=[
         "DrChatrikWeb": "vwzI",
         "Satluj": "òੱâÆ",
         "Joy": "tµvh",
-        "Asees": "t~vh",
-        "GurbaniLipi": "v~fI"
+        "Asees": "t~vh"
     },
     {
         "Unicode": "ਵੱਧ",
@@ -2246,8 +1997,7 @@ exports.samples=[
         "DrChatrikWeb": "vwD",
         "Satluj": "òੱè",
         "Joy": "tµX",
-        "Asees": "t~X",
-        "GurbaniLipi": "v~D"
+        "Asees": "t~X"
     },
     {
         "Unicode": "ਵੱਲੋਂ",
@@ -2255,8 +2005,7 @@ exports.samples=[
         "DrChatrikWeb": "vwloN",
         "Satluj": "òੱñੋº",
         "Joy": "tµbØ∫",
-        "Asees": "t~b'A",
-        "GurbaniLipi": "v~loN"
+        "Asees": "t~b'A"
     },
     {
         "Unicode": "ਸ਼ਹੀਦ",
@@ -2264,8 +2013,7 @@ exports.samples=[
         "DrChatrikWeb": "ÈhId",
         "Satluj": "ôÔÆç",
         "Joy": "Ùjhd",
-        "Asees": "Pjhd",
-        "GurbaniLipi": "ShId"
+        "Asees": "Pjhd"
     },
     {
         "Unicode": "ਸ਼ਾਮਲ",
@@ -2273,8 +2021,7 @@ exports.samples=[
         "DrChatrikWeb": "Èfml",
         "Satluj": "ôÅîñ",
         "Joy": "Ùkwb",
-        "Asees": "Pkwb",
-        "GurbaniLipi": "Swml"
+        "Asees": "Pkwb"
     },
     {
         "Unicode": "ਸ਼ਿਕਾਇਤਕਰਤਾ",
@@ -2282,8 +2029,7 @@ exports.samples=[
         "DrChatrikWeb": "iÈkfieqkrqf",
         "Satluj": "ÇôÕÅÇÂåÕðåÅ",
         "Joy": "fÙekfJseosk",
-        "Asees": "fPekfJseosk",
-        "GurbaniLipi": "iSkwieqkrqw"
+        "Asees": "fPekfJseosk"
     },
     {
         "Unicode": "ਸਟਾਫ",
@@ -2291,8 +2037,7 @@ exports.samples=[
         "DrChatrikWeb": "stfP",
         "Satluj": "ÃàÅë",
         "Joy": ";Nkc",
-        "Asees": ";Nkc",
-        "GurbaniLipi": "stwP"
+        "Asees": ";Nkc"
     },
     {
         "Unicode": "ਸਤਲੁਜ",
@@ -2300,8 +2045,7 @@ exports.samples=[
         "DrChatrikWeb": "sqluj",
         "Satluj": "Ãå«Ü",
         "Joy": ";s´i",
-        "Asees": ";sb[i",
-        "GurbaniLipi": "sqluj"
+        "Asees": ";sb[i"
     },
     {
         "Unicode": "ਸਨ",
@@ -2309,8 +2053,7 @@ exports.samples=[
         "DrChatrikWeb": "sn",
         "Satluj": "Ãé",
         "Joy": ";B",
-        "Asees": ";B",
-        "GurbaniLipi": "sn"
+        "Asees": ";B"
     },
     {
         "Unicode": "ਸਨ।",
@@ -2318,8 +2061,7 @@ exports.samples=[
         "DrChatrikWeb": "sn.",
         "Satluj": "Ãé¢",
         "Joy": ";BÕ",
-        "Asees": ";B.",
-        "GurbaniLipi": "sn["
+        "Asees": ";B।"
     },
     {
         "Unicode": "ਸਮੇਤ",
@@ -2327,8 +2069,7 @@ exports.samples=[
         "DrChatrikWeb": "smyq",
         "Satluj": "Ãî¶å",
         "Joy": ";w/s",
-        "Asees": ";w/s",
-        "GurbaniLipi": "smyq"
+        "Asees": ";w/s"
     },
     {
         "Unicode": "ਸਰਕਾਰ",
@@ -2336,8 +2077,7 @@ exports.samples=[
         "DrChatrikWeb": "srkfr",
         "Satluj": "ÃðÕÅð",
         "Joy": ";oeko",
-        "Asees": ";oeko",
-        "GurbaniLipi": "srkwr"
+        "Asees": ";oeko"
     },
     {
         "Unicode": "ਸਾਬਤ",
@@ -2345,8 +2085,7 @@ exports.samples=[
         "DrChatrikWeb": "sfbq",
         "Satluj": "ÃÅìå",
         "Joy": ";kps",
-        "Asees": ";kps",
-        "GurbaniLipi": "swbq"
+        "Asees": ";kps"
     },
     {
         "Unicode": "ਸਾਲ",
@@ -2354,8 +2093,7 @@ exports.samples=[
         "DrChatrikWeb": "sfl",
         "Satluj": "ÃÅñ",
         "Joy": ";kb",
-        "Asees": ";kb",
-        "GurbaniLipi": "swl"
+        "Asees": ";kb"
     },
     {
         "Unicode": "ਸਾਲਾਂ",
@@ -2363,8 +2101,7 @@ exports.samples=[
         "DrChatrikWeb": "sflF",
         "Satluj": "ÃÅñ»",
         "Joy": ";kbª",
-        "Asees": ";kbK",
-        "GurbaniLipi": "swlW"
+        "Asees": ";kbK"
     },
     {
         "Unicode": "ਸਾਹਮਣੇ",
@@ -2372,8 +2109,7 @@ exports.samples=[
         "DrChatrikWeb": "sfhmxy",
         "Satluj": "ÃÅÔîä¶",
         "Joy": ";kjwD/",
-        "Asees": ";kjwD/",
-        "GurbaniLipi": "swhmxy"
+        "Asees": ";kjwD/"
     },
     {
         "Unicode": "ਸਿਆਸਤ",
@@ -2381,8 +2117,7 @@ exports.samples=[
         "DrChatrikWeb": "isafsq",
         "Satluj": "ÇÃÁÅÃå",
         "Joy": "f;nk;s",
-        "Asees": "f;nk;s",
-        "GurbaniLipi": "isAwsq"
+        "Asees": "f;nk;s"
     },
     {
         "Unicode": "ਸਿੰਘ",
@@ -2390,8 +2125,7 @@ exports.samples=[
         "DrChatrikWeb": "isMG",
         "Satluj": "ÇÃ¿Ø",
         "Joy": "f;zx",
-        "Asees": "f;zx",
-        "GurbaniLipi": "isMG"
+        "Asees": "f;zx"
     },
     {
         "Unicode": "ਸਿੰਘ,",
@@ -2399,8 +2133,7 @@ exports.samples=[
         "DrChatrikWeb": "isMG,",
         "Satluj": "ÇÃ¿Ø,",
         "Joy": "f;zx,",
-        "Asees": "f;zx,",
-        "GurbaniLipi": "isMG,"
+        "Asees": "f;zx,"
     },
     {
         "Unicode": "ਸਿੱਖ",
@@ -2408,8 +2141,7 @@ exports.samples=[
         "DrChatrikWeb": "iswK",
         "Satluj": "ÇÃੱÖ",
         "Joy": "f;µy",
-        "Asees": "f;~y",
-        "GurbaniLipi": "is~K"
+        "Asees": "f;~y"
     },
     {
         "Unicode": "ਸੀ",
@@ -2417,8 +2149,7 @@ exports.samples=[
         "DrChatrikWeb": "sI",
         "Satluj": "ÃÆ",
         "Joy": ";h",
-        "Asees": ";h",
-        "GurbaniLipi": "sI"
+        "Asees": ";h"
     },
     {
         "Unicode": "ਸੀ,",
@@ -2426,8 +2157,7 @@ exports.samples=[
         "DrChatrikWeb": "sI,",
         "Satluj": "ÃÆ,",
         "Joy": ";h,",
-        "Asees": ";h,",
-        "GurbaniLipi": "sI,"
+        "Asees": ";h,"
     },
     {
         "Unicode": "ਸੀ.ਆਈ.ਏ.",
@@ -2435,8 +2165,7 @@ exports.samples=[
         "DrChatrikWeb": "sI[afeI[ey[",
         "Satluj": "ÃÆ.ÁÅÂÆ.Â¶.",
         "Joy": ";hHnkJhHJ/H",
-        "Asees": ";hHnkJhHJ/H",
-        "GurbaniLipi": "sI.AweI.ey."
+        "Asees": ";hHnkJhHJ/H"
     },
     {
         "Unicode": "ਸੀ.ਆਰ.ਪੀ.",
@@ -2444,8 +2173,7 @@ exports.samples=[
         "DrChatrikWeb": "sI[afr[pI[",
         "Satluj": "ÃÆ.ÁÅð.êÆ.",
         "Joy": ";hHnkoHghH",
-        "Asees": ";hHnkoHghH",
-        "GurbaniLipi": "sI.Awr.pI."
+        "Asees": ";hHnkoHghH"
     },
     {
         "Unicode": "ਸੀ.ਬੀ.ਆਈ",
@@ -2453,8 +2181,7 @@ exports.samples=[
         "DrChatrikWeb": "sI[bI[afeI",
         "Satluj": "ÃÆ.ìÆ.ÁÅÂÆ",
         "Joy": ";hHphHnkJh",
-        "Asees": ";hHphHnkJh",
-        "GurbaniLipi": "sI.bI.AweI"
+        "Asees": ";hHphHnkJh"
     },
     {
         "Unicode": "ਸੀ.ਬੀ.ਆਈ.",
@@ -2462,8 +2189,7 @@ exports.samples=[
         "DrChatrikWeb": "sI[bI[afeI[",
         "Satluj": "ÃÆ.ìÆ.ÁÅÂÆ.",
         "Joy": ";hHphHnkJhH",
-        "Asees": ";hHphHnkJhH",
-        "GurbaniLipi": "sI.bI.AweI."
+        "Asees": ";hHphHnkJhH"
     },
     {
         "Unicode": "ਸੀ।",
@@ -2471,8 +2197,7 @@ exports.samples=[
         "DrChatrikWeb": "sI.",
         "Satluj": "ÃÆ¢",
         "Joy": ";hÕ",
-        "Asees": ";h.",
-        "GurbaniLipi": "sI["
+        "Asees": ";h।"
     },
     {
         "Unicode": "ਸੁਧਾਈ",
@@ -2480,8 +2205,7 @@ exports.samples=[
         "DrChatrikWeb": "suDfeI",
         "Satluj": "ÃੁèÅÂÆ",
         "Joy": ";[XkJh",
-        "Asees": ";[XkJh",
-        "GurbaniLipi": "suDweI"
+        "Asees": ";[XkJh"
     },
     {
         "Unicode": "ਸੁਪਰੀਮ",
@@ -2489,8 +2213,7 @@ exports.samples=[
         "DrChatrikWeb": "suprIm",
         "Satluj": "ÃੁêðÆî",
         "Joy": ";[gohw",
-        "Asees": ";[gohw",
-        "GurbaniLipi": "suprIm"
+        "Asees": ";[gohw"
     },
     {
         "Unicode": "ਸੂਬਾ",
@@ -2498,8 +2221,7 @@ exports.samples=[
         "DrChatrikWeb": "sUbf",
         "Satluj": "Ã±ìÅ",
         "Joy": ";{pk",
-        "Asees": ";{pk",
-        "GurbaniLipi": "sUbw"
+        "Asees": ";{pk"
     },
     {
         "Unicode": "ਸੇਵਾਮੁਕਤ",
@@ -2507,8 +2229,7 @@ exports.samples=[
         "DrChatrikWeb": "syvfmukq",
         "Satluj": "Ã¶òÅîੁÕå",
         "Joy": ";/tkw[es",
-        "Asees": ";/tkw[es",
-        "GurbaniLipi": "syvwmukq"
+        "Asees": ";/tkw[es"
     },
     {
         "Unicode": "ਸੌਂਪੀ",
@@ -2516,8 +2237,7 @@ exports.samples=[
         "DrChatrikWeb": "sONpI",
         "Satluj": "ÃÏºêÆ",
         "Joy": ";\"∫gh",
-        "Asees": ";\"Agh",
-        "GurbaniLipi": "sONpI"
+        "Asees": ";\"Agh"
     },
     {
         "Unicode": "ਹਨ",
@@ -2525,8 +2245,7 @@ exports.samples=[
         "DrChatrikWeb": "hn",
         "Satluj": "Ôé",
         "Joy": "jB",
-        "Asees": "jB",
-        "GurbaniLipi": "hn"
+        "Asees": "jB"
     },
     {
         "Unicode": "ਹਨ।",
@@ -2534,8 +2253,7 @@ exports.samples=[
         "DrChatrikWeb": "hn.",
         "Satluj": "Ôé¢",
         "Joy": "jBÕ",
-        "Asees": "jB.",
-        "GurbaniLipi": "hn["
+        "Asees": "jB।"
     },
     {
         "Unicode": "ਹਰਿਆਣਾ",
@@ -2543,8 +2261,7 @@ exports.samples=[
         "DrChatrikWeb": "hirafxf",
         "Satluj": "ÔÇðÁÅäÅ",
         "Joy": "jfonkDk",
-        "Asees": "jfonkDk",
-        "GurbaniLipi": "hirAwxw"
+        "Asees": "jfonkDk"
     },
     {
         "Unicode": "ਹਰੋਨਾਂ",
@@ -2552,8 +2269,7 @@ exports.samples=[
         "DrChatrikWeb": "hronF",
         "Satluj": "Ôðੋé»",
         "Joy": "joØBª",
-        "Asees": "jo'BK",
-        "GurbaniLipi": "hronW"
+        "Asees": "jo'BK"
     },
     {
         "Unicode": "ਹਿਤ",
@@ -2561,8 +2277,7 @@ exports.samples=[
         "DrChatrikWeb": "ihq",
         "Satluj": "ÇÔå",
         "Joy": "fjs",
-        "Asees": "fjs",
-        "GurbaniLipi": "ihq"
+        "Asees": "fjs"
     },
     {
         "Unicode": "ਹਿਰਾਸਤ",
@@ -2570,8 +2285,7 @@ exports.samples=[
         "DrChatrikWeb": "ihrfsq",
         "Satluj": "ÇÔðÅÃå",
         "Joy": "fjok;s",
-        "Asees": "fjok;s",
-        "GurbaniLipi": "ihrwsq"
+        "Asees": "fjok;s"
     },
     {
         "Unicode": "ਹੀ",
@@ -2579,8 +2293,7 @@ exports.samples=[
         "DrChatrikWeb": "hI",
         "Satluj": "ÔÆ",
         "Joy": "jh",
-        "Asees": "jh",
-        "GurbaniLipi": "hI"
+        "Asees": "jh"
     },
     {
         "Unicode": "ਹੁਣ",
@@ -2588,8 +2301,7 @@ exports.samples=[
         "DrChatrikWeb": "hux",
         "Satluj": "Ôੁä",
         "Joy": "j[D",
-        "Asees": "j[D",
-        "GurbaniLipi": "hux"
+        "Asees": "j[D"
     },
     {
         "Unicode": "ਹੇਠ",
@@ -2597,8 +2309,7 @@ exports.samples=[
         "DrChatrikWeb": "hyT",
         "Satluj": "Ô¶á",
         "Joy": "j/m",
-        "Asees": "j/m",
-        "GurbaniLipi": "hyT"
+        "Asees": "j/m"
     },
     {
         "Unicode": "ਹੈ",
@@ -2606,8 +2317,7 @@ exports.samples=[
         "DrChatrikWeb": "hY",
         "Satluj": "ÔË",
         "Joy": "W",
-        "Asees": "j?",
-        "GurbaniLipi": "hY"
+        "Asees": "j?"
     },
     {
         "Unicode": "ਹੈ,",
@@ -2615,8 +2325,7 @@ exports.samples=[
         "DrChatrikWeb": "hY,",
         "Satluj": "ÔË,",
         "Joy": "W,",
-        "Asees": "j?,",
-        "GurbaniLipi": "hY,"
+        "Asees": "j?,"
     },
     {
         "Unicode": "ਹੈ।",
@@ -2624,8 +2333,7 @@ exports.samples=[
         "DrChatrikWeb": "hY.",
         "Satluj": "ÔË¢",
         "Joy": "WÕ",
-        "Asees": "j?.",
-        "GurbaniLipi": "hY["
+        "Asees": "j?।"
     },
     {
         "Unicode": "ਹੋ",
@@ -2633,8 +2341,7 @@ exports.samples=[
         "DrChatrikWeb": "ho",
         "Satluj": "Ôੋ",
         "Joy": "jØ",
-        "Asees": "j'",
-        "GurbaniLipi": "ho"
+        "Asees": "j'"
     },
     {
         "Unicode": "ਹੋਇਆ",
@@ -2642,8 +2349,7 @@ exports.samples=[
         "DrChatrikWeb": "hoieaf",
         "Satluj": "ÔੋÇÂÁÅ",
         "Joy": "jØfJnk",
-        "Asees": "j'fJnk",
-        "GurbaniLipi": "hoieAw"
+        "Asees": "j'fJnk"
     },
     {
         "Unicode": "ਹੋਈ",
@@ -2651,8 +2357,7 @@ exports.samples=[
         "DrChatrikWeb": "hoeI",
         "Satluj": "ÔੋÂÆ",
         "Joy": "jØJh",
-        "Asees": "j'Jh",
-        "GurbaniLipi": "hoeI"
+        "Asees": "j'Jh"
     },
     {
         "Unicode": "ਹੋਏ",
@@ -2660,8 +2365,7 @@ exports.samples=[
         "DrChatrikWeb": "hoey",
         "Satluj": "ÔੋÂ¶",
         "Joy": "jØJ/",
-        "Asees": "j'J/",
-        "GurbaniLipi": "hoey"
+        "Asees": "j'J/"
     },
     {
         "Unicode": "ਹੋਣ",
@@ -2669,8 +2373,7 @@ exports.samples=[
         "DrChatrikWeb": "hox",
         "Satluj": "Ôੋä",
         "Joy": "jØD",
-        "Asees": "j'D",
-        "GurbaniLipi": "hox"
+        "Asees": "j'D"
     },
     {
         "Unicode": "ਹੋਰ",
@@ -2678,8 +2381,7 @@ exports.samples=[
         "DrChatrikWeb": "hor",
         "Satluj": "Ôੋð",
         "Joy": "jØo",
-        "Asees": "j'o",
-        "GurbaniLipi": "hor"
+        "Asees": "j'o"
     },
     {
         "Unicode": "ਹੋਰਨਾਂ",
@@ -2687,8 +2389,7 @@ exports.samples=[
         "DrChatrikWeb": "hornF",
         "Satluj": "Ôੋðé»",
         "Joy": "jØoBª",
-        "Asees": "j'oBK",
-        "GurbaniLipi": "hornW"
+        "Asees": "j'oBK"
     },
     {
         "Unicode": "ਹੋਵੇਗੀ।",
@@ -2696,8 +2397,7 @@ exports.samples=[
         "DrChatrikWeb": "hovygI.",
         "Satluj": "Ôੋò¶×Æ¢",
         "Joy": "jØt/rhÕ",
-        "Asees": "j't/rh.",
-        "GurbaniLipi": "hovygI["
+        "Asees": "j't/rh।"
     },
     {
         "Unicode": "ਹਜ਼ਾਰ",
@@ -2705,8 +2405,7 @@ exports.samples=[
         "DrChatrikWeb": "hËfr",
         "Satluj": "Ô÷Åð",
         "Joy": "j˜ko",
-        "Asees": "jIko",
-        "GurbaniLipi": "hzwr"
+        "Asees": "jIko"
     },
     {
         "Unicode": "ਹੜਾਂ",
@@ -2714,8 +2413,7 @@ exports.samples=[
         "DrChatrikWeb": "hVF",
         "Satluj": "Ôó»",
         "Joy": "jVª",
-        "Asees": "jVK",
-        "GurbaniLipi": "hVW"
+        "Asees": "jVK"
     },
     {
         "Unicode": "ਹੜ੍ਹ",
@@ -2723,8 +2421,7 @@ exports.samples=[
         "DrChatrikWeb": "hVH",
         "Satluj": "Ôó੍Ô",
         "Joy": "jVQ",
-        "Asees": "jVQ",
-        "GurbaniLipi": "hVH"
+        "Asees": "jVQ"
     },
     {
         "Unicode": "ਹੜ੍ਹ:",
@@ -2732,8 +2429,7 @@ exports.samples=[
         "DrChatrikWeb": "hVH:",
         "Satluj": "Ôó੍Ô:",
         "Joy": "jVQ:",
-        "Asees": "jVQL",
-        "GurbaniLipi": "hVH:"
+        "Asees": "jVQL"
     },
     {
         "Unicode": "ਜ਼ਿਕਰਯੋਗ",
@@ -2741,7 +2437,6 @@ exports.samples=[
         "DrChatrikWeb": "iËkrXog",
         "Satluj": "Ç÷Õðïੋ×",
         "Joy": "f˜eo:Ør",
-        "Asees": "fIeo:'r",
-        "GurbaniLipi": "izkrXog"
+        "Asees": "fIeo:'r"
     }
 ]
