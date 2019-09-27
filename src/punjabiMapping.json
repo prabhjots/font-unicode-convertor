@@ -920,6 +920,14 @@
                 "Aunkar",
                 "Bindi"
             ]
+        ],
+        [
+            [
+                "Dash"
+            ],
+            [
+                "Dash2"
+            ]
         ]
     ],
     "mappings": [
@@ -1397,7 +1405,7 @@
                 "SquareBracketLeft2": "{",
                 "SquareBracketRight": "]",
                 "SquareBracketRight2": "}",
-                "Dash":"-"
+                "Dash": "-"
             }
         },
         {
@@ -1503,7 +1511,7 @@
                 "LalaDulainkar": "¬",
                 "LalaAunkar": "«",
                 "LalaTippi": "¦",
-                "Dash":"-"
+                "Dash": "-"
             }
         },
         {
@@ -1757,7 +1765,7 @@
                 "Hai": "W",
                 "Hai2": "˛",
                 "Colon": "L",
-                "Dash":"-",
+                "Dash": "-",
                 "Dash2": "F"
             }
         }
