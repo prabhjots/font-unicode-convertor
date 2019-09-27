@@ -1,567 +1,4 @@
 {
-    "keys": [
-        {
-            "key": "IkOnkarVersion1"
-        },
-        {
-            "key": "IkOnkarVersion1a"
-        },
-        {
-            "key": "IkOnkarVersion1b"
-        },
-        {
-            "key": "IkOnkarVersion2"
-        },
-        {
-            "key": "IkOnkarVersion2a"
-        },
-        {
-            "key": "IkOnkarVersion2b"
-        },
-        {
-            "key": "IkOnkarVersion3"
-        },
-        {
-            "key": "IkOnkarVersion4"
-        },
-        {
-            "key": "IkOnkarVersion5"
-        },
-        {
-            "key": "Onkar1"
-        },
-        {
-            "key": "Onkar2"
-        },
-        {
-            "key": "Uੳ"
-        },
-        {
-            "key": "Uਉ"
-        },
-        {
-            "key": "UਉBindi"
-        },
-        {
-            "key": "Uਊ"
-        },
-        {
-            "key": "Oਓ"
-        },
-        {
-            "key": "Oਓ2"
-        },
-        {
-            "key": "Aਅ"
-        },
-        {
-            "key": "Aਆ"
-        },
-        {
-            "key": "Aਐ"
-        },
-        {
-            "key": "Oਔ"
-        },
-        {
-            "key": "Eੲ"
-        },
-        {
-            "key": "Eਇ"
-        },
-        {
-            "key": "Eਈ"
-        },
-        {
-            "key": "Eਏ"
-        },
-        {
-            "key": "Sਸ"
-        },
-        {
-            "key": "Hਹ"
-        },
-        {
-            "key": "Kਕ"
-        },
-        {
-            "key": "Kਖ"
-        },
-        {
-            "key": "Gਗ"
-        },
-        {
-            "key": "Gਘ"
-        },
-        {
-            "key": "Nਙ"
-        },
-        {
-            "key": "Cਚ"
-        },
-        {
-            "key": "Cਛ"
-        },
-        {
-            "key": "Jਜ"
-        },
-        {
-            "key": "Jਝ"
-        },
-        {
-            "key": "Nਞ"
-        },
-        {
-            "key": "Tਟ"
-        },
-        {
-            "key": "Tਠ"
-        },
-        {
-            "key": "Dਡ"
-        },
-        {
-            "key": "Dਢ"
-        },
-        {
-            "key": "Nਣ"
-        },
-        {
-            "key": "Tਤ"
-        },
-        {
-            "key": "Tਥ"
-        },
-        {
-            "key": "Dਦ"
-        },
-        {
-            "key": "Dਧ"
-        },
-        {
-            "key": "Nਨ"
-        },
-        {
-            "key": "Pਪ"
-        },
-        {
-            "key": "Fਫ"
-        },
-        {
-            "key": "Bਬ"
-        },
-        {
-            "key": "Bਭ"
-        },
-        {
-            "key": "Mਮ"
-        },
-        {
-            "key": "Yਯ"
-        },
-        {
-            "key": "Rਰ"
-        },
-        {
-            "key": "Lਲ"
-        },
-        {
-            "key": "Vਵ"
-        },
-        {
-            "key": "Rੜ"
-        },
-        {
-            "key": "SPairiBindiਸ਼"
-        },
-        {
-            "key": "KPairiBindiਖ਼"
-        },
-        {
-            "key": "GPairiBindiਗ਼"
-        },
-        {
-            "key": "JPairiBindiਜ਼"
-        },
-        {
-            "key": "FPairiBindiਫ਼"
-        },
-        {
-            "key": "LPairiBindiਲ਼"
-        },
-        {
-            "key": "PairiBindi"
-        },
-        {
-            "key": "PairiBindi2"
-        },
-        {
-            "key": "Dot"
-        },
-        {
-            "key": "PairiHaha"
-        },
-        {
-            "key": "PairiHaha2"
-        },
-        {
-            "key": "PairiHahaDulainkar"
-        },
-        {
-            "key": "PairiRara"
-        },
-        {
-            "key": "PairiRaraLeft"
-        },
-        {
-            "key": "PairiRaraPairiBindi"
-        },
-        {
-            "key": "PairiChacha"
-        },
-        {
-            "key": "PairiTenka"
-        },
-        {
-            "key": "PairiVava"
-        },
-        {
-            "key": "PairiVava2"
-        },
-        {
-            "key": "PairiYaiya"
-        },
-        {
-            "key": "PairiTata"
-        },
-        {
-            "key": "PairiNana"
-        },
-        {
-            "key": "HalfYaiyaRight"
-        },
-        {
-            "key": "HalfYaiyaLeft"
-        },
-        {
-            "key": "TippiLeft"
-        },
-        {
-            "key": "Tippi"
-        },
-        {
-            "key": "Tippi2"
-        },
-        {
-            "key": "TippiRight"
-        },
-        {
-            "key": "Bindi"
-        },
-        {
-            "key": "Bindi2"
-        },
-        {
-            "key": "Visagra"
-        },
-        {
-            "key": "AddakLeft"
-        },
-        {
-            "key": "AddakAbove"
-        },
-        {
-            "key": "AddakRight"
-        },
-        {
-            "key": "AddakRight2"
-        },
-        {
-            "key": "AdakBindi"
-        },
-        {
-            "key": "Yakash"
-        },
-        {
-            "key": "Kana"
-        },
-        {
-            "key": "Kana2"
-        },
-        {
-            "key": "KanaBindi"
-        },
-        {
-            "key": "Sihari"
-        },
-        {
-            "key": "Sihari2"
-        },
-        {
-            "key": "Bihari"
-        },
-        {
-            "key": "Bihari2"
-        },
-        {
-            "key": "BihariBindi"
-        },
-        {
-            "key": "BihariBindi2"
-        },
-        {
-            "key": "Aunkar"
-        },
-        {
-            "key": "Aunkar2"
-        },
-        {
-            "key": "Aunkar3"
-        },
-        {
-            "key": "Dulainkar"
-        },
-        {
-            "key": "Dulainkar2"
-        },
-        {
-            "key": "Dulainkar3"
-        },
-        {
-            "key": "Lavan"
-        },
-        {
-            "key": "Lavan2"
-        },
-        {
-            "key": "Dulavan"
-        },
-        {
-            "key": "Dulavan2"
-        },
-        {
-            "key": "Hora"
-        },
-        {
-            "key": "Hora2"
-        },
-        {
-            "key": "Kanaura"
-        },
-        {
-            "key": "Kanaura2"
-        },
-        {
-            "key": "KanauraRight"
-        },
-        {
-            "key": "Virama"
-        },
-        {
-            "key": "Udaat"
-        },
-        {
-            "key": "Danda"
-        },
-        {
-            "key": "DandaLong"
-        },
-        {
-            "key": "Danda2"
-        },
-        {
-            "key": "Danda3"
-        },
-        {
-            "key": "DoubleDanda"
-        },
-        {
-            "key": "DoubleDanda2"
-        },
-        {
-            "key": "GZero"
-        },
-        {
-            "key": "GOne"
-        },
-        {
-            "key": "GOne1"
-        },
-        {
-            "key": "GTwo"
-        },
-        {
-            "key": "GThree"
-        },
-        {
-            "key": "GFour"
-        },
-        {
-            "key": "GFive"
-        },
-        {
-            "key": "GSix"
-        },
-        {
-            "key": "GSeven"
-        },
-        {
-            "key": "GEight"
-        },
-        {
-            "key": "GNine"
-        },
-        {
-            "key": "EnglishZero"
-        },
-        {
-            "key": "EnglishOne"
-        },
-        {
-            "key": "EnglishTwo"
-        },
-        {
-            "key": "EnglishThree"
-        },
-        {
-            "key": "EnglishFour"
-        },
-        {
-            "key": "EnglishFive"
-        },
-        {
-            "key": "EnglishSix"
-        },
-        {
-            "key": "EnglishSeven"
-        },
-        {
-            "key": "EnglishEight"
-        },
-        {
-            "key": "EnglishNine"
-        },
-        {
-            "key": "Nu"
-        },
-        {
-            "key": "NanaDulainkar"
-        },
-        {
-            "key": "RaraAunkar"
-        },
-        {
-            "key": "Divide"
-        },
-        {
-            "key": "Multiply"
-        },
-        {
-            "key": "Khanda"
-        },
-        {
-            "key": "Khanda2"
-        },
-        {
-            "key": "FlowerDesign1"
-        },
-        {
-            "key": "FlowerDesign2"
-        },
-        {
-            "key": "FlowerDesign3"
-        },
-        {
-            "key": "FlowerDesign4"
-        },
-        {
-            "key": "FlowerDesign5"
-        },
-        {
-            "key": "Diamond"
-        },
-        {
-            "key": "KThind"
-        },
-        {
-            "key": "Colon"
-        },
-        {
-            "key": "ColonFancy"
-        },
-        {
-            "key": "SemiColon"
-        },
-        {
-            "key": "SemiColon2"
-        },
-        {
-            "key": "SemiColon3"
-        },
-        {
-            "key": "Unknown1"
-        },
-        {
-            "key": "TopRightExtention"
-        },
-        {
-            "key": "SingleQuoteCurlyLeft"
-        },
-        {
-            "key": "SingleQuoteCurlyLeft2"
-        },
-        {
-            "key": "SingleQuoteCurlyRight"
-        },
-        {
-            "key": "SingleQuoteCurlyRight2"
-        },
-        {
-            "key": "DoubleQuoteCurlyLeft"
-        },
-        {
-            "key": "DoubleQuoteCurlyRight"
-        },
-        {
-            "key": "DoubleQuoteCurlyRight2"
-        },
-        {
-            "key": "SquareBracketLeft"
-        },
-        {
-            "key": "SquareBracketLeft2"
-        },
-        {
-            "key": "SquareBracketRight"
-        },
-        {
-            "key": "SquareBracketRight2"
-        },
-        {
-            "key": "KakaPairiRara"
-        },
-        {
-            "key": "LalaDulainkar"
-        },
-        {
-            "key": "LalaAunkar"
-        },
-        {
-            "key": "LalaTippi"
-        },
-        {
-            "key": "TਥAunkar"
-        },
-        {
-            "key": "CਚAunkar"
-        },
-        {
-            "key": "Hai"
-        },
-        {
-            "key": "Hai2"
-        }
-    ],
     "tightGroups": [
         [
             [
@@ -1154,6 +591,9 @@
                 "KanaBindi"
             ],
             [
+                "KanaBindi2"
+            ],
+            [
                 "Kana",
                 "Bindi"
             ]
@@ -1589,7 +1029,8 @@
                 "SingleQuoteCurlyLeft": "‘",
                 "SingleQuoteCurlyRight": "’",
                 "DoubleQuoteCurlyLeft": "“",
-                "DoubleQuoteCurlyRight": "”"
+                "DoubleQuoteCurlyRight": "”",
+                "Dash": "-"
             }
         },
         {
@@ -1718,7 +1159,8 @@
                 "SingleQuoteCurlyLeft": "‘",
                 "SingleQuoteCurlyRight": "’",
                 "DoubleQuoteCurlyLeft": "“",
-                "DoubleQuoteCurlyRight": "”"
+                "DoubleQuoteCurlyRight": "”",
+                "Dash": "-"
             }
         },
         {
@@ -1821,7 +1263,8 @@
                 "SingleQuoteCurlyLeft": "‘",
                 "SingleQuoteCurlyRight": "’",
                 "DoubleQuoteCurlyLeft": "“",
-                "DoubleQuoteCurlyRight": "”"
+                "DoubleQuoteCurlyRight": "”",
+                "Dash": "-"
             }
         },
         {
@@ -1953,7 +1396,8 @@
                 "SquareBracketLeft": "[",
                 "SquareBracketLeft2": "{",
                 "SquareBracketRight": "]",
-                "SquareBracketRight2": "}"
+                "SquareBracketRight2": "}",
+                "Dash":"-"
             }
         },
         {
@@ -2058,7 +1502,8 @@
                 "KakaPairiRara": "´",
                 "LalaDulainkar": "¬",
                 "LalaAunkar": "«",
-                "LalaTippi": "¦"
+                "LalaTippi": "¦",
+                "Dash":"-"
             }
         },
         {
@@ -2249,11 +1694,12 @@
                 "Bindi": "∫",
                 "Bindi2": "A",
                 "AddakLeft": "æ",
-                "AddakAbove": "º",
+                "AddakAbove": "Z",
                 "AddakRight": "µ",
                 "Kana": "k",
                 "Kana2": "≈",
-                "KanaBindi": "ª",
+                "KanaBindi": "K",
+                "KanaBindi2": "ª",
                 "Sihari": "f",
                 "Sihari2": "«",
                 "Bihari": "h",
@@ -2309,7 +1755,10 @@
                 "TਥAunkar": "˚",
                 "CਚAunkar": "¸",
                 "Hai": "W",
-                "Hai2": "˛"
+                "Hai2": "˛",
+                "Colon": "L",
+                "Dash":"-",
+                "Dash2": "F"
             }
         }
     ]
