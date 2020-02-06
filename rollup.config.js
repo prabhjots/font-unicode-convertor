@@ -10,8 +10,8 @@ export default {
     },
     plugins: [
          json({
-             include: "src/punjabiMapping.json",
-             preferConst: false, 
+             include: "src/mappings/*.json",
+             preferConst: true, 
               compact: true, 
           }),
         typescript()

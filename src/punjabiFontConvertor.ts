@@ -1,5 +1,5 @@
 import * as Convertor from "./convertor";
-import { mappings, tightGroups, groups } from "./punjabiMapping.json"
+import { mappings, tightGroups, groups } from "./mappings/punjabiMappings"
 export var punjabiMapping = { mappings, tightGroups, groups };
 
 function findMapping(name: string) {
