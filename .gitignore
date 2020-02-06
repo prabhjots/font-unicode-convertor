@@ -5,3 +5,5 @@ obj
 public/js/cljs-runtime/
 .shadow-cljs
 .idea
+public/js/manifest.edn
+public/js/main.js
