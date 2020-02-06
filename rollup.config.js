@@ -1,5 +1,5 @@
-import typescript from "rollup-plugin-typescript";
-import json from "rollup-plugin-json";
+import typescript from "@rollup/plugin-typescript";
+import json from "@rollup/plugin-json";
 
 export default {
     input: "src/punjabiFontConvertor.ts",
@@ -9,11 +9,12 @@ export default {
         name: "PunjabiFontConvertor"
     },
     plugins: [
-         json({
-             include: "src/mappings/*.json",
-             preferConst: true, 
-              compact: true, 
-          }),
+        json({
+            include: "src/mappings/*.json",
+            preferConst: false,
+            compact: true,
+            namedExports: false
+        }),
         typescript()
     ]
 };

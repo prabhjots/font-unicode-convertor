@@ -1,15 +1,16 @@
-export  { tightGroups, groups } from "./punjabiMapping.json"
-import * as anmol from "./anmol.json";
-import * as asses from "./asees.json";
-import * as awaze from "./awaze.json";
-import * as chatrik from "./chatrik.json";
-import * as joy from "./joy.json";
-import * as satluj from "./satluj.json";
-import * as unicode from "./unicode.json";
+import p from "./punjabiMapping.json";
+export const { tightGroups, groups } = p;
+import anmol from "./anmol.json";
+import asses from "./asees.json";
+import awaze from "./awaze.json";
+import chatrik from "./chatrik.json";
+import joy from "./joy.json";
+import satluj from "./satluj.json";
+import unicode from "./unicode.json";
 
 export const mappings = [
     unicode,
-    anmol ,
+    anmol,
     chatrik,
     awaze,
     satluj,
