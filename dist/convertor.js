@@ -43,7 +43,7 @@
                 }
                 else {
                     output.push(charToAddOnRight, charToAdd);
-                    charToAddOnRight = null;
+                    charToAddOnRight = "";
                     charToMoveRightIndex = 0;
                 }
             }
@@ -92,10 +92,10 @@
             if (toCharacter) {
                 var fromCharacters = getCompositionCharacters(compositionCharArrays, from.characterCodes);
                 for (var _a = 0, fromCharacters_1 = fromCharacters; _a < fromCharacters_1.length; _a++) {
-                    var fromChar_1 = fromCharacters_1[_a];
-                    maxWidth = Math.max(maxWidth, fromChar_1.length);
-                    if (!(fromChar_1 in mapper)) {
-                        mapper[fromChar_1] = toCharacter;
+                    var fromChar = fromCharacters_1[_a];
+                    maxWidth = Math.max(maxWidth, fromChar.length);
+                    if (!(fromChar in mapper)) {
+                        mapper[fromChar] = toCharacter;
                     }
                 }
             }
@@ -127,7 +127,6 @@
                 }
                 else {
                     isValid = false;
-                    //onsole.error(`No code in to for ${code}`);
                 }
             }
             if (isValid) {
@@ -164,7 +163,6 @@
         joy,
     ];
 
-    var punjabiMapping = { mappings: mappings, tightGroups: tightGroups, groups: groups };
     function findMapping(name) {
         var nameToUse = getNameToUseForMapping(name);
         return mappings.filter(function (m) { return m.name == nameToUse; })[0];
@@ -185,32 +183,38 @@
     function memoize(func) {
         var memo = {};
         var slice = Array.prototype.slice;
-        return function () {
+        var memoized;
+        memoized = function () {
             var args = slice.call(arguments);
             if (args in memo)
                 return memo[args];
             else
                 return (memo[args] = func.apply(null, args));
         };
+        return memoized;
     }
     var getMapper$1 = memoize(function getMapper$1(toFontName, fromFontName) {
         var to = findMapping(toFontName);
         if (!to) {
             console.error("Could not find mapping for", toFontName);
+            return;
         }
         var from = findMapping(fromFontName);
         if (!from) {
             console.error("Could not find mapping for", fromFontName);
+            return;
         }
         return getMapper(to, from, allGroups, tightGroups);
     });
     function convert(str, toFontName, fromFontName) {
         var mapperConfig = getMapper$1(getNameToUseForMapping(toFontName), getNameToUseForMapping(fromFontName));
+        if (!mapperConfig) {
+            return "";
+        }
         return convertStringUsingMapper(mapperConfig, str);
     }
 
     exports.convert = convert;
-    exports.punjabiMapping = punjabiMapping;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

@@ -3,6 +3,8 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "sourceMap": false                  
+    "sourceMap": false,
+    "allowJs": true,
+    "removeComments": true
   }
 }

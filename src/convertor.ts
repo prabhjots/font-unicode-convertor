@@ -1,6 +1,11 @@
-export function convertStringUsingMapper(config: IMapperConfig, stringToConvert: string): string {
+/**
+ * 
+ * @param {IMapperConfig} config 
+ * @param {string} stringToConvert 
+ */
+export function convertStringUsingMapper(config, stringToConvert) {
 
-    let output: string[] = [];
+    const output = [];
 
     let charToAddOnRight = "";
     let charToMoveRightIndex = 0;
@@ -19,7 +24,7 @@ export function convertStringUsingMapper(config: IMapperConfig, stringToConvert:
             }
         }
 
-        let charToAdd: string;
+        let charToAdd;
 
         if (matchFound) {
             charToAdd = config.mapper[charToMatch];
@@ -28,7 +33,7 @@ export function convertStringUsingMapper(config: IMapperConfig, stringToConvert:
         }
 
         if (config.moveRightChars.indexOf(charToAdd) > -1) {
-            if(charToAddOnRight){
+            if (charToAddOnRight) {
                 output.push(charToAddOnRight);
             }
             charToAddOnRight = charToAdd;
@@ -41,10 +46,10 @@ export function convertStringUsingMapper(config: IMapperConfig, stringToConvert:
                 output.push(charToAdd);
             } else {
                 output.push(charToAddOnRight, charToAdd);
-                charToAddOnRight = null;
+                charToAddOnRight = "";
                 charToMoveRightIndex = 0;
             }
-        } else  if (config.moveLeftChars.indexOf(charToAdd) > -1 && output.length) {
+        } else if (config.moveLeftChars.indexOf(charToAdd) > -1 && output.length) {
             insertCharOnLeft(output, config.moveAcrossCharacters, charToAdd, []);
         } else {
             output.push(charToAdd);
@@ -58,8 +63,15 @@ export function convertStringUsingMapper(config: IMapperConfig, stringToConvert:
 
 }
 
-function insertCharOnLeft(chars: string[], moveLeftAcrossChars: string[], characterToAdd: string, onRightChars: string[]) {
-    let lastChar = chars.pop();
+/**
+ * 
+ * @param {string[]} chars 
+ * @param {string[]} moveLeftAcrossChars 
+ * @param {string} characterToAdd 
+ * @param {string[]} onRightChars 
+ */
+function insertCharOnLeft(chars, moveLeftAcrossChars, characterToAdd, onRightChars) {
+    const lastChar = chars.pop();
 
     if (lastChar) {
         if (moveLeftAcrossChars.indexOf(lastChar) > -1) {
@@ -75,12 +87,21 @@ function insertCharOnLeft(chars: string[], moveLeftAcrossChars: string[], charac
     }
 }
 
-export function getMapper(to: IMapping, from: IMapping, groups: string[][][], tightGroups: string[][][]): IMapperConfig {
-    let mapper: any = {};
+/**
+ * 
+ * @param {IMapping} to 
+ * @param {IMapping} from 
+ * @param {string[][][]} groups 
+ * @param {string[][][]} tightGroups 
+ * @returns {IMapperConfig}
+ */
+export function getMapper(to, from, groups, tightGroups) {
+    /**@type {*} */
+    const mapper = {};
 
-    for (var i in to.characterCodes) {
-        var fromChar = from.characterCodes[i];
-        var toChar = to.characterCodes[i];
+    for (const i in to.characterCodes) {
+        const fromChar = from.characterCodes[i];
+        const toChar = to.characterCodes[i];
 
         if (fromChar && toChar) {
             mapper[fromChar] = toChar;
@@ -89,14 +110,14 @@ export function getMapper(to: IMapping, from: IMapping, groups: string[][][], ti
 
     let maxWidth = 1;
 
-    for (let compositionCharArrays of groups) {
+    for (const compositionCharArrays of groups) {
 
-        let toCharacter = getCompositionCharacters(compositionCharArrays, to.characterCodes)[0];
+        const toCharacter = getCompositionCharacters(compositionCharArrays, to.characterCodes)[0];
 
         if (toCharacter) {
-            let fromCharacters = getCompositionCharacters(compositionCharArrays, from.characterCodes);
+            const fromCharacters = getCompositionCharacters(compositionCharArrays, from.characterCodes);
 
-            for (let fromChar of fromCharacters) {
+            for (const fromChar of fromCharacters) {
                 maxWidth = Math.max(maxWidth, fromChar.length);
 
                 if (!(fromChar in mapper)) {
@@ -106,10 +127,10 @@ export function getMapper(to: IMapping, from: IMapping, groups: string[][][], ti
         }
     }
 
-    let moveLeftCharIndexes = from.moveRightCharacters.filter(a => to.moveRightCharacters.indexOf(a) === -1);
-    let moveRightCharIndexes = to.moveRightCharacters.filter(a => from.moveRightCharacters.indexOf(a) === -1);
+    const moveLeftCharIndexes = from.moveRightCharacters.filter(a => to.moveRightCharacters.indexOf(a) === -1);
+    const moveRightCharIndexes = to.moveRightCharacters.filter(a => from.moveRightCharacters.indexOf(a) === -1);
 
-    let moveAcrossCharacters = tightGroups
+    const moveAcrossCharacters = tightGroups
         .map(a => getCompositionCharacters(a, to.characterCodes))
         .reduce((a, b) => a.concat(b), []);
     return {
@@ -121,14 +142,19 @@ export function getMapper(to: IMapping, from: IMapping, groups: string[][][], ti
     };
 }
 
-function getCompositionCharacters(compositionCharArrays: string[][], codes: IChars) {
-    let characters: string[] = [];
+/**
+ * 
+ * @param {string[][]} compositionCharArrays 
+ * @param {IChars} codes 
+ */
+function getCompositionCharacters(compositionCharArrays, codes) {
+    const characters = [];
 
-    for (let compositionChar of compositionCharArrays) {
+    for (const compositionChar of compositionCharArrays) {
         let isValid = true;
-        let charCodes: string[] = [];
-        for (let code of compositionChar) {
-            let toCode = codes[code];
+        const charCodes = [];
+        for (const code of compositionChar) {
+            const toCode = codes[code];
 
             if (toCode) {
                 charCodes.push(toCode);
@@ -145,34 +171,20 @@ function getCompositionCharacters(compositionCharArrays: string[][], codes: ICha
     return characters;
 }
 
+/**
+ * 
+ * @param  {...IChars} configs 
+ * @returns {IChars}
+ */
+export function merge(...configs) {
+    /** @type {IChars} */
+    const c = {};
 
-export interface IMapping {
-    characterCodes: IChars;
-    moveRightCharacters: string[];
-    moveRightAcrossCharacterSet?: string[];
-}
-
-export interface IChars {
-    [key: string]: string
-}
-
-export function merge(...configs: IChars[]): IChars {
-    var c: IChars = {};
-
-    for (let a of configs) {
-        for (var x in a) {
+    for (const a of configs) {
+        for (const x in a) {
             c[x] = a[x];
         }
     }
     return c;
 }
 
-export interface IMapperConfig {
-    mapper: {
-        [key: string]: string;
-    };
-    maxWidth: number
-    moveLeftChars: string[];
-    moveRightChars: string[];
-    moveAcrossCharacters: string[];
-}
