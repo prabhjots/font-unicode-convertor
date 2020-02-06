@@ -1,0 +1,17 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ [[com.cognitect/transit-cljs "0.8.256"]]
+ 
+ :dev-http {8080 "public"}
+
+ :builds
+ {:frontend
+  {:target :browser
+   :modules {:main {:init-fn font-convertor.app/init}}}}}
+   
+   

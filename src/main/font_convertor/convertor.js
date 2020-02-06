@@ -171,20 +171,4 @@ function getCompositionCharacters(compositionCharArrays, codes) {
     return characters;
 }
 
-/**
- * 
- * @param  {...IChars} configs 
- * @returns {IChars}
- */
-export function merge(...configs) {
-    /** @type {IChars} */
-    const c = {};
-
-    for (const a of configs) {
-        for (const x in a) {
-            c[x] = a[x];
-        }
-    }
-    return c;
-}
 

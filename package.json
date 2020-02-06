@@ -1,18 +1,9 @@
 {
+  "name": "font-unicode-convertor2",
+  "version": "0.0.1",
   "private": true,
   "devDependencies": {
-    "@rollup/plugin-json": "^4.0.2",
-    "@rollup/plugin-typescript": "^3.0.0",
-    "@types/jest": "^24.0.18",
-    "jest": "^24.9.0",
-    "rollup": "1.20.3",
-    "ts-jest": "^24.0.2",
-    "tslib": "1.10.0",
-    "typescript": "3.6.2"
-  },
-  "scripts": {
-    "test": "jest",
-    "build": "rollup --config"
+    "shadow-cljs": "2.8.83"
   },
   "dependencies": {}
 }
