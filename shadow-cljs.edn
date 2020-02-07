@@ -5,7 +5,7 @@
   "src/test"]
 
  :dependencies
- [[com.cognitect/transit-cljs "0.8.256"]]
+ []
  
  :dev-http {8080 "public"}
 
