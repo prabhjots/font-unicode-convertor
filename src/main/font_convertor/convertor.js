@@ -1,6 +1,7 @@
+//@ts-check
+
 /**
  * 
- * @param {IMapperConfig} config 
  * @param {string} stringToConvert 
  */
 export function convertStringUsingMapper(config, stringToConvert) {
@@ -89,11 +90,6 @@ function insertCharOnLeft(chars, moveLeftAcrossChars, characterToAdd, onRightCha
 
 /**
  * 
- * @param {IMapping} to 
- * @param {IMapping} from 
- * @param {string[][][]} groups 
- * @param {string[][][]} tightGroups 
- * @returns {IMapperConfig}
  */
 export function getMapper(to, from, groups, tightGroups) {
     /**@type {*} */
@@ -144,8 +140,6 @@ export function getMapper(to, from, groups, tightGroups) {
 
 /**
  * 
- * @param {string[][]} compositionCharArrays 
- * @param {IChars} codes 
  */
 function getCompositionCharacters(compositionCharArrays, codes) {
     const characters = [];
