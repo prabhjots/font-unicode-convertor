@@ -4,10 +4,6 @@
             [clojure.set :refer [difference]]
             ["./convertor" :as js-convertor]))
 
-(defn p [n a]
-  (println n a)
-  a)
-
 (defn mapping-name [name]
   (case name
     "Arial Unicode MS" "unicode"

@@ -7,3 +7,4 @@ public/js/cljs-runtime/
 .idea
 public/js/manifest.edn
 
+public/js/convertor.js
