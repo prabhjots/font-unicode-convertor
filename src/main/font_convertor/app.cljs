@@ -25,7 +25,8 @@
    [:option {:value "Awaze"} "Awaze"]
    [:option {:value "Satluj"} "Satluj"]
    [:option {:value "Asees"} "Asees"]
-   [:option {:value "Joy"} "Joy"]])
+   [:option {:value "Joy"} "Joy"]
+   [:option {:value "GurbaniLipi"} "Gurbani Lipi"]])
 
 (defn root []
   (let [data           @data-atom
