@@ -11,13 +11,13 @@
 
 (def all-groups (concat groups tight-groups))
 
-(def mappings {"anmol" (read-str (rc/inline "./mappings/anmol.json"))
-                "asees" (read-str (rc/inline "./mappings/asees.json"))
-                "awaze" (read-str (rc/inline "./mappings/awaze.json"))
-                "chatrik" (read-str (rc/inline "./mappings/chatrik.json"))
-                "joy" (read-str (rc/inline "./mappings/joy.json"))
-                "satluj" (read-str (rc/inline "./mappings/satluj.json"))
-                "unicode" (read-str (rc/inline "./mappings/unicode.json"))})
+(def mappings {"anmol"   (read-str (rc/inline "./mappings/anmol.json"))
+               "asees"   (read-str (rc/inline "./mappings/asees.json"))
+               "awaze"   (read-str (rc/inline "./mappings/awaze.json"))
+               "chatrik" (read-str (rc/inline "./mappings/chatrik.json"))
+               "joy"     (read-str (rc/inline "./mappings/joy.json"))
+               "satluj"  (read-str (rc/inline "./mappings/satluj.json"))
+               "unicode" (read-str (rc/inline "./mappings/unicode.json"))})
 
 
 

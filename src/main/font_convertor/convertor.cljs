@@ -12,10 +12,8 @@
     "DrChatrikWeb"     "chatrik"
     (clojure.string/lower-case name)))
 
-
 (defn find-mapping [name]
   (p-mappings/mappings (mapping-name name)))
-
 
 (defn get-matching-chars [name-groups name->char]
   (->> name-groups
@@ -25,7 +23,6 @@
                   ""
                   (clojure.string/join "" chars)))))
        (filter seq)))
-
 
 (defn get-group-mapper [groups name->source-char name->target-char]
   (let [groups (for [sub-group   groups
@@ -68,7 +65,6 @@
                                            char      (get-matching-chars sub-group name->source-char)]
                                        char))
 
-
         max-width-key           (apply max-key count (keys group-mapper))
         max-width               (if max-width-key (count max-width-key) 1)]
     (clj->js {:mapper            merged-mapper
@@ -87,6 +83,8 @@
 
 
 ; following is for backward compatibility
+
+
 (ns PunjabiFontConvertor
   (:require [font-convertor.convertor]))
 (defn ^:export convert [text target-font source-font]

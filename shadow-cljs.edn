@@ -2,14 +2,20 @@
 {:source-paths ["src/dev" "src/main" "src/test"]
 
  :dependencies [[reagent "0.8.1"]]
- 
+
  :dev-http     {8080 "public"}
 
- :builds       {:app {:target :browser
-                      :modules {:convertor {:entries [font-convertor.convertor]}
-                                
-                                :main      {:init-fn    font-convertor.app/init
-                                            :depends-on #{:convertor}}}}}}
-                      
-   
-   
+ :builds       {:app  {:target  :browser
+                       :modules {:convertor {:entries [font-convertor.convertor]}
+
+                                 :main      {:init-fn    font-convertor.app/init
+                                             :depends-on #{:convertor}}}}
+                :test {:target    :browser-test
+                       :test-dir  "resources/public/js/test"
+                       :ns-regexp "-spec$"
+                       :runner-ns tests.client-test-main
+                       :devtools  {:http-port 8021
+                                   :http-root "resources/public/js/test"}}}}
+
+
+
