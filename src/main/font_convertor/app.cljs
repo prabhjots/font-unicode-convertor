@@ -15,17 +15,17 @@
                  (assoc key value)
                  (convert-text))]
     (reset! data-atom data)))
-    
+
 (defn options []
   [:<>
-    [:option {:value "AnmolLipi"} "Anmol Lipi"]
-    [:option {:value "AnmolUni"} "Anmol Uni"]
-    [:option {:value "Arial Unicode MS"} "Unicode"]
-    [:option {:value "DrChatrikWeb"} "Dr Chatrik"]
-    [:option {:value "Awaze"} "Awaze"]
-    [:option {:value "Satluj"} "Satluj"]
-    [:option {:value "Asees"} "Asees"]
-    [:option {:value "Joy"} "Joy"]])
+   [:option {:value "AnmolLipi"} "Anmol Lipi"]
+   [:option {:value "AnmolUni"} "Anmol Uni"]
+   [:option {:value "Arial Unicode MS"} "Unicode"]
+   [:option {:value "DrChatrikWeb"} "Dr Chatrik"]
+   [:option {:value "Awaze"} "Awaze"]
+   [:option {:value "Satluj"} "Satluj"]
+   [:option {:value "Asees"} "Asees"]
+   [:option {:value "Joy"} "Joy"]])
 
 (defn root []
   (let [data           @data-atom
@@ -43,7 +43,7 @@
      [:h1 "Punjabi Font Convertor"]
      [:select {:on-change (fn [e] (dispatch [:change :source-font (.-value (.-target e))]))
                :value     source-font}
-       [options]]
+      [options]]
      [:label "to"]
      [:select {:on-change (fn [e] (dispatch [:change :target-font (.-value (.-target e))]))
                :value     target-font}
