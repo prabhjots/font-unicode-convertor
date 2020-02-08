@@ -9,6 +9,8 @@ Test Page at https://prabhjots.github.io/font-unicode-convertor/test/visual.html
 
 Build
 
+
+npx shadow-cljs watch frontend
 ```bash
 yarn build
 ```
