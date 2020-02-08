@@ -1,7 +1,8 @@
 (ns font-convertor.convertor
   (:require [font-convertor.punjabi-mappings :as p-mappings]
             [clojure.string]
-            [clojure.set :refer [difference]]))
+            [clojure.set :refer [difference]]
+            ["./convertor" :as js-convertor]))
 
 (defn p [n a]
   (println n a)
@@ -74,19 +75,18 @@
 
         max-width-key           (apply max-key count (keys group-mapper))
         max-width               (if max-width-key (count max-width-key) 1)]
-    (println "group-mapper" group-mapper)
-    {:mapper            merged-mapper
-     :move-left-chars   move-left-chars
-     :move-right-chars  move-right-chars
-     :max-width         max-width
-     :move-across-chars move-across-chars}))
+    (clj->js {:mapper            merged-mapper
+              :move-left-chars   move-left-chars
+              :move-right-chars  move-right-chars
+              :max-width         max-width
+              :move-across-chars move-across-chars})))
 
 (def get-mapper-config-memo (memoize get-mapper-config))
 
-(defn convert [string-target-convert target-font source-font]
+(defn ^:export convert [text target-font source-font]
+  (println text target-font source-font)
   (if-let [mapper (get-mapper-config-memo source-font target-font)]
-    mapper
-    ;(js-convertor/convertStringUsingMapper mapper string-target-convert)
+    (js-convertor/convertStringUsingMapper mapper text)
     ""))
 
 
