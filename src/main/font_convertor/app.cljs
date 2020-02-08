@@ -4,8 +4,8 @@
 
 (defonce data-atom (reagent/atom {:source-text ""
                                   :target-text ""
-                                  :source-font "Satluj"
-                                  :target-font "Arial Unicode MS"}))
+                                  :source-font "AnmolLipi"
+                                  :target-font "AnmolUni"}))
 
 (defn convert-text [data]
   (assoc data :target-text (time (convertor/convert (:source-text data) (:target-font data) (:source-font data)))))
@@ -41,20 +41,19 @@
         target-text    (:target-text data)]
     [:div
      [:h1 "Punjabi Font Convertor"]
-     [:select {:on-change (fn [e] (dispatch [:change :source-font (.-value (.-target e))]))
-               :value     source-font}
-      [options]]
-     [:label "to"]
-     [:select {:on-change (fn [e] (dispatch [:change :target-font (.-value (.-target e))]))
-               :value     target-font}
-      [options]]
      [:div {:class "row"}
       [:div {:class "col"}
+       [:select {:on-change (fn [e] (dispatch [:change :source-font (.-value (.-target e))]))
+                 :value     source-font}
+        [options]]
        [:textarea (assoc textarea-props
                          :style {:font-family source-font}
                          :value source-text
                          :on-change (fn [e] (dispatch [:change :source-text (.-value (.-target e))])))]]
       [:div {:class "col"}
+       [:select {:on-change (fn [e] (dispatch [:change :target-font (.-value (.-target e))]))
+                 :value     target-font}
+        [options]]
        [:textarea (assoc textarea-props
                          :style {:font-family target-font}
                          :read-only true

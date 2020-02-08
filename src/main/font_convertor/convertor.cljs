@@ -76,17 +76,10 @@
 (def get-mapper-config-memo (memoize get-mapper-config))
 
 (defn ^:export convert [text target-font source-font]
-  (println text target-font source-font)
   (if-let [mapper (get-mapper-config-memo source-font target-font)]
     (js-convertor/convertStringUsingMapper mapper text)
     ""))
 
 
-; following is for backward compatibility
 
-
-(ns PunjabiFontConvertor
-  (:require [font-convertor.convertor]))
-(defn ^:export convert [text target-font source-font]
-  (font-convertor.convertor/convert text target-font source-font))
 
