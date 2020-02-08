@@ -1,5 +1,10 @@
 .DS_Store
 node_modules
-src/**/*.js
 obj
 .cache
+public/js/cljs-runtime/
+.shadow-cljs
+.idea
+public/js/manifest.edn
+
+public/js/convertor.js
