@@ -75,9 +75,9 @@
 
 (def get-mapper-config-memo (memoize get-mapper-config))
 
-(defn ^:export convert [text target-font source-font]
+(defn ^:export convert [{:keys [source-text source-font target-font]}]
   (if-let [mapper (get-mapper-config-memo source-font target-font)]
-    (js-convertor/convertStringUsingMapper mapper text)
+    (js-convertor/convertStringUsingMapper mapper source-text)
     ""))
 
 

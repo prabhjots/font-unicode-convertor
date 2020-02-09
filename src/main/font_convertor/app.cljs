@@ -8,7 +8,7 @@
                                   :target-font "AnmolUni"}))
 
 (defn convert-text [data]
-  (assoc data :target-text (time (convertor/convert (:source-text data) (:target-font data) (:source-font data)))))
+  (assoc data :target-text (convertor/convert data)))
 
 (defn dispatch [[_type key value]]
   (let [data (-> @data-atom
