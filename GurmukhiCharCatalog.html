@@ -1,5 +1,17 @@
 <html>
+
 <body>
+    <style>
+    .char {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+    }
+
+    #catalog {
+        margin: 10px;
+    }
+    </style>
     <h1>Char Catalog</h1>
     <select id=select onchange="changeFont()">
         <option value="AnmolLipi" selected>Anmol Lipi</option>
@@ -12,10 +24,10 @@
         <option value="Joy">Joy</option>
         <option value="GurbaniLipi">Gurbani Lipi</option>
     </select>
-    <div id=catalog</div>
+    <div id=catalog></div>
 
     <script>
-        function charDiv(parent, charCode) {
+        function renderChar(parent, charCode) {
             var char = String.fromCharCode(charCode);
             if (char) {
                 var div = document.createElement("div");
@@ -29,7 +41,7 @@
 
         function render() {
             for (var v = 0; v <= 1000; v++) {
-                charDiv(catalog, v);
+                renderChar(catalog, v);
             }
 
             changeFont();
@@ -37,10 +49,10 @@
 
         render()
 
-        function changeFont(){
+        function changeFont() {
             catalog.style.fontFamily = select.value;
         }
-        
+
 
     </script>
 </body>
