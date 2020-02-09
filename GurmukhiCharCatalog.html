@@ -1,0 +1,48 @@
+<html>
+<body>
+    <h1>Char Catalog</h1>
+    <select id=select onchange="changeFont()">
+        <option value="AnmolLipi" selected>Anmol Lipi</option>
+        <option value="AnmolUni">Anmol Uni</option>
+        <option value="Arial Unicode MS">Unicode</option>
+        <option value="DrChatrikWeb">Dr Chatrik</option>
+        <option value="Awaze">Awaze</option>
+        <option value="Satluj">Satluj</option>
+        <option value="Asees">Asees</option>
+        <option value="Joy">Joy</option>
+        <option value="GurbaniLipi">Gurbani Lipi</option>
+    </select>
+    <div id=catalog</div>
+
+    <script>
+        function charDiv(parent, charCode) {
+            var char = String.fromCharCode(charCode);
+            if (char) {
+                var div = document.createElement("div");
+                div.className = "char";
+                div.innerText = char;
+                div.title = charCode;
+                parent.appendChild(div)
+            }
+
+        }
+
+        function render() {
+            for (var v = 0; v <= 1000; v++) {
+                charDiv(catalog, v);
+            }
+
+            changeFont();
+        }
+
+        render()
+
+        function changeFont(){
+            catalog.style.fontFamily = select.value;
+        }
+        
+
+    </script>
+</body>
+
+</html>

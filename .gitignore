@@ -8,3 +8,5 @@ public/js/cljs-runtime/
 public/js/manifest.edn
 
 public/js/convertor.js
+
+resources/public/js/test/
