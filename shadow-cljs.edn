@@ -8,7 +8,7 @@
  :builds       {:app  {:target  :browser
                        :modules {:convertor {:entries [PunjabiFontConvertor]}
 
-                                 :main      {:init-fn    font-convertor.app/init
+                                 :main      {:init-fn    sikhsiyasat.font-converter.app/init
                                              :depends-on #{:convertor}}}}
                 :test {:target    :browser-test
                        :test-dir  "resources/public/js/test"
