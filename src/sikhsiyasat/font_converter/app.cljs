@@ -1,4 +1,4 @@
-(ns font-convertor.app
+(ns sikhsiyasat.font-converter.app
   (:require [font-convertor.convertor :as convertor]
             [reagent.core :as reagent]))
 

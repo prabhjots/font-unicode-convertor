@@ -1,4 +1,4 @@
-(ns font-convertor.convertor
+(ns sikhsiyasat.font-converter.core
   (:require [font-convertor.punjabi-mappings :as p-mappings]
             [clojure.string]
             [clojure.set :refer [difference]]

@@ -25,7 +25,8 @@
         <option value="GurbaniLipi">Gurbani Lipi</option>
     </select>
     <div id=catalog></div>
-
+    <h2>Unicode</h2>
+    <div id=unicode></div>
     <script>
         function renderChar(parent, charCode) {
             var char = String.fromCharCode(charCode);
@@ -42,6 +43,10 @@
         function render() {
             for (var v = 0; v <= 1000; v++) {
                 renderChar(catalog, v);
+            }
+
+            for (var v = 2560; v <= 2680; v++) {
+                renderChar(unicode, v);
             }
 
             changeFont();
