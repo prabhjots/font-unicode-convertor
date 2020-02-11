@@ -2,15 +2,15 @@
 
 <body>
     <style>
-    .char {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-    }
+        .char {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+        }
 
-    #catalog {
-        margin: 10px;
-    }
+        #catalog {
+            margin: 10px;
+        }
     </style>
     <h1>Char Catalog</h1>
     <select id=select onchange="changeFont()">
@@ -34,7 +34,10 @@
                 var div = document.createElement("div");
                 div.className = "char";
                 div.innerText = char;
-                div.title = charCode;
+                div.title = char + " " + charCode;
+                div.onclick = function () {
+                    navigator.clipboard.writeText(char)
+                }
                 parent.appendChild(div)
             }
 
