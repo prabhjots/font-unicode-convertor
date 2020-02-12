@@ -1,5 +1,5 @@
-(ns font-convertor.app
-  (:require [font-convertor.convertor :as convertor]
+(ns sikhsiyasat.font-converter.app
+  (:require [sikhsiyasat.font-converter.core :as converter]
             [reagent.core :as reagent]))
 
 (defonce data-atom (reagent/atom {:source-text ""
@@ -8,7 +8,7 @@
                                   :target-font "AnmolUni"}))
 
 (defn convert-text [data]
-  (assoc data :target-text (convertor/convert data)))
+  (assoc data :target-text (converter/convert data)))
 
 (defn dispatch [[_type key value]]
   (let [data (-> @data-atom

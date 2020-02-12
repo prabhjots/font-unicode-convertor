@@ -1,6 +1,6 @@
 (ns PunjabiFontConvertor
-  (:require [font-convertor.convertor]))
+  (:require [sikhsiyasat.font-converter.core :as converter]))
 (defn ^:export convert [text target-font source-font]
-  (font-convertor.convertor/convert {:source-text text 
+  (converter/convert {:source-text text 
                                      :target-font target-font 
                                      :source-font source-font}))

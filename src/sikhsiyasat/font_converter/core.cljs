@@ -1,8 +1,8 @@
-(ns font-convertor.convertor
-  (:require [font-convertor.punjabi-mappings :as p-mappings]
+(ns sikhsiyasat.font-converter.core
+  (:require [sikhsiyasat.font-converter.punjabi-mappings :as p-mappings]
             [clojure.string]
             [clojure.set :refer [difference]]
-            ["./convertor" :as js-convertor]))
+            ["./converter" :as js-converter]))
 
 (defn mapping-name [name]
   (case name
@@ -77,7 +77,7 @@
 
 (defn ^:export convert [{:keys [source-text source-font target-font]}]
   (if-let [mapper (get-mapper-config-memo source-font target-font)]
-    (js-convertor/convertStringUsingMapper mapper source-text)
+    (js-converter/convertStringUsingMapper mapper source-text)
     ""))
 
 

@@ -1,9 +1,3 @@
-//@ts-check
-
-/**
- * 
- * @param {string} stringToConvert 
- */
 export function convertStringUsingMapper(config, stringToConvert) {
     const maxWidth = config["max-width"];
     const mapper = config["mapper"];
@@ -69,13 +63,6 @@ export function convertStringUsingMapper(config, stringToConvert) {
 
 }
 
-/**
- * 
- * @param {string[]} chars 
- * @param {string[]} moveLeftAcrossChars 
- * @param {string} characterToAdd 
- * @param {string[]} onRightChars 
- */
 function insertCharOnLeft(chars, moveLeftAcrossChars, characterToAdd, onRightChars) {
     const lastChar = chars.pop();
 
