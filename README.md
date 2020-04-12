@@ -35,11 +35,11 @@ Note: You will need to install the fonts at your machine to be able to see them 
 To run the app in the watch mode
 ```bash
 npm install
-npx shadow-cljs watch frontend
+npx shadow-cljs watch app
 ```
 
 To create a release
 ```bash
-npx shadow-cljs release frontend
+npx shadow-cljs release app
 ```
 this will create `convertor.js` and `main.js` in the root directory
