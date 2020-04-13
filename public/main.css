@@ -1,0 +1,46 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.col {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+textarea {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+
+    font-size: 16px;
+    flex-grow: 1;
+    resize: none;
+}
+
+select {
+    max-width: 200px;
+}
+
+pre {
+    margin: 0;
+}
+
+footer {
+    min-height: 4px;
+}
