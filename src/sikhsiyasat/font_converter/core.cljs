@@ -4,7 +4,7 @@
             [clojure.set :refer [difference]]
             ["./converter" :as js-converter]))
 
-(defn mapping-name [name]
+(defn- mapping-name [name]
   (case name
     "Arial Unicode MS" "unicode"
     "AnmolUni"         "unicode"
@@ -12,10 +12,10 @@
     "DrChatrikWeb"     "chatrik"
     (clojure.string/lower-case name)))
 
-(defn find-mapping [name]
+(defn- find-mapping [name]
   (p-mappings/mappings (mapping-name name)))
 
-(defn get-matching-chars [name-groups name->char]
+(defn- get-matching-chars [name-groups name->char]
   (->> name-groups
        (map (fn [names]
               (let [chars (into [] (map (fn [m] (name->char m)) names))]
@@ -24,14 +24,14 @@
                   (clojure.string/join "" chars)))))
        (filter seq)))
 
-(defn get-group-mapper [groups name->source-char name->target-char]
+(defn- get-group-mapper [groups name->source-char name->target-char]
   (let [groups (for [sub-group   groups
                      target-char (take 1 (get-matching-chars sub-group name->target-char))
                      source-char (get-matching-chars sub-group name->source-char)]
                  [source-char target-char])]
     (into {} groups)))
 
-(defn get-mapper [name->source-char name->target-char]
+(defn- get-mapper [name->source-char name->target-char]
   (reduce
    (fn [m [name target-char]]
      (if-let [source-val (name->source-char name)]
@@ -40,19 +40,13 @@
    {}
    name->target-char))
 
-(defn get-mapper-config [source-font-name target-font-name]
+(defn- get-mapper-config [source-font-name target-font-name]
   (let [target-font             (find-mapping target-font-name)
         name->target-char       (target-font "characterCodes")
         source-font             (find-mapping source-font-name)
         name->source-char       (source-font "characterCodes")
 
-        mapper                  (reduce
-                                 (fn [m [name target-char]]
-                                   (if-let [source-val (name->source-char name)]
-                                     (assoc m source-val target-char)
-                                     m))
-                                 {}
-                                 name->target-char)
+        mapper                  (get-mapper name->source-char name->target-char)
 
         group-mapper            (get-group-mapper p-mappings/all-groups name->source-char name->target-char)
         merged-mapper           (merge mapper group-mapper)

@@ -8,10 +8,10 @@
                                   :target-text ""
                                   :target-text-manually-changed false}))
 
-(defn convert-text [data]
+(defn- convert-text [data]
   (assoc data :target-text (converter/convert data)))
 
-(defn dispatch [[type key value]]
+(defn- dispatch [[type key value]]
   (case type
     :change
     (let [target-text-manually-changed  (= key :target-text)
@@ -25,16 +25,16 @@
         (reset! data-atom converted-data))))
 
 
-(def fonts [{:key 0 :value "AnmolLipi"    :text "Anmol"}
-            {:key 1 :value "AnmolUni"     :text "Unicode"}
-            {:key 2 :value "DrChatrikWeb" :text "Dr Chatrik"}
-            {:key 3 :value "Awaze"        :text "Awaze"}
-            {:key 4 :value "Satluj"       :text  "Satluj"}
-            {:key 5 :value "Asees"        :text "Asees"}
-            {:key 6 :value "Joy"          :text  "Joy"}
-            {:key 7 :value "GurbaniLipi"  :text "Gurbani Lipi"}])
+(def fonts [{:key 0 :value "AnmolLipi"        :text "Anmol"}
+            {:key 1 :value "Arial Unicode MS" :text "Unicode"}
+            {:key 2 :value "DrChatrikWeb"     :text "Dr Chatrik"}
+            {:key 3 :value "Awaze"            :text "Awaze"}
+            {:key 4 :value "Satluj"           :text "Satluj"}
+            {:key 5 :value "Asees"            :text "Asees"}
+            {:key 6 :value "Joy"              :text "Joy"}
+            {:key 7 :value "GurbaniLipi"      :text "Gurbani Lipi"}])
 
-(defn root []
+(defn- root []
   (let [data           @data-atom
         source-font    (:source-font data)
         target-font    (:target-font data)
@@ -44,7 +44,7 @@
         debug          (:debug data)]
     [:<>
       [:h1 {:on-click (fn [_e] (dispatch [:change :debug (not debug)]))} 
-       "Punjabi Font Convertor"]
+       "Punjabi Font Converter"]
       [:div.row
         [:div.col
           [:select {:on-change (fn [e] (dispatch [:change :source-font (.-value (.-target e))]))
@@ -83,7 +83,7 @@
       [:footer]]))
  
 
-(defn mount-root []
+(defn- mount-root []
   (reagent/render [root] (.getElementById js/document "app")))
 
 (defn init []

@@ -1,6 +1,9 @@
 # font-unicode-converter
 Utility to convert different fonts for the Punjabi Language. 
 
+## Online Editor
+Online editor is available at [here](https://prabhjots.github.io/font-unicode-convertor/public/index.html)
+
 ## Reason
 Unicode support was eventually added by microsoft and characters were allocated between 2560 - 2680
 
@@ -9,7 +12,7 @@ By this time different font authors already created different punjabi fonts whic
 This utility will provide a solution to this problem by tranforming the actual characters when changing font. 
 
 ## Convertor
-Convertor is a JS library which could be found at [https://raw.githubusercontent.com/prabhjots/font-unicode-convertor/master/public/js/convertor.js]()
+Convertor is a JS library which could be found at [here](https://raw.githubusercontent.com/prabhjots/font-unicode-convertor/master/public/js/convertor.js)
 
 It exposes a single function 
 
@@ -21,12 +24,8 @@ var inUnicode = PunjabiFontConvertor.convert(inAnmol, "unicode", "anmol")
 console.log(inUnicode) // "ਗੁਰਮੁਖੀ"
 ```
 
-
-## Online Editor
-Online editor is available at [https://prabhjots.github.io/font-unicode-convertor/public/index.html]()
-
 ## Character Set
-To view different character set provided by different fonts see [https://prabhjots.github.io/font-unicode-convertor/public/GurmukhiCharCatalog.html]()
+To view different character set provided by different fonts [see](https://prabhjots.github.io/font-unicode-convertor/public/GurmukhiCharCatalog.html)
 
 Note: You will need to install the fonts at your machine to be able to see them on the page. 
 
