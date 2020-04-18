@@ -2,8 +2,8 @@
   (:require [sikhsiyasat.font-converter.core :as converter]
             [reagent.core :as reagent]))
 
-(defonce data-atom (reagent/atom {:source-font "AnmolLipi"
-                                  :target-font "AnmolUni"
+(defonce data-atom (reagent/atom {:source-font "anmol"
+                                  :target-font "unicode"
                                   :source-text ""
                                   :target-text ""
                                   :target-text-manually-changed false}))
@@ -25,14 +25,18 @@
         (reset! data-atom converted-data))))
 
 
-(def fonts [{:key 0 :value "AnmolLipi"        :text "Anmol"}
-            {:key 1 :value "Arial Unicode MS" :text "Unicode"}
-            {:key 2 :value "DrChatrikWeb"     :text "Dr Chatrik"}
-            {:key 3 :value "Awaze"            :text "Awaze"}
-            {:key 4 :value "Satluj"           :text "Satluj"}
-            {:key 5 :value "Asees"            :text "Asees"}
-            {:key 6 :value "Joy"              :text "Joy"}
-            {:key 7 :value "GurbaniLipi"      :text "Gurbani Lipi"}])
+(def fonts [{:key "anmol"       :font-family "AnmolLipi"        :text "Anmol"}
+            {:key "unicode"     :font-family "AnmolUni, Arial Unicode MS" :text "Unicode"}
+            {:key "chatrik"     :font-family "DrChatrikWeb"     :text "Dr Chatrik"}
+            {:key "awaze"       :font-family "Awaze"            :text "Awaze"}
+            {:key "satluj"      :font-family "Satluj"           :text "Satluj"}
+            {:key "asees"       :font-family "Asees"            :text "Asees"}
+            {:key "joy"         :font-family "Joy"              :text "Joy"}
+            {:key "gurbanilipi" :font-family "GurbaniLipi"      :text "Gurbani Lipi"}])
+
+(def font-family (->> fonts
+                     (map (fn [font] [(:key font) (:font-family font)]))
+                     (into {})))
 
 (defn- root []
   (let [data           @data-atom
@@ -50,26 +54,26 @@
           [:select {:on-change (fn [e] (dispatch [:change :source-font (.-value (.-target e))]))
                     :value     source-font}
             (for [opt fonts]
-              [:option opt (:text opt)])]
+              [:option {:key (:key opt) :value (:key opt)} (:text opt)])]
           [:textarea {:auto-capitalize "off"
                       :auto-correct    "off"
                       :spell-check     "false"
                       :auto-complete   "off"  
                       :placeholder "..."
-                      :style {:font-family source-font}
+                      :style {:font-family (font-family source-font)}
                       :value source-text
                       :on-change (fn [e] (dispatch [:change :source-text (.-value (.-target e))]))}]]
         [:div.col
           [:select {:on-change (fn [e] (dispatch [:change :target-font (.-value (.-target e))]))
                     :value     target-font}
             (for [opt fonts]
-              [:option opt (:text opt)])]
+              [:option {:key (:key opt) :value (:key opt)} (:text opt)])]
           [:textarea {:auto-capitalize "off"
                       :auto-correct    "off"
                       :spell-check     "false"
                       :auto-complete   "off" 
                       :placeholder "..."
-                      :style {:font-family target-font
+                      :style {:font-family (font-family target-font)
                               :background-color (if target-text-manually-changed "#ffffcc" "inherit")}
                       :value target-text
                       :on-change (fn [e] (dispatch [:change :target-text (.-value (.-target e))]))}]]]

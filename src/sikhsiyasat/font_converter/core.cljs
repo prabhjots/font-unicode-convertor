@@ -56,7 +56,7 @@
         move-left-chars         (difference source-move-right-chars target-move-right-chars)
         move-right-chars        (difference target-move-right-chars source-move-right-chars)
         move-across-chars       (set (for [sub-group p-mappings/tight-groups
-                                           char      (get-matching-chars sub-group name->source-char)]
+                                           char      (get-matching-chars sub-group name->target-char)]
                                        char))
 
         max-width-key           (apply max-key count (keys group-mapper))
