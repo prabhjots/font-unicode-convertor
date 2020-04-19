@@ -28,7 +28,8 @@
   (let [groups (for [sub-group   groups
                      target-char (take 1 (get-matching-chars sub-group name->target-char))
                      source-char (get-matching-chars sub-group name->source-char)]
-                 [source-char target-char])]
+                 (when (or (= (count target-char) 1) (= (count source-char) 1))
+                   [source-char target-char]))]
     (into {} groups)))
 
 (defn- get-mapper [name->source-char name->target-char]
