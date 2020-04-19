@@ -50,7 +50,7 @@
         mapper                  (get-mapper name->source-char name->target-char)
 
         group-mapper            (get-group-mapper p-mappings/all-groups name->source-char name->target-char)
-        merged-mapper           (merge mapper group-mapper)
+        merged-mapper           (merge-with (fn [a b] a) mapper group-mapper)
 
         target-move-right-chars (set (map #(name->target-char %1) (target-font "moveRightCharacters")))
         source-move-right-chars (set (map #(name->target-char %1) (source-font "moveRightCharacters")))
