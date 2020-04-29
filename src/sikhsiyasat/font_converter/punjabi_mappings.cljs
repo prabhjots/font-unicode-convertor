@@ -11,11 +11,11 @@
 
 (def all-groups (concat groups tight-groups))
 
-(def anmol (read-str (rc/inline "./mappings/anmol.json")))
+(def anmol (read-str (rc/inline "./mappings/anmol.edn")))
 
 (def gurbani-lipi (read-str (rc/inline "./mappings/gurbani_lipi.json")))
 
-(def mappings {"anmol"       (read-str (rc/inline "./mappings/anmol.json"))
+(def mappings {"anmol"       (read-str (rc/inline "./mappings/anmol.edn"))
                "asees"       (read-str (rc/inline "./mappings/asees.json"))
                "awaze"       (read-str (rc/inline "./mappings/awaze.json"))
                "chatrik"     (read-str (rc/inline "./mappings/chatrik.json"))
@@ -24,6 +24,8 @@
                "unicode"     (read-str (rc/inline "./mappings/unicode.json"))
                "gurbanilipi" (assoc anmol
                                     "characterCodes" (merge (anmol "characterCodes") (gurbani-lipi "characterCodes")))})
+
+(prn mappings)
 
 
 

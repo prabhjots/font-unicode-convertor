@@ -260,7 +260,7 @@
             "Aਆ"
         ],
         [
-            "Aਅ",
+            [:aida],
             "Kana"
         ]
     ],
@@ -270,7 +270,7 @@
             "Bindi"
         ],
         [
-            "Aਅ",
+            [:aida],
             "KanaBindi"
         ]
     ],
@@ -354,11 +354,11 @@
             "Aਐ"
         ],
         [
-            "Aਅ",
+            [:aida],
             "Dulavan"
         ],
         [
-            "Aਅ",
+            [:aida],
             "Dulavan2"
         ]
     ],
@@ -367,7 +367,7 @@
             "Oਔ"
         ],
         [
-            "Aਅ",
+            [:aida],
             "KanauraRight"
         ],
         [
