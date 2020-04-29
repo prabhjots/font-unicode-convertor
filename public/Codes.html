@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Codes</title>
+
+    <style>
+        textarea {
+            width: 100%;
+            height: 100px;
+            font-family: AnmolUni;
+        }
+    </style>
+</head>
+
+<body>
+    Text
+    <textarea id="text" onchange="onTextChange()" onkeyup="onTextChange()"></textarea>
+
+    Joined
+    <textarea id="joined"></textarea>
+
+
+    Splits
+    <textarea id="splits"></textarea>
+
+
+
+
+    Codes
+    <textarea id="codes"></textarea>
+
+    <script>
+        function onTextChange () {
+            joined.value = text.value.split("").map(c => c.trim()).join("");
+            splits.value = text.value.split("").join(" ");
+            codes.value = text.value.split("").map(c => c ? c.charCodeAt(0) : c).join(" ")
+        }
+    </script>
+
+
+</body>
+
+</html>

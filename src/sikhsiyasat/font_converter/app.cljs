@@ -1,6 +1,7 @@
 (ns sikhsiyasat.font-converter.app
   (:require [sikhsiyasat.font-converter.core :as converter]
-            [reagent.core :as reagent]))
+            [reagent.core :as reagent]
+            [reagent.dom :as rdom]))
 
 (defonce data-atom (reagent/atom {:source-font "anmol"
                                   :target-font "unicode"
@@ -88,7 +89,7 @@
  
 
 (defn- mount-root []
-  (reagent/render [root] (.getElementById js/document "app")))
+  (rdom/render [root] (.getElementById js/document "app")))
 
 (defn init []
   (mount-root))
