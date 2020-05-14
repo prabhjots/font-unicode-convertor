@@ -4,10 +4,10 @@
  :dev-http     {8080 "public"}
 
  :builds       {:punjabi-converter  {:target  :browser
-                                     :modules {:converter {:entries [sikhsiyasat.punjabi-font-converter.core]}}
+                                     :modules {:punjabi-converter {:entries [sikhsiyasat.punjabi-font-converter.core]}
 
-                                     :main      {:init-fn    sikhsiyasat.punjabi-font-converter.app/init
-                                                 :depends-on #{:converter}}}
+                                               :punjabi-converter-app      {:init-fn    sikhsiyasat.punjabi-font-converter.app/init
+                                                                            :depends-on #{:punjabi-converter}}}}
                 :test {:target    :browser-test
                        :test-dir  "resources/public/js/test"
                        :devtools  {:http-port 8021
