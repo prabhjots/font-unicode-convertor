@@ -3,11 +3,11 @@
 
  :dev-http     {8080 "public"}
 
- :builds       {:app  {:target  :browser
-                       :modules {:convertor {:entries [PunjabiFontConvertor]}
+ :builds       {:punjabi-converter  {:target  :browser
+                                     :modules {:converter {:entries [sikhsiyasat.punjabi-font-converter.core]}}
 
-                                 :main      {:init-fn    sikhsiyasat.font-converter.app/init
-                                             :depends-on #{:convertor}}}}
+                                     :main      {:init-fn    sikhsiyasat.punjabi-font-converter.app/init
+                                                 :depends-on #{:converter}}}
                 :test {:target    :browser-test
                        :test-dir  "resources/public/js/test"
                        :devtools  {:http-port 8021

@@ -1,4 +1,4 @@
-(ns sikhsiyasat.font-converter.app
+(ns sikhsiyasat.punjabi-font-converter.app
   (:require [sikhsiyasat.font-converter.core :as converter]
             [reagent.core :as reagent]
             [reagent.dom :as rdom]))
