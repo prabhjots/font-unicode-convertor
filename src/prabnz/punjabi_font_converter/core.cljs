@@ -28,10 +28,11 @@
 
 (defn ^:export convert
   ([conf]
-   (converter/convert (assoc conf
-                             :mappings mappings
-                             :all-groups all-groups
-                             :tight-groups tight-groups)))
+   (time 
+    (converter/convert (assoc conf
+                            :mappings mappings
+                            :all-groups all-groups
+                            :tight-groups tight-groups))))
 
   ([text target-font source-font]
    (convert {:source-text text

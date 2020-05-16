@@ -1,13 +1,153 @@
-<!doctype html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>Punjabi Font Convertor</title>
-  <link rel="stylesheet" href="./main.css">
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #punjabiConverterApp {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+    }
+
+    #punjabiConverterApp .row {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+    }
+
+    #punjabiConverterApp .col {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+    }
+
+    #punjabiConverterApp textarea {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+
+      font-size: 16px;
+      flex-grow: 1;
+      resize: none;
+    }
+
+    #punjabiConverterApp select {
+      max-width: 200px;
+    }
+
+    #punjabiConverterApp pre {
+      margin: 0;
+    }
+
+    #punjabiConverterApp footer {
+      min-height: 4px;
+    }
+  </style>
 </head>
+
 <body>
-  <div id="app"></div>
+  <div id="punjabiConverterApp">
+    <header>
+      <h1>Punjabi Font Converter</h1>
+    </header>
+    <div class="row">
+      <div class="col">
+        <select id="fromFont" onchange="PunjabiFontConvertorApp.convertText()">
+          <option value="AnmolLipi" selected>Anmol Lipi</option>
+          <option value='AnmolUni, "Arial Unicode MS"'>Unicode</option>
+          <option value="DrChatrikWeb">Dr Chatrik</option>
+          <option value="Awaze">Awaze</option>
+          <option value="Satluj">Satluj</option>
+          <option value="Asees">Asees</option>
+          <option value="Joy">Joy</option>
+          <option value="GurbaniLipi">Gurbany Lipi</option>
+        </select>
+        <textarea autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off"
+          style="font-family: AnmolLipi;" id="fromText" oninput="PunjabiFontConvertorApp.convertText()"
+          onscroll="PunjabiFontConvertorApp.onScroll(event)"></textarea>
+      </div>
+      <div class="col">
+        <select id="toFont" onchange="PunjabiFontConvertorApp.convertText()">
+          <option value="AnmolLipi">Anmol Lipi</option>
+          <option value='AnmolUni, "Arial Unicode MS"' selected>Unicode</option>
+          <option value="DrChatrikWeb">Dr Chatrik</option>
+          <option value="Awaze">Awaze</option>
+          <option value="Satluj">Satluj</option>
+          <option value="Asees">Asees</option>
+          <option value="Joy">Joy</option>
+          <option value="GurbaniLipi">Gurbany Lipi</option>
+        </select>
+        <textarea id="toText" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+          style="font-family: AnmolUni, 'Arial Unicode MS'; background-color: inherit;"></textarea>
+      </div>
+      <footer></footer>
+    </div>
+  </div>
   <script src="./js/punjabi-converter.js"></script>
-  <script src="./js/punjabi-converter-app.js"></script>
+  <script>
+    var PunjabiFontConvertorApp = (function () {
+      function debounce(func, timeout) {
+        var timer;
+        return function (a, b, c) {
+          if (timer) {
+            clearTimeout(timer);
+          }
+          timer = setTimeout(function () {
+            return func(a, b, c);
+          }, timeout);
+        };
+      }
+
+      function getFontKey(fontName) {
+        switch (fontName) {
+          case "AnmolLipi":
+            return "anmol";
+          case 'AnmolUni, "Arial Unicode MS"':
+            return "unicode";
+          case "DrChatrikWeb":
+            return "chatrik";
+          default:
+            return fontName.toLowercase();
+        }
+      }
+
+      function convert(text, to, from) {
+        return prabnz.punjabi_font_converter.core.convert(text, getFontKey(to), getFontKey(from));
+      }
+
+      var fromFont = document.getElementById("fromFont");
+      var toFont = document.getElementById("toFont");
+      var fromText = document.getElementById("fromText");
+      var toText = document.getElementById("toText");
+
+      function convertText() {
+        fromText.style.fontFamily = fromFont.value;
+        toText.style.fontFamily = toFont.value;
+        toText.value = convert(fromText.value, toFont.value, fromFont.value);
+        onScroll();
+      }
+
+      function onScroll() {
+        toText.scrollTop = (fromText.scrollTop * toText.scrollHeight) / fromText.scrollHeight;
+      }
+
+      return {
+        convertText: debounce(convertText, 100),
+        onScroll: onScroll
+      };
+    }())
+  </script>
 </body>
+
 </html>
