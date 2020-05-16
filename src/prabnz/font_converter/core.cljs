@@ -1,19 +1,7 @@
-(ns sikhsiyasat.font-converter.core
-  (:require [sikhsiyasat.font-converter.punjabi-mappings :as p-mappings]
-            [clojure.string]
+(ns prabnz.font-converter.core
+  (:require [clojure.string]
             [clojure.set :refer [difference]]
             ["./converter" :as js-converter]))
-
-(defn- mapping-name [name]
-  (case name
-    "Arial Unicode MS" "unicode"
-    "AnmolUni"         "unicode"
-    "AnmolLipi"        "anmol"
-    "DrChatrikWeb"     "chatrik"
-    (clojure.string/lower-case name)))
-
-(defn- find-mapping [name]
-  (p-mappings/mappings (mapping-name name)))
 
 (defn- get-matching-chars [name-groups name->char]
   (->> name-groups
@@ -41,22 +29,22 @@
    {}
    name->target-char))
 
-(defn- get-mapper-config [source-font-name target-font-name]
-  (let [target-font             (find-mapping target-font-name)
+(defn- get-mapper-config [mappings all-groups tight-groups source-font-name target-font-name]
+  (let [target-font             (mappings target-font-name)
         name->target-char       (target-font "characterCodes")
-        source-font             (find-mapping source-font-name)
+        source-font             (mappings source-font-name)
         name->source-char       (source-font "characterCodes")
 
         mapper                  (get-mapper name->source-char name->target-char)
 
-        group-mapper            (get-group-mapper p-mappings/all-groups name->source-char name->target-char)
-        merged-mapper           (merge-with (fn [a b] a) mapper group-mapper)
+        group-mapper            (get-group-mapper all-groups name->source-char name->target-char)
+        merged-mapper           (merge-with (fn [a _b] a) mapper group-mapper)
 
         target-move-right-chars (set (map #(name->target-char %1) (target-font "moveRightCharacters")))
         source-move-right-chars (set (map #(name->target-char %1) (source-font "moveRightCharacters")))
         move-left-chars         (difference source-move-right-chars target-move-right-chars)
         move-right-chars        (difference target-move-right-chars source-move-right-chars)
-        move-across-chars       (set (for [sub-group p-mappings/tight-groups
+        move-across-chars       (set (for [sub-group tight-groups
                                            char      (get-matching-chars sub-group name->target-char)]
                                        char))
 
@@ -70,8 +58,8 @@
 
 (def get-mapper-config-memo (memoize get-mapper-config))
 
-(defn ^:export convert [{:keys [source-text source-font target-font]}]
-  (if-let [mapper (get-mapper-config-memo source-font target-font)]
+(defn ^:export convert [{:keys [source-text source-font target-font mappings all-groups tight-groups]}]
+  (if-let [mapper (get-mapper-config-memo mappings all-groups tight-groups source-font target-font)]
     (js-converter/convertStringUsingMapper mapper source-text)
     ""))
 

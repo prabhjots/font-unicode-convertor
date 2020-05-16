@@ -1,8 +1,9 @@
-(ns sikhsiyasat.font-converter.punjabi-mappings
-  (:require [shadow.resource :as rc]
+(ns prabnz.punjabi-font-converter.core
+  (:require [prabnz.font-converter.core :as converter]
+            [shadow.resource :as rc]
             [clojure.string]))
 
-(defn read-str [s]
+(defn- read-str [s]
   (js->clj (js/JSON.parse s)))
 
 (def tight-groups (read-str (rc/inline "./mappings/tight_groups.json")))
@@ -25,7 +26,14 @@
                "gurbanilipi" (assoc anmol
                                     "characterCodes" (merge (anmol "characterCodes") (gurbani-lipi "characterCodes")))})
 
+(defn ^:export convert
+  ([conf]
+   (converter/convert (assoc conf
+                             :mappings mappings
+                             :all-groups all-groups
+                             :tight-groups tight-groups)))
 
-
-
-
+  ([text target-font source-font]
+   (convert {:source-text text
+             :target-font target-font
+             :source-font source-font})))
