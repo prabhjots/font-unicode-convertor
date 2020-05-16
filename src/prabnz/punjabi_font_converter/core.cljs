@@ -1,5 +1,5 @@
-(ns sikhsiyasat.punjabi-font-converter.core
-  (:require [sikhsiyasat.font-converter.core :as converter]
+(ns prabnz.punjabi-font-converter.core
+  (:require [prabnz.font-converter.core :as converter]
             [shadow.resource :as rc]
             [clojure.string]))
 
@@ -37,8 +37,3 @@
    (convert {:source-text text
              :target-font target-font
              :source-font source-font})))
-
-
-
-
-

@@ -1,6 +1,6 @@
-(ns sikhsiyasat.font-converter.converter-test
+(ns prabnz.font-converter.converter-test
   (:require [clojure.test :refer [is deftest]]
-            [sikhsiyasat.font-converter.core :as c]))
+            [prabnz.font-converter.core :as c]))
 
 (defn anmol-unicode [a b]
   (let [converted (c/convert {:source-text a

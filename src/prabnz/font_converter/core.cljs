@@ -1,4 +1,4 @@
-(ns sikhsiyasat.font-converter.core
+(ns prabnz.font-converter.core
   (:require [clojure.string]
             [clojure.set :refer [difference]]
             ["./converter" :as js-converter]))
@@ -30,11 +30,6 @@
    name->target-char))
 
 (defn- get-mapper-config [mappings all-groups tight-groups source-font-name target-font-name]
-  (prn "1" mappings)
-  (prn "2" all-groups)
-  (prn "3" tight-groups)
-  (prn "4" source-font-name)
-  (prn "4" target-font-name)
   (let [target-font             (mappings target-font-name)
         name->target-char       (target-font "characterCodes")
         source-font             (mappings source-font-name)
