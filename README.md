@@ -34,11 +34,11 @@ Note: You will need to install the fonts at your machine to be able to see them 
 To run the app in the watch mode
 ```bash
 npm install
-npx shadow-cljs watch app
+npx shadow-cljs watch punjabi-converter
 ```
 
 To create a release
 ```bash
-npx shadow-cljs release app
+npx shadow-cljs release punjabi-converter
 ```
 this will create `convertor.js` and `main.js` in the root directory

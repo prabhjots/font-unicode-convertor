@@ -3,8 +3,18 @@
             [reagent.core :as reagent]
             [reagent.dom :as rdom]))
 
-(defonce data-atom (reagent/atom {:source-font "anmol"
-                                  :target-font "unicode"
+(defn set-localstorage-item!
+  "Set `key' in browser's localStorage to `val`."
+  [key val]
+  (.setItem (.-localStorage js/window) key val))
+
+(defn get-localstorage-item
+  "Returns value of `key' from browser's localStorage."
+  [key]
+  (.getItem (.-localStorage js/window) key))
+
+(defonce data-atom (reagent/atom {:source-font (or (get-localstorage-item :source-font) "anmol")
+                                  :target-font (or (get-localstorage-item :target-font) "unicode")
                                   :source-text ""
                                   :target-text ""
                                   :target-text-manually-changed false}))
@@ -23,6 +33,8 @@
           converted-data                (if target-text-manually-changed
                                             data
                                             (convert-text data))]
+        (when (or (= key :source-font) (= key :target-font)))
+            (set-localstorage-item! key value)
         (reset! data-atom converted-data))))
 
 
