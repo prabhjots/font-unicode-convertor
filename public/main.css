@@ -16,12 +16,18 @@ html, body {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
+    flex-wrap: wrap;
 }
 
 .col {
     display: flex;
     width: 100%;
+    max-width: 700px;
     flex-direction: column;
+}
+.col-header {
+    margin-top: 5px;
+    height: 20px;
 }
 
 textarea {
@@ -43,4 +49,10 @@ pre {
 
 footer {
     min-height: 4px;
+}
+
+.font-selector {
+    display: flex;
+    justify-content: space-between;
+    max-width: 220px;
 }
