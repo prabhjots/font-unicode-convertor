@@ -85,10 +85,7 @@
                    :on-change (fn [e] (dispatch [:change :source-text (.-value (.-target e))]))}]]
       [:div.col
        [:div.col-header
-        [:button {:on-click (fn [e] 
-                              (.select (js/document.querySelector "#targetText")) 
-                              (js/document.execCommand "copy"))}
-          "Select and copy"]]
+         "Output"]
        [:textarea {:auto-capitalize "off"
                    :auto-correct    "off"
                    :spell-check     "false"
@@ -99,6 +96,12 @@
                    :value target-text
                    :id "targetText"
                    :on-change (fn [e] (dispatch [:change :target-text (.-value (.-target e))]))}]]]
+     
+     [:div
+       [:button {:on-click (fn [e])
+                 (.select (js/document.querySelector "#targetText"))
+                 (js/document.execCommand "copy")}
+          "Select and copy"]]
      (when debug
        [:pre {:style {:width "100%" :overflow-x :auto}}
         [:code

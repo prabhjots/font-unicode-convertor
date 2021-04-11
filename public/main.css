@@ -27,7 +27,7 @@ html, body {
 }
 .col-header {
     margin-top: 5px;
-    height: 20px;
+    height: 15px;
 }
 
 textarea {
@@ -55,4 +55,9 @@ footer {
     display: flex;
     justify-content: space-between;
     max-width: 220px;
+}
+
+button {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
