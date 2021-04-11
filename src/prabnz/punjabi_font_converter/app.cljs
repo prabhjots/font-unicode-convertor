@@ -87,7 +87,7 @@
        [:div.col-header
         [:button {:on-click (fn [e] 
                               (.select (js/document.querySelector "#targetText")) 
-                              (js/document.execCommand 'copy'))}
+                              (js/document.execCommand "copy"))}
           "Select and copy"]]
        [:textarea {:auto-capitalize "off"
                    :auto-correct    "off"
