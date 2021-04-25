@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Punjabi Font Convertor</title>
+    <link rel="stylesheet" href="/public/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>Punjabi Font Converter</h1>
+        <div class="font-selector">
+            <select id="sourceFontName">
+                <option value="anmol">Anmol</option>
+                <option value="unicode">Unicode</option>
+                <option value="chatrik">Dr Chatrik</option>
+                <option value="awaze">Awaze</option>
+                <option value="satluj">Satluj</option>
+                <option value="asees">Asees</option>
+                <option value="joy">Joy</option>
+                <option value="gurbanilipi">Gurbani Lipi</option>
+            </select>
+            to
+            <select id="targetFontName">
+                <option value="anmol">Anmol</option>
+                <option value="unicode">Unicode</option>
+                <option value="chatrik">Dr Chatrik</option>
+                <option value="awaze">Awaze</option>
+                <option value="satluj">Satluj</option>
+                <option value="asees">Asees</option>
+                <option value="joy">Joy</option>
+                <option value="gurbanilipi">Gurbani Lipi</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="col-header"></div>
+                <textarea id="sourceText" autocapitalize="none" autocorrect="off" spellcheck="false"
+                    autocomplete="off" placeholder="..." style="font-family: AnmolLipi;"></textarea>
+            </div>
+            <div class="col">
+                <div class="col-header">Output</div>
+                <textarea autocomplete="off" autocapitalize="none" placeholder="..."
+                    style="font-family: AnmolUni, Arial Unicode MS; background-color: inherit;" id="targetText"
+                    spellcheck="false" autocorrect="off"></textarea>
+            </div>
+        </div>
+        <div><button>Select and copy</button></div>
+        <footer></footer>
+    </div>
+    <script type="module" src="/src/prabnz/punjabi_font_converter/app.ts"></script>
+</body>
+
+</html>

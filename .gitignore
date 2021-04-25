@@ -14,3 +14,4 @@ resources/public/js/test/
 font-unicode-convertor.iml
 font-unicode-convertor-1.iml
 .lsp
+dist/js/cljs-runtime/
