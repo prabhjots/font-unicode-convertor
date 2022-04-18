@@ -1,0 +1,1297 @@
+{
+.appVersion = "3108";
+.formatVersion = 3;
+date = "2022-04-17 22:58:53 +0000";
+familyName = Noorani;
+fontMaster = (
+{
+id = m01;
+metricValues = (
+{
+over = 16;
+pos = 800;
+},
+{
+over = -16;
+},
+{
+over = -16;
+pos = -200;
+},
+{
+over = 16;
+pos = 900;
+},
+{
+over = 10;
+pos = 600;
+},
+{
+over = -10;
+pos = 525;
+},
+{
+over = -16;
+pos = -300;
+}
+);
+name = Regular;
+}
+);
+glyphs = (
+{
+glyphname = "aaMatra-gurmukhi";
+lastChange = "2022-04-17 23:11:46 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(314,530,l),
+(314,599,l),
+(-10,599,l),
+(-10,530,l),
+(110,530,l),
+(110,246,l),
+(190,246,l),
+(190,530,l)
+);
+}
+);
+width = 304;
+}
+);
+unicode = 2622;
+},
+{
+glyphname = "iMatra-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2623;
+},
+{
+glyphname = "iiMatra-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2624;
+},
+{
+glyphname = "a-gurmukhi";
+lastChange = "2022-04-17 23:10:38 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(769,530,l),
+(769,599,l),
+(587,599,l),
+(587,396,l),
+(552,394,o),
+(450,341,o),
+(421,315,c),
+(426,361,o),
+(422,535,o),
+(389,538,c),
+(384,537,o),
+(280,509,o),
+(204,443,c),
+(198,476,o),
+(186,539,o),
+(145,570,c),
+(111,596,o),
+(79,599,o),
+(35,599,c),
+(-14,599,l),
+(-14,530,l),
+(53,530,l),
+(120,530,o),
+(138,457,o),
+(138,396,c),
+(126,370,o),
+(44,341,o),
+(44,274,c),
+(44,236,o),
+(55,185,o),
+(82,185,c),
+(151,185,o),
+(194,305,o),
+(189,359,c),
+(223,382,o),
+(299,445,o),
+(347,445,c),
+(364,445,o),
+(368,306,o),
+(362,262,c),
+(302,211,o),
+(282,164,o),
+(282,136,c),
+(282,93,o),
+(293,63,o),
+(324,63,c),
+(383,63,o),
+(426,157,o),
+(425,244,c),
+(450,271,o),
+(567,324,o),
+(587,327,c),
+(587,5,l),
+(662,5,l),
+(662,530,l)
+);
+}
+);
+width = 750;
+}
+);
+unicode = 2565;
+},
+{
+glyphname = "aa-gurmukhi";
+lastChange = "2022-04-18 02:36:46 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(769,530,l),
+(769,599,l),
+(587,599,l),
+(587,396,l),
+(552,394,o),
+(450,341,o),
+(421,315,c),
+(426,361,o),
+(422,535,o),
+(389,538,c),
+(384,537,o),
+(280,509,o),
+(204,443,c),
+(198,476,o),
+(186,539,o),
+(145,570,c),
+(111,596,o),
+(79,599,o),
+(35,599,c),
+(-14,599,l),
+(-14,530,l),
+(53,530,l),
+(120,530,o),
+(138,457,o),
+(138,396,c),
+(126,370,o),
+(44,341,o),
+(44,274,c),
+(44,236,o),
+(55,185,o),
+(82,185,c),
+(151,185,o),
+(194,305,o),
+(189,359,c),
+(223,382,o),
+(299,445,o),
+(347,445,c),
+(364,445,o),
+(368,306,o),
+(362,262,c),
+(302,211,o),
+(282,164,o),
+(282,136,c),
+(282,93,o),
+(293,63,o),
+(324,63,c),
+(383,63,o),
+(426,157,o),
+(425,244,c),
+(450,271,o),
+(567,324,o),
+(587,327,c),
+(587,5,l),
+(662,5,l),
+(662,530,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(969,530,l),
+(969,599,l),
+(647,599,l),
+(647,530,l),
+(767,530,l),
+(767,246,l),
+(847,246,l),
+(847,530,l)
+);
+}
+);
+width = 950;
+}
+);
+unicode = 2566;
+},
+{
+glyphname = "i-gurmukhi";
+lastChange = "2022-04-18 02:37:18 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(880,530,l),
+(880,599,l),
+(298,599,l),
+(298,530,l),
+(356,530,l),
+(358,519,o),
+(366,461,o),
+(397,410,c),
+(429,359,o),
+(473,331,o),
+(491,320,c),
+(457,307,o),
+(354,222,o),
+(354,190,c),
+(354,168,o),
+(476,8,o),
+(604,8,c),
+(679,8,o),
+(794,97,o),
+(794,118,c),
+(794,127,o),
+(794,134,o),
+(773,134,c),
+(763,134,o),
+(708,70,o),
+(626,70,c),
+(546,70,o),
+(458,153,o),
+(458,190,c),
+(458,217,o),
+(543,283,o),
+(573,283,c),
+(778,283,l),
+(778,530,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(583,358,l),
+(532,358,o),
+(481,396,o),
+(461,425,c),
+(425,479,o),
+(425,530,o),
+(425,530,c),
+(703,530,l),
+(703,530,o),
+(703,393,o),
+(703,358,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(421,751,l),
+(389,804,o),
+(335,868,o),
+(247,864,c),
+(150,860,o),
+(95,780,o),
+(95,687,c),
+(95,599,l),
+(-14,599,l),
+(-14,530,l),
+(96,530,l),
+(96,4,l),
+(171,4,l),
+(171,530,l),
+(297,530,l),
+(297,599,l),
+(170,599,l),
+(170,665,l),
+(170,747,o),
+(196,789,o),
+(253,794,c),
+(321,800,o),
+(352,735,o),
+(360,716,c)
+);
+}
+);
+width = 861;
+}
+);
+unicode = 2567;
+},
+{
+glyphname = "ii-gurmukhi";
+lastChange = "2022-04-18 02:31:35 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(576,530,l),
+(576,599,l),
+(-12,599,l),
+(-12,530,l),
+(46,530,l),
+(48,519,o),
+(56,461,o),
+(87,410,c),
+(119,359,o),
+(163,331,o),
+(181,320,c),
+(147,307,o),
+(44,222,o),
+(44,190,c),
+(44,168,o),
+(166,8,o),
+(294,8,c),
+(369,8,o),
+(484,97,o),
+(484,118,c),
+(484,127,o),
+(484,134,o),
+(463,134,c),
+(453,134,o),
+(398,70,o),
+(316,70,c),
+(236,70,o),
+(148,153,o),
+(148,190,c),
+(148,217,o),
+(233,283,o),
+(263,283,c),
+(468,283,l),
+(468,530,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(273,358,l),
+(222,358,o),
+(171,396,o),
+(151,425,c),
+(115,479,o),
+(115,530,o),
+(115,530,c),
+(393,530,l),
+(393,530,o),
+(393,393,o),
+(393,358,c)
+);
+},
+{
+closed = 1;
+nodes = (
+(885,530,l),
+(885,599,l),
+(758,599,l),
+(758,657,l),
+(758,750,o),
+(699,837,o),
+(595,843,c),
+(502,848,o),
+(466,797,o),
+(438,731,c),
+(497,689,l),
+(510,728,o),
+(539,782,o),
+(595,775,c),
+(657,767,o),
+(683,717,o),
+(683,635,c),
+(683,599,l),
+(571,599,l),
+(571,530,l),
+(683,530,l),
+(683,4,l),
+(758,4,l),
+(758,530,l)
+);
+}
+);
+width = 600;
+}
+);
+unicode = 2568;
+},
+{
+glyphname = "u-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2569;
+},
+{
+glyphname = "uu-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2570;
+},
+{
+glyphname = "ee-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2575;
+},
+{
+glyphname = "ai-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2576;
+},
+{
+glyphname = "oo-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2579;
+},
+{
+glyphname = "au-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2580;
+},
+{
+glyphname = "ka-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2581;
+},
+{
+glyphname = "kha-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2582;
+},
+{
+glyphname = "ga-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2583;
+},
+{
+glyphname = "gha-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2584;
+},
+{
+glyphname = "nga-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2585;
+},
+{
+glyphname = "ca-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2586;
+},
+{
+glyphname = "cha-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2587;
+},
+{
+glyphname = "ja-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2588;
+},
+{
+glyphname = "jha-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2589;
+},
+{
+glyphname = "nya-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2590;
+},
+{
+glyphname = "tta-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2591;
+},
+{
+glyphname = "ttha-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2592;
+},
+{
+glyphname = "dda-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2593;
+},
+{
+glyphname = "ddha-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2594;
+},
+{
+glyphname = "nna-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2595;
+},
+{
+glyphname = "ta-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2596;
+},
+{
+glyphname = "tha-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2597;
+},
+{
+glyphname = "da-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2598;
+},
+{
+glyphname = "dha-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2599;
+},
+{
+glyphname = "na-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2600;
+},
+{
+glyphname = "pa-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2602;
+},
+{
+glyphname = "pha-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2603;
+},
+{
+glyphname = "ba-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2604;
+},
+{
+glyphname = "bha-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2605;
+},
+{
+glyphname = "ma-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2606;
+},
+{
+glyphname = "ya-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2607;
+},
+{
+glyphname = "ra-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2608;
+},
+{
+glyphname = "la-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2610;
+},
+{
+glyphname = "lla-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2611;
+},
+{
+glyphname = "va-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2613;
+},
+{
+glyphname = "sha-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2614;
+},
+{
+glyphname = "sa-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2616;
+},
+{
+glyphname = "ha-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2617;
+},
+{
+glyphname = "khha-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2649;
+},
+{
+glyphname = "ghha-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2650;
+},
+{
+glyphname = "za-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2651;
+},
+{
+glyphname = "rra-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2652;
+},
+{
+glyphname = "fa-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2654;
+},
+{
+glyphname = "iri-gurmukhi";
+lastChange = "2022-04-18 02:27:14 +0000";
+layers = (
+{
+layerId = m01;
+shapes = (
+{
+closed = 1;
+nodes = (
+(570,530,l),
+(570,599,l),
+(-12,599,l),
+(-12,530,l),
+(46,530,l),
+(48,519,o),
+(56,461,o),
+(87,410,c),
+(119,359,o),
+(163,331,o),
+(181,320,c),
+(147,307,o),
+(44,222,o),
+(44,190,c),
+(44,168,o),
+(166,8,o),
+(294,8,c),
+(369,8,o),
+(484,97,o),
+(484,118,c),
+(484,127,o),
+(484,134,o),
+(463,134,c),
+(453,134,o),
+(398,70,o),
+(316,70,c),
+(236,70,o),
+(148,153,o),
+(148,190,c),
+(148,217,o),
+(233,283,o),
+(263,283,c),
+(468,283,l),
+(468,530,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(273,358,l),
+(222,358,o),
+(171,396,o),
+(151,425,c),
+(115,479,o),
+(115,530,o),
+(115,530,c),
+(393,530,l),
+(393,530,o),
+(393,393,o),
+(393,358,c)
+);
+}
+);
+width = 600;
+}
+);
+unicode = 2674;
+},
+{
+glyphname = "ura-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2675;
+},
+{
+glyphname = "ekonkar-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2676;
+},
+{
+glyphname = "ya-gurmukhi.post";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+},
+{
+glyphname = "zero-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2662;
+},
+{
+glyphname = "one-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2663;
+},
+{
+glyphname = "two-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2664;
+},
+{
+glyphname = "three-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2665;
+},
+{
+glyphname = "four-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2666;
+},
+{
+glyphname = "five-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2667;
+},
+{
+glyphname = "six-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2668;
+},
+{
+glyphname = "seven-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2669;
+},
+{
+glyphname = "eight-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2670;
+},
+{
+glyphname = "nine-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2671;
+},
+{
+glyphname = space;
+layers = (
+{
+layerId = m01;
+width = 200;
+}
+);
+unicode = 32;
+},
+{
+glyphname = "addakBindi-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2561;
+},
+{
+glyphname = "bindi-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2562;
+},
+{
+glyphname = "visarga-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2563;
+},
+{
+glyphname = "nukta-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2620;
+},
+{
+glyphname = "rakar-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+},
+{
+glyphname = "uMatra-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2625;
+},
+{
+glyphname = "uuMatra-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2626;
+},
+{
+glyphname = "eeMatra-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2631;
+},
+{
+glyphname = "aiMatra-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2632;
+},
+{
+glyphname = "ooMatra-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2635;
+},
+{
+glyphname = "auMatra-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2636;
+},
+{
+glyphname = "halant-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2637;
+},
+{
+glyphname = "udaat-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2641;
+},
+{
+glyphname = "tippi-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2672;
+},
+{
+glyphname = "addak-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2673;
+},
+{
+glyphname = "yakash-gurmukhi";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+unicode = 2677;
+},
+{
+glyphname = "ha-gurmukhi.below";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+},
+{
+glyphname = "va-gurmukhi.below";
+layers = (
+{
+layerId = m01;
+width = 600;
+}
+);
+}
+);
+metrics = (
+{
+type = ascender;
+},
+{
+type = baseline;
+},
+{
+type = descender;
+},
+{
+filter = "script == \"gurmukhi\"";
+type = ascender;
+},
+{
+filter = "script == \"gurmukhi\"";
+name = "Headline Top";
+type = bodyHeight;
+},
+{
+filter = "script == \"gurmukhi\"";
+name = "Headline Bottom";
+},
+{
+filter = "script == \"gurmukhi\"";
+name = Subscript;
+}
+);
+unitsPerEm = 1000;
+versionMajor = 1;
+versionMinor = 0;
+}
